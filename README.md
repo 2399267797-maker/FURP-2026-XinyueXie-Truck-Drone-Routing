@@ -25,11 +25,11 @@ This is your project home for the FURP programme. **Fork this template**, rename
 
 | Field | Your entry |
 |---|---|
-| Student name(s) | _e.g. Jason Zhang_ |
-| Project title | _..._ |
+| Student name(s) | _XinyueXie_ |
+| Project title | _Truck-Drone-Routing_ |
 | Project tag | _e.g. ROSBootcamp_ |
 | Track | Research |
-| Supervising faculty | _..._ |
+| Supervising faculty | _FOSE_ |
 | Project lead | _..._ |
 | Team or individual | _..._ |
 | Cited paper being replicated | _title + link/DOI_ |
@@ -97,9 +97,9 @@ Any **leave of absence** or **withdrawal** must be notified to us **by email** â
 
 ## Quick checklist
 
-- [ ] Forked the template and renamed the repo (`FURP-2025/YourName-ProjectTag`)
-- [ ] Made the repo public **or** shared it with the research group
-- [ ] Filled in the *Project Info* table above
+- [x] Forked the template and renamed the repo (`FURP-2025/YourName-ProjectTag`)
+- [x] Made the repo public **or** shared it with the research group
+- [x] Filled in the *Project Info* table above
 - [ ] Started `docs/00_weekly.md`
 - [ ] Created my first file in `docs/meeting_notes/`
 - [ ] (By Showcase) Added `FURP_Showcase.pdf` to the repo root
