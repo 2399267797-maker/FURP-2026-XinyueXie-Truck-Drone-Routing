@@ -4,8 +4,8 @@
 **OR-Tools**
 ## Step 2: Environment Record
 ---
-- **operating system:**Ubuntu-22.04
-- **Python version:**Python 3.10.12
+- **operating system:** Ubuntu-22.04
+- **Python version:** Python 3.10.12
 - **package manager:** pip
 - **solver or codebase version:** ortools==9.15.6755
 - **exact install commands:**
