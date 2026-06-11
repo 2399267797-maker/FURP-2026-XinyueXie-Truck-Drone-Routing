@@ -21,7 +21,7 @@ Storage: 954 GB SSD
 - **instance name and size:** tiny_pdp_16nodes, total 17 nodes (1 depot node 0 + 16 customer nodes), 4 vehicles, 8 pickup-delivery pairs
 - **objective value:** 226116
 - **feasibility status:** Feasible
-- **runtime:**0.0194s
+- **runtime:** 0.0194s
 - **route plot or textual route output:**
 Route for vehicle 0:
  0 ->  13 ->  15 ->  11 ->  12 -> 0
