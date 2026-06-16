@@ -44,6 +44,6 @@
 **Next steps**
 - week2
 
-**Hours spent (optional):**4h
+**Hours spent (optional):** 4h
 
 **Links (optional):**[link for report](src/Week1-lab.md)
