@@ -30,20 +30,20 @@
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
 
-### Week 1 — YYYY-MM-DD
+### Week 1 — 2026-06-08
 
-**Attended this week's meeting:** Yes / No
+**Attended this week's meeting:** No
 
 **Progress this week**
 - Set up repository from the FURP template.
-- _..._
+- week1 lab
 
 **Challenges & blockers**
-- _..._
+- none
 
 **Next steps**
-- _..._
+- week2
 
-**Hours spent (optional):**
+**Hours spent (optional):** 4h
 
-**Links (optional):**
+**Links (optional):**[link for report](src/Week1-lab.md)
