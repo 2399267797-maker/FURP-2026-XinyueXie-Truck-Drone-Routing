@@ -1,3 +1,6 @@
 [submodule "src/experiments/POMO"]
 	path = src/experiments/POMO
 	url = https://github.com/yd-kwon/POMO
+[submodule "src/experiments/py-ga-VRPTW"]
+	path = src/experiments/py-ga-VRPTW
+	url = https://github.com/iRB-Lab/py-ga-VRPTW.git
