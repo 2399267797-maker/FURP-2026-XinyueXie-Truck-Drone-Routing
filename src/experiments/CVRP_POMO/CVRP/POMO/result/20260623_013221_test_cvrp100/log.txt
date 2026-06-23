@@ -1,0 +1,13 @@
+[2026-06-23 00:32:22] CVRPTester.py(53) : ✓ 模型加载成功 (完整checkpoint)
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 10: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 20: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 30: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 40: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 50: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 60: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 70: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 80: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 90: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(158) : Step 100: selected=0, valid_nodes=0/101, load=1.000
+[2026-06-23 00:32:22] CVRPTester.py(162) : ⚠ 超过 100 步，强制停止
+[2026-06-23 00:32:22] CVRPTester.py(163) : 选择的节点序列: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

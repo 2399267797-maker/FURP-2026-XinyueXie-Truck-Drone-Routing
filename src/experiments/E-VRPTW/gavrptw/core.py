@@ -12,8 +12,15 @@ from . import BASE_DIR
 from .utils import make_dirs_for_file, exist, load_instance, merge_rules
 
 
-def ind2route(individual, instance, energy_constraint=False, battery_capacity=None, energy_consumption=None):
-    '''gavrptw.core.ind2route(individual, instance, energy_constraint=False, battery_capacity=None, energy_consumption=None)'''
+def ind2route(individual, instance, energy_constraint=False, battery_capacity=None, energy_consumption=None,
+              hard_time_window=False):
+    '''gavrptw.core.ind2route(individual, instance, energy_constraint=False, battery_capacity=None, 
+        energy_consumption=None, hard_time_window=False)
+        
+        New parameter: hard_time_window - if True, uses hard constraint (start new route if late)
+                       instead of soft constraint (penalty cost for late arrival)
+        NOTE: Aligned with CVRP-POMO TW constraint when hard_time_window=True
+    '''
     route = []
     vehicle_capacity = instance['vehicle_capacity']
     depart_due_time = instance['depart']['due_time']
@@ -54,8 +61,16 @@ def ind2route(individual, instance, energy_constraint=False, battery_capacity=No
         service_time = instance[f'customer_{customer_id}']['service_time']
         return_time = instance['distance_matrix'][customer_id][0]
         updated_elapsed_time = elapsed_time + distance_to_customer + service_time + return_time
-        # Validate vehicle load and elapsed time
-        if (updated_vehicle_load <= vehicle_capacity) and (updated_elapsed_time <= depart_due_time):
+        
+        # POMO-aligned hard TW constraint: check if late BEFORE adding to route
+        is_late = False
+        if hard_time_window:
+            arrival_time = elapsed_time + distance_to_customer
+            if arrival_time > instance[f'customer_{customer_id}']['due_time']:
+                is_late = True
+        
+        # Validate vehicle load, elapsed time, and time window
+        if (updated_vehicle_load <= vehicle_capacity) and (updated_elapsed_time <= depart_due_time) and (not is_late):
             # Add to current sub-route
             sub_route.append(customer_id)
             vehicle_load = updated_vehicle_load
@@ -100,11 +115,19 @@ def print_route(route, merge=False):
 
 
 def eval_vrptw(individual, instance, unit_cost=1.0, init_cost=0, wait_cost=0, delay_cost=0, 
-               energy_constraint=False, battery_capacity=None, energy_consumption=None):
+               energy_constraint=False, battery_capacity=None, energy_consumption=None,
+               hard_time_window=False):
     '''gavrptw.core.eval_vrptw(individual, instance, unit_cost=1.0, init_cost=0, wait_cost=0,
-        delay_cost=0, energy_constraint=False, battery_capacity=None, energy_consumption=None)'''
+        delay_cost=0, energy_constraint=False, battery_capacity=None, energy_consumption=None,
+        hard_time_window=False)
+        
+        New parameter: hard_time_window - if True, uses hard constraint (infeasible if late)
+                       instead of soft constraint (penalty cost for late arrival)
+        NOTE: Aligned with CVRP-POMO TW constraint when hard_time_window=True
+    '''
     total_cost = 0
-    route = ind2route(individual, instance, energy_constraint, battery_capacity, energy_consumption)
+    route = ind2route(individual, instance, energy_constraint, battery_capacity, energy_consumption,
+                     hard_time_window=hard_time_window)
     total_cost = 0
     for sub_route in route:
         sub_route_time_cost = 0
@@ -118,11 +141,18 @@ def eval_vrptw(individual, instance, unit_cost=1.0, init_cost=0, wait_cost=0, de
             sub_route_distance = sub_route_distance + distance
             # Calculate time cost
             arrival_time = elapsed_time + distance
-            time_cost = wait_cost * max(instance[f'customer_{customer_id}']['ready_time'] - \
-                arrival_time, 0) + delay_cost * max(arrival_time - \
-                instance[f'customer_{customer_id}']['due_time'], 0)
-            # Update sub-route time cost
-            sub_route_time_cost = sub_route_time_cost + time_cost
+            # POMO-aligned hard TW constraint: infeasible if late
+            if hard_time_window:
+                if arrival_time > instance[f'customer_{customer_id}']['due_time']:
+                    # Hard constraint violated - return infeasible
+                    return (0.0,)  # Zero fitness = infeasible
+            else:
+                # Soft TW constraint: penalty for late/early arrival
+                time_cost = wait_cost * max(instance[f'customer_{customer_id}']['ready_time'] - \
+                    arrival_time, 0) + delay_cost * max(arrival_time - \
+                    instance[f'customer_{customer_id}']['due_time'], 0)
+                # Update sub-route time cost
+                sub_route_time_cost = sub_route_time_cost + time_cost
             # Update elapsed time
             elapsed_time = arrival_time + instance[f'customer_{customer_id}']['service_time']
             # Update last customer ID
@@ -134,7 +164,7 @@ def eval_vrptw(individual, instance, unit_cost=1.0, init_cost=0, wait_cost=0, de
         sub_route_cost = sub_route_time_cost + sub_route_transport_cost
         # Update total cost
         total_cost = total_cost + sub_route_cost
-    fitness = 1.0 / total_cost
+    fitness = 1.0 / total_cost if total_cost > 0 else 0.0
     return (fitness, )
 
 
@@ -167,10 +197,15 @@ def mut_inverse_indexes(individual):
 
 def run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost, ind_size, pop_size, \
     cx_pb, mut_pb, n_gen, export_csv=False, customize_data=False, energy_constraint=False, \
-    battery_capacity=None, energy_consumption=None):
+    battery_capacity=None, energy_consumption=None, hard_time_window=False):
     '''gavrptw.core.run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost,
         ind_size, pop_size, cx_pb, mut_pb, n_gen, export_csv=False, customize_data=False,
-        energy_constraint=False, battery_capacity=None, energy_consumption=None)'''
+        energy_constraint=False, battery_capacity=None, energy_consumption=None, hard_time_window=False)
+        
+        New parameter: hard_time_window - if True, uses hard constraint (infeasible if late)
+                       instead of soft constraint (penalty cost for late arrival)
+        NOTE: Aligned with CVRP-POMO TW constraint when hard_time_window=True
+    '''
     if customize_data:
         json_data_dir = os.path.join(BASE_DIR, 'data', 'json_customize')
     else:
@@ -191,11 +226,19 @@ def run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost, ind_
         # energy_consumption = 1.0 ~ 1.2
         energy_consumption = 1.0 + random.random() * 0.2
     
-    # Print energy constraint info if enabled
+    # Print constraint info if enabled
     if energy_constraint:
-        print(f'\nEnergy Constraint Enabled:')
+        print(f'\nEnergy Constraint Enabled (E):')
         print(f'  Battery Capacity: {battery_capacity:.2f}')
-        print(f'  Energy Consumption Rate: {energy_consumption:.2f}\n')
+        print(f'  Energy Consumption Rate: {energy_consumption:.2f}')
+        print(f'  Energy Check: remaining_energy >= distance_to_node + distance_to_depot')
+    
+    if hard_time_window:
+        print(f'\nTime Window Constraint (TW) - Hard Mode:')
+        print(f'  Late arrival = infeasible (ninf_mask)')
+    else:
+        print(f'\nTime Window Constraint (TW) - Soft Mode:')
+        print(f'  Late arrival = penalty cost')
     
     creator.create('FitnessMax', base.Fitness, weights=(1.0, ))
     creator.create('Individual', list, fitness=creator.FitnessMax)
@@ -209,7 +252,7 @@ def run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost, ind_
     toolbox.register('evaluate', eval_vrptw, instance=instance, unit_cost=unit_cost, \
         init_cost=init_cost, wait_cost=wait_cost, delay_cost=delay_cost, \
         energy_constraint=energy_constraint, battery_capacity=battery_capacity, \
-        energy_consumption=energy_consumption)
+        energy_consumption=energy_consumption, hard_time_window=hard_time_window)
     toolbox.register('select', tools.selRoulette)
     toolbox.register('mate', cx_partially_matched)
     toolbox.register('mutate', mut_inverse_indexes)
@@ -272,12 +315,13 @@ def run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost, ind_
     best_ind = tools.selBest(pop, 1)[0]
     print(f'Best individual: {best_ind}')
     print(f'Fitness: {best_ind.fitness.values[0]}')
-    print_route(ind2route(best_ind, instance, energy_constraint, battery_capacity, energy_consumption))
+    print_route(ind2route(best_ind, instance, energy_constraint, battery_capacity, energy_consumption, hard_time_window))
     print(f'Total cost: {1 / best_ind.fitness.values[0]}')
     if export_csv:
         csv_file_name = f'{instance_name}_uC{unit_cost}_iC{init_cost}_wC{wait_cost}' \
             f'_dC{delay_cost}_iS{ind_size}_pS{pop_size}_cP{cx_pb}_mP{mut_pb}_nG{n_gen}' \
-            f'_eC{int(energy_constraint)}_bC{battery_capacity:.1f}_eR{energy_consumption:.2f}.csv'
+            f'_eC{int(energy_constraint)}_bC{battery_capacity:.1f}_eR{energy_consumption:.2f}' \
+            f'_hTW{int(hard_time_window)}.csv'
         csv_file = os.path.join(BASE_DIR, 'results', csv_file_name)
         print(f'Write to file: {csv_file}')
         make_dirs_for_file(path=csv_file)

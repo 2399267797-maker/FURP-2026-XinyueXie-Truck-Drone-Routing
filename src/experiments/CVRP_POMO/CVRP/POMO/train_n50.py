@@ -30,8 +30,8 @@ from CVRPTrainer import CVRPTrainer as Trainer
 # parameters
 
 env_params = {
-    'problem_size': 20,
-    'pomo_size': 20,
+    'problem_size': 50,
+    'pomo_size': 50,
 }
 
 model_params = {
@@ -40,7 +40,7 @@ model_params = {
     'encoder_layer_num': 6,
     'qkv_dim': 16,
     'head_num': 8,
-    'logit_clipping': 10,
+    'logit_clipping': 8,#10,
     'ff_hidden_dim': 512,
     'eval_type': 'argmax',
 }
@@ -51,7 +51,7 @@ optimizer_params = {
         'weight_decay': 1e-6
     },
     'scheduler': {
-        'milestones': [8001, 8051],
+        'milestones': [80,95],#[8001, 8051],
         'gamma': 0.1
     }
 }
@@ -59,13 +59,13 @@ optimizer_params = {
 trainer_params = {
     'use_cuda': USE_CUDA,
     'cuda_device_num': CUDA_DEVICE_NUM,
-    'epochs': 50,#8100
-    'train_episodes': 10 * 1000,
+    'epochs': 100,#8100
+    'train_episodes': 1024,#10 * 1000,
     'train_batch_size': 64,
     'prev_model_path': None,
     'logging': {
-        'model_save_interval': 500,
-        'img_save_interval': 500,
+        'model_save_interval': 10,
+        'img_save_interval': 10,
         'log_image_params_1': {
             'json_foldername': 'log_image_style',
             'filename': 'style_cvrp_100.json'

@@ -1,0 +1,31 @@
+[2026-06-23 01:08:27] CVRPTester.py(53) : ✓ 模型加载成功 (完整checkpoint)
+[2026-06-23 01:08:27] CVRPTester.py(159) : Step 5: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:27] CVRPTester.py(166) :   可选节点（前10个）: [3, 4, 6, 7, 8, 9, 10, 11, 12, 13]
+[2026-06-23 01:08:27] CVRPTester.py(159) : Step 10: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:27] CVRPTester.py(166) :   可选节点（前10个）: [3, 4, 6, 7, 8, 9, 10, 11, 12, 13]
+[2026-06-23 01:08:27] CVRPTester.py(159) : Step 15: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:27] CVRPTester.py(166) :   可选节点（前10个）: [3, 4, 6, 7, 8, 9, 10, 11, 12, 13]
+[2026-06-23 01:08:27] CVRPTester.py(159) : Step 20: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:27] CVRPTester.py(159) : Step 25: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:27] CVRPTester.py(159) : Step 30: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 35: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 40: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 45: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 50: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 55: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 60: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 65: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 70: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 75: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 80: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 85: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 90: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 95: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(159) : Step 100: selected=0, valid_nodes=73/101, load=1.000, time=5.477, energy=14.142
+[2026-06-23 01:08:28] CVRPTester.py(170) : ⚠ 超过 100 步，强制停止
+[2026-06-23 01:08:28] CVRPTester.py(171) : 选择的节点序列: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[2026-06-23 01:08:28] CVRPTester.py(176) : 强制计算的reward形状: torch.Size([1, 100])
+[2026-06-23 01:08:28] CVRPTester.py(108) : episode   1/  1, Elapsed[0.02m], Remain[0.00m], score:0.124, aug_score:0.124
+[2026-06-23 01:08:28] CVRPTester.py(114) :  *** Test Done *** 
+[2026-06-23 01:08:28] CVRPTester.py(115) :  NO-AUG SCORE: 0.1244 
+[2026-06-23 01:08:28] CVRPTester.py(116) :  AUGMENTATION SCORE: 0.1244 

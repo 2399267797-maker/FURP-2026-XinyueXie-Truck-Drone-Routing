@@ -1,0 +1,7 @@
+[2026-06-21 17:16:31] test_n100.py(122) : DEBUG_MODE: False
+[2026-06-21 17:16:31] test_n100.py(123) : USE_CUDA: False, CUDA_DEVICE_NUM: 0
+[2026-06-21 17:16:31] test_n100.py(124) : VRPTW_INSTANCE_NAME: C101
+[2026-06-21 17:16:31] test_n100.py(125) : env_params{'problem_size': 100, 'pomo_size': 100}
+[2026-06-21 17:16:31] test_n100.py(125) : model_params{'embedding_dim': 128, 'sqrt_embedding_dim': 11.313708498984761, 'encoder_layer_num': 6, 'qkv_dim': 16, 'head_num': 8, 'logit_clipping': 10, 'ff_hidden_dim': 512, 'eval_type': 'argmax'}
+[2026-06-21 17:16:31] test_n100.py(125) : tester_params{'use_cuda': False, 'cuda_device_num': 0, 'model_load': {'path': './result/saved_CVRP100_model', 'epoch': 30500}, 'test_episodes': 1, 'test_batch_size': 1, 'augmentation_enable': False, 'aug_factor': 8, 'aug_batch_size': 400, 'test_data_load': {'enable': True, 'filename': './vrptw_instances/C101.pt'}}
+[2026-06-21 17:16:31] test_n100.py(125) : logger_params{'log_file': {'desc': 'test_cvrp100', 'filename': 'log.txt', 'filepath': './result/20260621_181629_test_cvrp100'}}

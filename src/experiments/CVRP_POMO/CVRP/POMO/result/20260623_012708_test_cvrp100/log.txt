@@ -1,0 +1,1 @@
+[2026-06-23 00:27:08] CVRPTester.py(53) : ✓ 模型加载成功 (完整checkpoint)

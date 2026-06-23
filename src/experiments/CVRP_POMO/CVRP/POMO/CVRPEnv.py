@@ -118,6 +118,18 @@ class CVRPEnv:
         self.saved_energy_consumption = loaded_dict.get('energy_consumption', None)
         self.saved_index = 0
 
+    def use_saved_problems_from_dict(self, data_dict):
+        """Load problems from a dictionary instead of a file"""
+        self.FLAG__use_saved_problems = True
+        
+        self.saved_depot_xy = data_dict['depot_xy']
+        self.saved_node_xy = data_dict['node_xy']
+        self.saved_node_demand = data_dict['node_demand']
+        self.saved_node_time_windows = data_dict.get('node_time_windows', None)
+        self.saved_battery_capacity = data_dict.get('battery_capacity', None)
+        self.saved_energy_consumption = data_dict.get('energy_consumption', None)
+        self.saved_index = 0
+
     def load_problems(self, batch_size, aug_factor=1):
         self.batch_size = batch_size
 
@@ -321,16 +333,24 @@ class CVRPEnv:
             self.ninf_mask[too_late] = float('-inf')
         
         # Electric vehicle constraint (E): mask nodes that cannot be reached with remaining battery
+        # NOTE: E-VRPTW aligned - requires enough energy to reach node AND return to depot
         if self.current_energy is not None and self.energy_consumption is not None:
             # Calculate energy needed to reach each node
             node_pos = self.depot_node_xy[:, None, :, :].expand(self.batch_size, self.pomo_size, -1, -1)
             curr_pos = self.depot_node_xy[self.BATCH_IDX, selected][:, :, None, :]
             dist_to_node = torch.norm(node_pos - curr_pos, dim=3)
-            energy_needed = dist_to_node * self.energy_consumption[:, None, None].expand(self.batch_size, self.pomo_size, self.problem_size+1)
+            # shape: (batch, pomo, problem+1)
+            
+            # E-VRPTW alignment: Energy needed = distance_to_node + distance_to_depot
+            depot_pos = self.depot_node_xy[:, None, :, :].expand(self.batch_size, self.pomo_size, -1, -1)[:, :, 0:1, :]
+            # Get depot position: (batch, 1, 1, 2)
+            dist_to_depot = torch.norm(depot_pos - node_pos, dim=3)
+            # shape: (batch, pomo, problem+1)
+            total_energy_needed = (dist_to_node + dist_to_depot) * self.energy_consumption[:, None, None].expand(self.batch_size, self.pomo_size, self.problem_size+1)
             
             # Mask nodes where energy needed exceeds remaining energy (with NaN check)
-            valid_energy = (~self.current_energy[:, :, None].isnan()) & (~energy_needed.isnan())
-            not_enough_energy = (self.current_energy[:, :, None] < energy_needed - round_error_epsilon) & valid_energy
+            valid_energy = (~self.current_energy[:, :, None].isnan()) & (~total_energy_needed.isnan())
+            not_enough_energy = (self.current_energy[:, :, None] < total_energy_needed - round_error_epsilon) & valid_energy
             self.ninf_mask[not_enough_energy] = float('-inf')
 
         newly_finished = (self.visited_ninf_flag == float('-inf')).all(dim=2)

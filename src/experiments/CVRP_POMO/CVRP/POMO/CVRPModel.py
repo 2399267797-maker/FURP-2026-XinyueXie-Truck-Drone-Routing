@@ -91,6 +91,14 @@ class CVRPModel(nn.Module):
                 # shape: (batch, pomo)
                 prob = None  # value not needed. Can be anything.
 
+            # 调试：输出depot和其他节点的probs
+            if batch_size == 1 and pomo_size == 100:
+                depot_prob = probs[0, 0, 0].item()
+                other_probs = probs[0, 0, 1:].mean().item()
+                import logging
+                logger = logging.getLogger('root')
+                logger.info(f"[DEBUG] 模型输出: depot_prob={depot_prob:.4f}, avg_other_prob={other_probs:.4f}, argmax={selected[0,0].item()}")
+
         return selected, prob
 
 

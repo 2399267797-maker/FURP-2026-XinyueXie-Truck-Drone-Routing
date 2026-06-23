@@ -17,7 +17,7 @@ def main():
     wait_cost = 0.5
     delay_cost = 1.5
 
-    ind_size = 50#25
+    ind_size = 100#25
     pop_size = 80
     cx_pb = 0.85
     mut_pb = 0.01

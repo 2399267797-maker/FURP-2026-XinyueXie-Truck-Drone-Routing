@@ -1,0 +1,12 @@
+[2026-06-23 00:30:46] CVRPTester.py(53) : ✓ 模型加载成功 (完整checkpoint)
+[2026-06-23 00:30:47] CVRPTester.py(148) : Step 100: finished=0/100
+[2026-06-23 00:30:49] CVRPTester.py(148) : Step 200: finished=0/100
+[2026-06-23 00:30:50] CVRPTester.py(148) : Step 300: finished=0/100
+[2026-06-23 00:30:51] CVRPTester.py(148) : Step 400: finished=0/100
+[2026-06-23 00:30:52] CVRPTester.py(148) : Step 500: finished=0/100
+[2026-06-23 00:30:54] CVRPTester.py(148) : Step 600: finished=0/100
+[2026-06-23 00:30:55] CVRPTester.py(148) : Step 700: finished=0/100
+[2026-06-23 00:30:56] CVRPTester.py(148) : Step 800: finished=0/100
+[2026-06-23 00:30:57] CVRPTester.py(148) : Step 900: finished=0/100
+[2026-06-23 00:30:59] CVRPTester.py(148) : Step 1000: finished=0/100
+[2026-06-23 00:30:59] CVRPTester.py(152) : ⚠ 超过 1000 步，强制停止
