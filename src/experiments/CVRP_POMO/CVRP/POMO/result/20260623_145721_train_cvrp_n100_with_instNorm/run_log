@@ -1,0 +1,430 @@
+[2026-06-23 13:57:22] train_n100.py(123) : DEBUG_MODE: False
+[2026-06-23 13:57:22] train_n100.py(124) : USE_CUDA: True, CUDA_DEVICE_NUM: 0
+[2026-06-23 13:57:22] train_n100.py(125) : env_params{'problem_size': 100, 'pomo_size': 100}
+[2026-06-23 13:57:22] train_n100.py(125) : model_params{'embedding_dim': 128, 'sqrt_embedding_dim': 11.313708498984761, 'encoder_layer_num': 6, 'qkv_dim': 16, 'head_num': 8, 'logit_clipping': 8, 'ff_hidden_dim': 512, 'eval_type': 'argmax'}
+[2026-06-23 13:57:22] train_n100.py(125) : optimizer_params{'optimizer': {'lr': 0.0001, 'weight_decay': 1e-06}, 'scheduler': {'milestones': [80, 95], 'gamma': 0.1}}
+[2026-06-23 13:57:22] train_n100.py(125) : trainer_params{'use_cuda': True, 'cuda_device_num': 0, 'epochs': 100, 'train_episodes': 1024, 'train_batch_size': 64, 'prev_model_path': None, 'logging': {'model_save_interval': 10, 'img_save_interval': 10, 'log_image_params_1': {'json_foldername': 'log_image_style', 'filename': 'style_cvrp_100.json'}, 'log_image_params_2': {'json_foldername': 'log_image_style', 'filename': 'style_loss_1.json'}}, 'model_load': {'enable': False}}
+[2026-06-23 13:57:22] train_n100.py(125) : logger_params{'log_file': {'desc': 'train_cvrp_n100_with_instNorm', 'filename': 'run_log', 'filepath': './result/20260623_145721_train_cvrp_n100_with_instNorm'}}
+[2026-06-23 13:57:23] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:57:24] CVRPTrainer.py(147) : Epoch   1: Train  64/1024(6.2%)  Score: 4926.1572,  Loss: -579.9526
+[2026-06-23 13:57:24] CVRPTrainer.py(147) : Epoch   1: Train 128/1024(12.5%)  Score: 4158.9932,  Loss: -645.1267
+[2026-06-23 13:57:25] CVRPTrainer.py(147) : Epoch   1: Train 192/1024(18.8%)  Score: 3848.7485,  Loss: -604.7992
+[2026-06-23 13:57:25] CVRPTrainer.py(147) : Epoch   1: Train 256/1024(25.0%)  Score: 3705.3221,  Loss: -560.1151
+[2026-06-23 13:57:25] CVRPTrainer.py(147) : Epoch   1: Train 320/1024(31.2%)  Score: 3596.2171,  Loss: -543.7643
+[2026-06-23 13:57:26] CVRPTrainer.py(147) : Epoch   1: Train 384/1024(37.5%)  Score: 3490.1070,  Loss: -555.2600
+[2026-06-23 13:57:26] CVRPTrainer.py(147) : Epoch   1: Train 448/1024(43.8%)  Score: 3389.9579,  Loss: -552.5541
+[2026-06-23 13:57:26] CVRPTrainer.py(147) : Epoch   1: Train 512/1024(50.0%)  Score: 3298.4038,  Loss: -545.8697
+[2026-06-23 13:57:27] CVRPTrainer.py(147) : Epoch   1: Train 576/1024(56.2%)  Score: 3219.1417,  Loss: -537.3473
+[2026-06-23 13:57:27] CVRPTrainer.py(147) : Epoch   1: Train 640/1024(62.5%)  Score: 3147.8285,  Loss: -539.0770
+[2026-06-23 13:57:29] CVRPTrainer.py(152) : Epoch   1: Train (100%)  Score: 2828.7703,  Loss: -531.1191
+[2026-06-23 13:57:29] CVRPTrainer.py(82) : Epoch   1/100: Time Est.: Elapsed[0.11m], Remain[10.51m]
+[2026-06-23 13:57:29] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:57:35] CVRPTrainer.py(152) : Epoch   2: Train (100%)  Score: 1659.6096,  Loss: -642.7711
+[2026-06-23 13:57:35] CVRPTrainer.py(82) : Epoch   2/100: Time Est.: Elapsed[0.20m], Remain[9.70m]
+[2026-06-23 13:57:35] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:57:35] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:57:40] CVRPTrainer.py(152) : Epoch   3: Train (100%)  Score: 1442.9162,  Loss: -615.6060
+[2026-06-23 13:57:40] CVRPTrainer.py(82) : Epoch   3/100: Time Est.: Elapsed[0.29m], Remain[9.51m]
+[2026-06-23 13:57:40] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:57:41] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:57:46] CVRPTrainer.py(152) : Epoch   4: Train (100%)  Score: 1362.5630,  Loss: -604.6066
+[2026-06-23 13:57:46] CVRPTrainer.py(82) : Epoch   4/100: Time Est.: Elapsed[0.39m], Remain[9.38m]
+[2026-06-23 13:57:46] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:57:46] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:57:52] CVRPTrainer.py(152) : Epoch   5: Train (100%)  Score: 1289.4889,  Loss: -608.9074
+[2026-06-23 13:57:52] CVRPTrainer.py(82) : Epoch   5/100: Time Est.: Elapsed[0.49m], Remain[9.25m]
+[2026-06-23 13:57:52] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:57:52] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:57:58] CVRPTrainer.py(152) : Epoch   6: Train (100%)  Score: 1264.0752,  Loss: -602.8479
+[2026-06-23 13:57:58] CVRPTrainer.py(82) : Epoch   6/100: Time Est.: Elapsed[0.59m], Remain[9.18m]
+[2026-06-23 13:57:58] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:57:58] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:04] CVRPTrainer.py(152) : Epoch   7: Train (100%)  Score: 1242.2098,  Loss: -612.2631
+[2026-06-23 13:58:04] CVRPTrainer.py(82) : Epoch   7/100: Time Est.: Elapsed[0.68m], Remain[9.05m]
+[2026-06-23 13:58:04] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:04] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:09] CVRPTrainer.py(152) : Epoch   8: Train (100%)  Score: 1202.6874,  Loss: -596.5045
+[2026-06-23 13:58:09] CVRPTrainer.py(82) : Epoch   8/100: Time Est.: Elapsed[0.78m], Remain[8.93m]
+[2026-06-23 13:58:09] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:09] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:15] CVRPTrainer.py(152) : Epoch   9: Train (100%)  Score: 1167.7160,  Loss: -578.8503
+[2026-06-23 13:58:15] CVRPTrainer.py(82) : Epoch   9/100: Time Est.: Elapsed[0.87m], Remain[8.81m]
+[2026-06-23 13:58:15] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:15] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:21] CVRPTrainer.py(152) : Epoch  10: Train (100%)  Score: 1131.9496,  Loss: -578.5972
+[2026-06-23 13:58:21] CVRPTrainer.py(82) : Epoch  10/100: Time Est.: Elapsed[0.97m], Remain[8.73m]
+[2026-06-23 13:58:21] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:21] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 13:58:21] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:27] CVRPTrainer.py(152) : Epoch  11: Train (100%)  Score: 1112.4952,  Loss: -540.3198
+[2026-06-23 13:58:27] CVRPTrainer.py(82) : Epoch  11/100: Time Est.: Elapsed[1.07m], Remain[8.65m]
+[2026-06-23 13:58:27] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:27] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:33] CVRPTrainer.py(152) : Epoch  12: Train (100%)  Score: 1071.7791,  Loss: -545.8998
+[2026-06-23 13:58:33] CVRPTrainer.py(82) : Epoch  12/100: Time Est.: Elapsed[1.17m], Remain[8.55m]
+[2026-06-23 13:58:33] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:33] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:39] CVRPTrainer.py(152) : Epoch  13: Train (100%)  Score: 1037.1377,  Loss: -536.6971
+[2026-06-23 13:58:39] CVRPTrainer.py(82) : Epoch  13/100: Time Est.: Elapsed[1.27m], Remain[8.48m]
+[2026-06-23 13:58:39] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:39] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:44] CVRPTrainer.py(152) : Epoch  14: Train (100%)  Score: 998.1225,  Loss: -524.6395
+[2026-06-23 13:58:44] CVRPTrainer.py(82) : Epoch  14/100: Time Est.: Elapsed[1.36m], Remain[8.36m]
+[2026-06-23 13:58:44] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:45] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:50] CVRPTrainer.py(152) : Epoch  15: Train (100%)  Score: 973.5395,  Loss: -495.1563
+[2026-06-23 13:58:50] CVRPTrainer.py(82) : Epoch  15/100: Time Est.: Elapsed[1.46m], Remain[8.25m]
+[2026-06-23 13:58:50] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:50] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:58:56] CVRPTrainer.py(152) : Epoch  16: Train (100%)  Score: 944.4922,  Loss: -466.0286
+[2026-06-23 13:58:56] CVRPTrainer.py(82) : Epoch  16/100: Time Est.: Elapsed[1.55m], Remain[8.14m]
+[2026-06-23 13:58:56] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:58:56] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:01] CVRPTrainer.py(152) : Epoch  17: Train (100%)  Score: 921.9454,  Loss: -480.5147
+[2026-06-23 13:59:01] CVRPTrainer.py(82) : Epoch  17/100: Time Est.: Elapsed[1.64m], Remain[8.03m]
+[2026-06-23 13:59:01] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:02] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:07] CVRPTrainer.py(152) : Epoch  18: Train (100%)  Score: 905.3738,  Loss: -499.9817
+[2026-06-23 13:59:07] CVRPTrainer.py(82) : Epoch  18/100: Time Est.: Elapsed[1.74m], Remain[7.93m]
+[2026-06-23 13:59:07] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:07] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:13] CVRPTrainer.py(152) : Epoch  19: Train (100%)  Score: 894.9389,  Loss: -483.2664
+[2026-06-23 13:59:13] CVRPTrainer.py(82) : Epoch  19/100: Time Est.: Elapsed[1.84m], Remain[7.85m]
+[2026-06-23 13:59:13] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:13] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:19] CVRPTrainer.py(152) : Epoch  20: Train (100%)  Score: 871.4830,  Loss: -488.1792
+[2026-06-23 13:59:19] CVRPTrainer.py(82) : Epoch  20/100: Time Est.: Elapsed[1.94m], Remain[7.76m]
+[2026-06-23 13:59:19] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:19] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 13:59:20] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:25] CVRPTrainer.py(152) : Epoch  21: Train (100%)  Score: 873.4160,  Loss: -468.5623
+[2026-06-23 13:59:25] CVRPTrainer.py(82) : Epoch  21/100: Time Est.: Elapsed[2.04m], Remain[7.69m]
+[2026-06-23 13:59:25] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:25] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:31] CVRPTrainer.py(152) : Epoch  22: Train (100%)  Score: 844.4049,  Loss: -502.0206
+[2026-06-23 13:59:31] CVRPTrainer.py(82) : Epoch  22/100: Time Est.: Elapsed[2.14m], Remain[7.60m]
+[2026-06-23 13:59:31] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:32] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:37] CVRPTrainer.py(152) : Epoch  23: Train (100%)  Score: 833.8365,  Loss: -474.3110
+[2026-06-23 13:59:37] CVRPTrainer.py(82) : Epoch  23/100: Time Est.: Elapsed[2.24m], Remain[7.51m]
+[2026-06-23 13:59:37] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:37] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:43] CVRPTrainer.py(152) : Epoch  24: Train (100%)  Score: 827.2340,  Loss: -497.0878
+[2026-06-23 13:59:43] CVRPTrainer.py(82) : Epoch  24/100: Time Est.: Elapsed[2.34m], Remain[7.40m]
+[2026-06-23 13:59:43] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:43] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:49] CVRPTrainer.py(152) : Epoch  25: Train (100%)  Score: 814.3068,  Loss: -473.2004
+[2026-06-23 13:59:49] CVRPTrainer.py(82) : Epoch  25/100: Time Est.: Elapsed[2.43m], Remain[7.30m]
+[2026-06-23 13:59:49] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:49] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 13:59:55] CVRPTrainer.py(152) : Epoch  26: Train (100%)  Score: 806.8042,  Loss: -439.1885
+[2026-06-23 13:59:55] CVRPTrainer.py(82) : Epoch  26/100: Time Est.: Elapsed[2.53m], Remain[7.21m]
+[2026-06-23 13:59:55] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 13:59:55] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:01] CVRPTrainer.py(152) : Epoch  27: Train (100%)  Score: 790.1911,  Loss: -445.0089
+[2026-06-23 14:00:01] CVRPTrainer.py(82) : Epoch  27/100: Time Est.: Elapsed[2.63m], Remain[7.11m]
+[2026-06-23 14:00:01] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:01] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:07] CVRPTrainer.py(152) : Epoch  28: Train (100%)  Score: 796.1591,  Loss: -448.7136
+[2026-06-23 14:00:07] CVRPTrainer.py(82) : Epoch  28/100: Time Est.: Elapsed[2.73m], Remain[7.02m]
+[2026-06-23 14:00:07] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:07] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:12] CVRPTrainer.py(152) : Epoch  29: Train (100%)  Score: 781.5599,  Loss: -417.6075
+[2026-06-23 14:00:12] CVRPTrainer.py(82) : Epoch  29/100: Time Est.: Elapsed[2.83m], Remain[6.92m]
+[2026-06-23 14:00:12] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:12] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:18] CVRPTrainer.py(152) : Epoch  30: Train (100%)  Score: 761.8622,  Loss: -404.0728
+[2026-06-23 14:00:18] CVRPTrainer.py(82) : Epoch  30/100: Time Est.: Elapsed[2.92m], Remain[6.82m]
+[2026-06-23 14:00:18] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:19] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 14:00:19] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:24] CVRPTrainer.py(152) : Epoch  31: Train (100%)  Score: 761.3618,  Loss: -389.4538
+[2026-06-23 14:00:24] CVRPTrainer.py(82) : Epoch  31/100: Time Est.: Elapsed[3.03m], Remain[6.74m]
+[2026-06-23 14:00:24] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:24] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:30] CVRPTrainer.py(152) : Epoch  32: Train (100%)  Score: 784.9358,  Loss: -416.1167
+[2026-06-23 14:00:30] CVRPTrainer.py(82) : Epoch  32/100: Time Est.: Elapsed[3.12m], Remain[6.64m]
+[2026-06-23 14:00:30] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:30] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:36] CVRPTrainer.py(152) : Epoch  33: Train (100%)  Score: 765.8921,  Loss: -407.8733
+[2026-06-23 14:00:36] CVRPTrainer.py(82) : Epoch  33/100: Time Est.: Elapsed[3.22m], Remain[6.54m]
+[2026-06-23 14:00:36] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:36] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:42] CVRPTrainer.py(152) : Epoch  34: Train (100%)  Score: 788.6366,  Loss: -385.8912
+[2026-06-23 14:00:42] CVRPTrainer.py(82) : Epoch  34/100: Time Est.: Elapsed[3.32m], Remain[6.44m]
+[2026-06-23 14:00:42] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:42] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:48] CVRPTrainer.py(152) : Epoch  35: Train (100%)  Score: 779.4675,  Loss: -389.6438
+[2026-06-23 14:00:48] CVRPTrainer.py(82) : Epoch  35/100: Time Est.: Elapsed[3.41m], Remain[6.34m]
+[2026-06-23 14:00:48] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:48] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:00:54] CVRPTrainer.py(152) : Epoch  36: Train (100%)  Score: 754.8697,  Loss: -402.2998
+[2026-06-23 14:00:54] CVRPTrainer.py(82) : Epoch  36/100: Time Est.: Elapsed[3.52m], Remain[6.25m]
+[2026-06-23 14:00:54] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:00:54] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:00] CVRPTrainer.py(152) : Epoch  37: Train (100%)  Score: 735.3677,  Loss: -375.9886
+[2026-06-23 14:01:00] CVRPTrainer.py(82) : Epoch  37/100: Time Est.: Elapsed[3.61m], Remain[6.15m]
+[2026-06-23 14:01:00] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:00] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:05] CVRPTrainer.py(152) : Epoch  38: Train (100%)  Score: 724.3224,  Loss: -392.2425
+[2026-06-23 14:01:05] CVRPTrainer.py(82) : Epoch  38/100: Time Est.: Elapsed[3.71m], Remain[6.05m]
+[2026-06-23 14:01:05] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:06] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:11] CVRPTrainer.py(152) : Epoch  39: Train (100%)  Score: 731.2277,  Loss: -372.7643
+[2026-06-23 14:01:11] CVRPTrainer.py(82) : Epoch  39/100: Time Est.: Elapsed[3.81m], Remain[5.96m]
+[2026-06-23 14:01:11] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:11] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:17] CVRPTrainer.py(152) : Epoch  40: Train (100%)  Score: 735.8400,  Loss: -367.9568
+[2026-06-23 14:01:17] CVRPTrainer.py(82) : Epoch  40/100: Time Est.: Elapsed[3.91m], Remain[5.87m]
+[2026-06-23 14:01:17] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:18] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 14:01:18] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:24] CVRPTrainer.py(152) : Epoch  41: Train (100%)  Score: 724.5122,  Loss: -372.2134
+[2026-06-23 14:01:24] CVRPTrainer.py(82) : Epoch  41/100: Time Est.: Elapsed[4.02m], Remain[5.78m]
+[2026-06-23 14:01:24] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:24] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:30] CVRPTrainer.py(152) : Epoch  42: Train (100%)  Score: 720.3127,  Loss: -382.7840
+[2026-06-23 14:01:30] CVRPTrainer.py(82) : Epoch  42/100: Time Est.: Elapsed[4.11m], Remain[5.68m]
+[2026-06-23 14:01:30] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:30] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:36] CVRPTrainer.py(152) : Epoch  43: Train (100%)  Score: 702.5686,  Loss: -357.2789
+[2026-06-23 14:01:36] CVRPTrainer.py(82) : Epoch  43/100: Time Est.: Elapsed[4.21m], Remain[5.59m]
+[2026-06-23 14:01:36] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:36] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:42] CVRPTrainer.py(152) : Epoch  44: Train (100%)  Score: 711.9730,  Loss: -388.6768
+[2026-06-23 14:01:42] CVRPTrainer.py(82) : Epoch  44/100: Time Est.: Elapsed[4.32m], Remain[5.49m]
+[2026-06-23 14:01:42] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:42] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:48] CVRPTrainer.py(152) : Epoch  45: Train (100%)  Score: 713.3094,  Loss: -354.8510
+[2026-06-23 14:01:48] CVRPTrainer.py(82) : Epoch  45/100: Time Est.: Elapsed[4.42m], Remain[5.40m]
+[2026-06-23 14:01:48] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:48] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:01:54] CVRPTrainer.py(152) : Epoch  46: Train (100%)  Score: 706.6402,  Loss: -359.1245
+[2026-06-23 14:01:54] CVRPTrainer.py(82) : Epoch  46/100: Time Est.: Elapsed[4.51m], Remain[5.30m]
+[2026-06-23 14:01:54] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:01:54] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:00] CVRPTrainer.py(152) : Epoch  47: Train (100%)  Score: 702.1662,  Loss: -339.0391
+[2026-06-23 14:02:00] CVRPTrainer.py(82) : Epoch  47/100: Time Est.: Elapsed[4.61m], Remain[5.20m]
+[2026-06-23 14:02:00] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:00] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:06] CVRPTrainer.py(152) : Epoch  48: Train (100%)  Score: 697.1511,  Loss: -334.6219
+[2026-06-23 14:02:06] CVRPTrainer.py(82) : Epoch  48/100: Time Est.: Elapsed[4.71m], Remain[5.10m]
+[2026-06-23 14:02:06] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:06] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:11] CVRPTrainer.py(152) : Epoch  49: Train (100%)  Score: 719.8361,  Loss: -350.9099
+[2026-06-23 14:02:11] CVRPTrainer.py(82) : Epoch  49/100: Time Est.: Elapsed[4.81m], Remain[5.01m]
+[2026-06-23 14:02:11] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:11] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:17] CVRPTrainer.py(152) : Epoch  50: Train (100%)  Score: 695.4512,  Loss: -339.8587
+[2026-06-23 14:02:17] CVRPTrainer.py(82) : Epoch  50/100: Time Est.: Elapsed[4.91m], Remain[4.91m]
+[2026-06-23 14:02:17] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:17] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 14:02:17] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:24] CVRPTrainer.py(152) : Epoch  51: Train (100%)  Score: 696.3456,  Loss: -314.8902
+[2026-06-23 14:02:24] CVRPTrainer.py(82) : Epoch  51/100: Time Est.: Elapsed[5.01m], Remain[4.82m]
+[2026-06-23 14:02:24] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:24] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:30] CVRPTrainer.py(152) : Epoch  52: Train (100%)  Score: 688.9713,  Loss: -341.4866
+[2026-06-23 14:02:30] CVRPTrainer.py(82) : Epoch  52/100: Time Est.: Elapsed[5.11m], Remain[4.72m]
+[2026-06-23 14:02:30] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:30] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:36] CVRPTrainer.py(152) : Epoch  53: Train (100%)  Score: 683.2317,  Loss: -321.9316
+[2026-06-23 14:02:36] CVRPTrainer.py(82) : Epoch  53/100: Time Est.: Elapsed[5.21m], Remain[4.62m]
+[2026-06-23 14:02:36] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:36] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:42] CVRPTrainer.py(152) : Epoch  54: Train (100%)  Score: 687.4888,  Loss: -322.8312
+[2026-06-23 14:02:42] CVRPTrainer.py(82) : Epoch  54/100: Time Est.: Elapsed[5.32m], Remain[4.53m]
+[2026-06-23 14:02:42] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:42] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:48] CVRPTrainer.py(152) : Epoch  55: Train (100%)  Score: 685.0424,  Loss: -328.0771
+[2026-06-23 14:02:48] CVRPTrainer.py(82) : Epoch  55/100: Time Est.: Elapsed[5.42m], Remain[4.43m]
+[2026-06-23 14:02:48] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:48] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:02:54] CVRPTrainer.py(152) : Epoch  56: Train (100%)  Score: 667.0238,  Loss: -324.5326
+[2026-06-23 14:02:54] CVRPTrainer.py(82) : Epoch  56/100: Time Est.: Elapsed[5.52m], Remain[4.34m]
+[2026-06-23 14:02:54] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:02:54] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:00] CVRPTrainer.py(152) : Epoch  57: Train (100%)  Score: 685.2950,  Loss: -315.9246
+[2026-06-23 14:03:00] CVRPTrainer.py(82) : Epoch  57/100: Time Est.: Elapsed[5.62m], Remain[4.24m]
+[2026-06-23 14:03:00] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:00] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:06] CVRPTrainer.py(152) : Epoch  58: Train (100%)  Score: 680.0688,  Loss: -326.5887
+[2026-06-23 14:03:06] CVRPTrainer.py(82) : Epoch  58/100: Time Est.: Elapsed[5.72m], Remain[4.14m]
+[2026-06-23 14:03:06] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:06] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:12] CVRPTrainer.py(152) : Epoch  59: Train (100%)  Score: 690.4031,  Loss: -306.7278
+[2026-06-23 14:03:12] CVRPTrainer.py(82) : Epoch  59/100: Time Est.: Elapsed[5.82m], Remain[4.04m]
+[2026-06-23 14:03:12] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:12] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:18] CVRPTrainer.py(152) : Epoch  60: Train (100%)  Score: 668.5662,  Loss: -308.7316
+[2026-06-23 14:03:18] CVRPTrainer.py(82) : Epoch  60/100: Time Est.: Elapsed[5.92m], Remain[3.95m]
+[2026-06-23 14:03:18] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:18] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 14:03:18] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:24] CVRPTrainer.py(152) : Epoch  61: Train (100%)  Score: 662.6372,  Loss: -308.4477
+[2026-06-23 14:03:24] CVRPTrainer.py(82) : Epoch  61/100: Time Est.: Elapsed[6.02m], Remain[3.85m]
+[2026-06-23 14:03:24] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:24] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:30] CVRPTrainer.py(152) : Epoch  62: Train (100%)  Score: 673.4969,  Loss: -303.4587
+[2026-06-23 14:03:30] CVRPTrainer.py(82) : Epoch  62/100: Time Est.: Elapsed[6.12m], Remain[3.75m]
+[2026-06-23 14:03:30] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:30] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:36] CVRPTrainer.py(152) : Epoch  63: Train (100%)  Score: 662.9852,  Loss: -302.5605
+[2026-06-23 14:03:36] CVRPTrainer.py(82) : Epoch  63/100: Time Est.: Elapsed[6.23m], Remain[3.66m]
+[2026-06-23 14:03:36] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:36] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:42] CVRPTrainer.py(152) : Epoch  64: Train (100%)  Score: 669.0112,  Loss: -315.7574
+[2026-06-23 14:03:42] CVRPTrainer.py(82) : Epoch  64/100: Time Est.: Elapsed[6.33m], Remain[3.56m]
+[2026-06-23 14:03:42] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:43] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:48] CVRPTrainer.py(152) : Epoch  65: Train (100%)  Score: 672.6522,  Loss: -304.8963
+[2026-06-23 14:03:48] CVRPTrainer.py(82) : Epoch  65/100: Time Est.: Elapsed[6.43m], Remain[3.46m]
+[2026-06-23 14:03:48] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:49] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:03:54] CVRPTrainer.py(152) : Epoch  66: Train (100%)  Score: 656.2628,  Loss: -323.4600
+[2026-06-23 14:03:54] CVRPTrainer.py(82) : Epoch  66/100: Time Est.: Elapsed[6.53m], Remain[3.36m]
+[2026-06-23 14:03:54] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:03:55] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:01] CVRPTrainer.py(152) : Epoch  67: Train (100%)  Score: 644.3988,  Loss: -286.5464
+[2026-06-23 14:04:01] CVRPTrainer.py(82) : Epoch  67/100: Time Est.: Elapsed[6.63m], Remain[3.27m]
+[2026-06-23 14:04:01] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:01] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:06] CVRPTrainer.py(152) : Epoch  68: Train (100%)  Score: 660.5166,  Loss: -295.9780
+[2026-06-23 14:04:06] CVRPTrainer.py(82) : Epoch  68/100: Time Est.: Elapsed[6.73m], Remain[3.17m]
+[2026-06-23 14:04:06] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:07] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:13] CVRPTrainer.py(152) : Epoch  69: Train (100%)  Score: 641.6563,  Loss: -313.7160
+[2026-06-23 14:04:13] CVRPTrainer.py(82) : Epoch  69/100: Time Est.: Elapsed[6.83m], Remain[3.07m]
+[2026-06-23 14:04:13] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:13] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:18] CVRPTrainer.py(152) : Epoch  70: Train (100%)  Score: 645.0236,  Loss: -294.8567
+[2026-06-23 14:04:18] CVRPTrainer.py(82) : Epoch  70/100: Time Est.: Elapsed[6.93m], Remain[2.97m]
+[2026-06-23 14:04:18] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:19] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 14:04:19] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:25] CVRPTrainer.py(152) : Epoch  71: Train (100%)  Score: 632.9832,  Loss: -286.2846
+[2026-06-23 14:04:25] CVRPTrainer.py(82) : Epoch  71/100: Time Est.: Elapsed[7.03m], Remain[2.87m]
+[2026-06-23 14:04:25] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:25] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:31] CVRPTrainer.py(152) : Epoch  72: Train (100%)  Score: 645.0590,  Loss: -289.5502
+[2026-06-23 14:04:31] CVRPTrainer.py(82) : Epoch  72/100: Time Est.: Elapsed[7.13m], Remain[2.77m]
+[2026-06-23 14:04:31] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:31] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:37] CVRPTrainer.py(152) : Epoch  73: Train (100%)  Score: 639.1486,  Loss: -301.2465
+[2026-06-23 14:04:37] CVRPTrainer.py(82) : Epoch  73/100: Time Est.: Elapsed[7.23m], Remain[2.68m]
+[2026-06-23 14:04:37] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:37] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:43] CVRPTrainer.py(152) : Epoch  74: Train (100%)  Score: 635.8045,  Loss: -286.8623
+[2026-06-23 14:04:43] CVRPTrainer.py(82) : Epoch  74/100: Time Est.: Elapsed[7.34m], Remain[2.58m]
+[2026-06-23 14:04:43] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:43] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:49] CVRPTrainer.py(152) : Epoch  75: Train (100%)  Score: 641.3919,  Loss: -269.9278
+[2026-06-23 14:04:49] CVRPTrainer.py(82) : Epoch  75/100: Time Est.: Elapsed[7.44m], Remain[2.48m]
+[2026-06-23 14:04:49] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:49] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:04:55] CVRPTrainer.py(152) : Epoch  76: Train (100%)  Score: 632.5964,  Loss: -296.1190
+[2026-06-23 14:04:55] CVRPTrainer.py(82) : Epoch  76/100: Time Est.: Elapsed[7.54m], Remain[2.38m]
+[2026-06-23 14:04:55] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:04:55] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:01] CVRPTrainer.py(152) : Epoch  77: Train (100%)  Score: 632.4332,  Loss: -282.0373
+[2026-06-23 14:05:01] CVRPTrainer.py(82) : Epoch  77/100: Time Est.: Elapsed[7.64m], Remain[2.28m]
+[2026-06-23 14:05:01] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:01] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:07] CVRPTrainer.py(152) : Epoch  78: Train (100%)  Score: 628.1731,  Loss: -272.7902
+[2026-06-23 14:05:07] CVRPTrainer.py(82) : Epoch  78/100: Time Est.: Elapsed[7.74m], Remain[2.18m]
+[2026-06-23 14:05:07] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:07] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:13] CVRPTrainer.py(152) : Epoch  79: Train (100%)  Score: 619.7868,  Loss: -265.9484
+[2026-06-23 14:05:13] CVRPTrainer.py(82) : Epoch  79/100: Time Est.: Elapsed[7.84m], Remain[2.08m]
+[2026-06-23 14:05:13] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:13] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:19] CVRPTrainer.py(152) : Epoch  80: Train (100%)  Score: 629.3439,  Loss: -251.7075
+[2026-06-23 14:05:19] CVRPTrainer.py(82) : Epoch  80/100: Time Est.: Elapsed[7.94m], Remain[1.98m]
+[2026-06-23 14:05:19] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:19] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 14:05:19] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:25] CVRPTrainer.py(152) : Epoch  81: Train (100%)  Score: 609.8606,  Loss: -282.2933
+[2026-06-23 14:05:25] CVRPTrainer.py(82) : Epoch  81/100: Time Est.: Elapsed[8.04m], Remain[1.89m]
+[2026-06-23 14:05:25] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:25] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:31] CVRPTrainer.py(152) : Epoch  82: Train (100%)  Score: 612.8239,  Loss: -258.8380
+[2026-06-23 14:05:31] CVRPTrainer.py(82) : Epoch  82/100: Time Est.: Elapsed[8.14m], Remain[1.79m]
+[2026-06-23 14:05:31] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:31] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:37] CVRPTrainer.py(152) : Epoch  83: Train (100%)  Score: 598.4682,  Loss: -275.7513
+[2026-06-23 14:05:37] CVRPTrainer.py(82) : Epoch  83/100: Time Est.: Elapsed[8.23m], Remain[1.69m]
+[2026-06-23 14:05:37] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:37] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:43] CVRPTrainer.py(152) : Epoch  84: Train (100%)  Score: 603.9610,  Loss: -260.6729
+[2026-06-23 14:05:43] CVRPTrainer.py(82) : Epoch  84/100: Time Est.: Elapsed[8.33m], Remain[1.59m]
+[2026-06-23 14:05:43] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:43] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:49] CVRPTrainer.py(152) : Epoch  85: Train (100%)  Score: 600.2451,  Loss: -269.4621
+[2026-06-23 14:05:49] CVRPTrainer.py(82) : Epoch  85/100: Time Est.: Elapsed[8.43m], Remain[1.49m]
+[2026-06-23 14:05:49] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:49] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:05:55] CVRPTrainer.py(152) : Epoch  86: Train (100%)  Score: 598.4783,  Loss: -264.9692
+[2026-06-23 14:05:55] CVRPTrainer.py(82) : Epoch  86/100: Time Est.: Elapsed[8.53m], Remain[1.39m]
+[2026-06-23 14:05:55] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:05:55] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:01] CVRPTrainer.py(152) : Epoch  87: Train (100%)  Score: 598.7386,  Loss: -260.3139
+[2026-06-23 14:06:01] CVRPTrainer.py(82) : Epoch  87/100: Time Est.: Elapsed[8.63m], Remain[1.29m]
+[2026-06-23 14:06:01] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:01] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:07] CVRPTrainer.py(152) : Epoch  88: Train (100%)  Score: 605.9098,  Loss: -266.3886
+[2026-06-23 14:06:07] CVRPTrainer.py(82) : Epoch  88/100: Time Est.: Elapsed[8.73m], Remain[1.19m]
+[2026-06-23 14:06:07] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:07] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:13] CVRPTrainer.py(152) : Epoch  89: Train (100%)  Score: 601.1152,  Loss: -262.1955
+[2026-06-23 14:06:13] CVRPTrainer.py(82) : Epoch  89/100: Time Est.: Elapsed[8.83m], Remain[1.09m]
+[2026-06-23 14:06:13] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:13] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:19] CVRPTrainer.py(152) : Epoch  90: Train (100%)  Score: 605.7701,  Loss: -271.2504
+[2026-06-23 14:06:19] CVRPTrainer.py(82) : Epoch  90/100: Time Est.: Elapsed[8.94m], Remain[0.99m]
+[2026-06-23 14:06:19] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:19] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 14:06:19] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:25] CVRPTrainer.py(152) : Epoch  91: Train (100%)  Score: 598.4707,  Loss: -259.9603
+[2026-06-23 14:06:25] CVRPTrainer.py(82) : Epoch  91/100: Time Est.: Elapsed[9.04m], Remain[0.89m]
+[2026-06-23 14:06:25] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:25] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:31] CVRPTrainer.py(152) : Epoch  92: Train (100%)  Score: 602.6338,  Loss: -271.8976
+[2026-06-23 14:06:31] CVRPTrainer.py(82) : Epoch  92/100: Time Est.: Elapsed[9.14m], Remain[0.79m]
+[2026-06-23 14:06:31] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:31] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:38] CVRPTrainer.py(152) : Epoch  93: Train (100%)  Score: 597.1960,  Loss: -268.9541
+[2026-06-23 14:06:38] CVRPTrainer.py(82) : Epoch  93/100: Time Est.: Elapsed[9.25m], Remain[0.70m]
+[2026-06-23 14:06:38] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:38] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:43] CVRPTrainer.py(152) : Epoch  94: Train (100%)  Score: 602.5791,  Loss: -269.8644
+[2026-06-23 14:06:43] CVRPTrainer.py(82) : Epoch  94/100: Time Est.: Elapsed[9.34m], Remain[0.60m]
+[2026-06-23 14:06:43] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:43] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:49] CVRPTrainer.py(152) : Epoch  95: Train (100%)  Score: 594.2739,  Loss: -277.5988
+[2026-06-23 14:06:49] CVRPTrainer.py(82) : Epoch  95/100: Time Est.: Elapsed[9.44m], Remain[0.50m]
+[2026-06-23 14:06:49] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:49] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:06:55] CVRPTrainer.py(152) : Epoch  96: Train (100%)  Score: 602.7417,  Loss: -274.7045
+[2026-06-23 14:06:55] CVRPTrainer.py(82) : Epoch  96/100: Time Est.: Elapsed[9.53m], Remain[0.40m]
+[2026-06-23 14:06:55] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:06:55] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:07:01] CVRPTrainer.py(152) : Epoch  97: Train (100%)  Score: 593.8462,  Loss: -254.6243
+[2026-06-23 14:07:01] CVRPTrainer.py(82) : Epoch  97/100: Time Est.: Elapsed[9.63m], Remain[0.30m]
+[2026-06-23 14:07:01] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:07:01] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:07:06] CVRPTrainer.py(152) : Epoch  98: Train (100%)  Score: 590.3771,  Loss: -261.0077
+[2026-06-23 14:07:06] CVRPTrainer.py(82) : Epoch  98/100: Time Est.: Elapsed[9.72m], Remain[0.20m]
+[2026-06-23 14:07:06] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:07:06] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:07:12] CVRPTrainer.py(152) : Epoch  99: Train (100%)  Score: 593.3835,  Loss: -262.3990
+[2026-06-23 14:07:12] CVRPTrainer.py(82) : Epoch  99/100: Time Est.: Elapsed[9.82m], Remain[0.10m]
+[2026-06-23 14:07:12] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:07:12] CVRPTrainer.py(68) : =================================================================
+[2026-06-23 14:07:18] CVRPTrainer.py(152) : Epoch 100: Train (100%)  Score: 601.1353,  Loss: -246.1670
+[2026-06-23 14:07:18] CVRPTrainer.py(82) : Epoch 100/100: Time Est.: Elapsed[9.92m], Remain[0.00m]
+[2026-06-23 14:07:18] CVRPTrainer.py(91) : Saving log_image
+[2026-06-23 14:07:18] CVRPTrainer.py(100) : Saving trained_model
+[2026-06-23 14:07:18] CVRPTrainer.py(120) :  *** Training Done *** 
+[2026-06-23 14:07:18] CVRPTrainer.py(121) : Now, printing log array...
+[2026-06-23 14:07:18] utils.py(236) : train_loss_list = [-531.1191425323486, -642.7711448669434, -615.6059913635254, -604.6066017150879, -608.9073829650879, -602.8479042053223, -612.2630767822266, -596.504451751709, -578.8503398895264, -578.5971736907959, -540.3197841644287, -545.8998489379883, -536.6970767974854, -524.6395282745361, -495.15627670288086, -466.02858543395996, -480.51472663879395, -499.98168182373047, -483.266357421875, -488.1791687011719, -468.56225204467773, -502.02063941955566, -474.3110046386719, -497.08777618408203, -473.2003536224365, -439.18852043151855, -445.00891876220703, -448.71356201171875, -417.6074676513672, -404.0728416442871, -389.4538059234619, -416.11666679382324, -407.8733425140381, -385.8911838531494, -389.643798828125, -402.2997760772705, -375.9885787963867, -392.2425022125244, -372.7642650604248, -367.95678520202637, -372.21339416503906, -382.78396797180176, -357.2789306640625, -388.6768264770508, -354.85097885131836, -359.124547958374, -339.0391368865967, -334.6219139099121, -350.90991401672363, -339.85866832733154, -314.89020442962646, -341.48657989501953, -321.93156814575195, -322.83122634887695, -328.07711029052734, -324.5325870513916, -315.9246492385864, -326.5886821746826, -306.7277584075928, -308.7315511703491, -308.44770336151123, -303.4587287902832, -302.56052017211914, -315.7573518753052, -304.89632511138916, -323.45998764038086, -286.54641914367676, -295.97795963287354, -313.7160177230835, -294.856728553772, -286.284628868103, -289.5502128601074, -301.246506690979, -286.8622760772705, -269.92779541015625, -296.11902141571045, -282.037296295166, -272.7901725769043, -265.9484462738037, -251.70754432678223, -282.2933397293091, -258.83799934387207, -275.75128746032715, -260.6729383468628, -269.4621067047119, -264.96918869018555, -260.3138837814331, -266.38860034942627, -262.1954860687256, -271.2503719329834, -259.96031188964844, -271.8975992202759, -268.9540910720825, -269.8644380569458, -277.5987730026245, -274.7044553756714, -254.62430000305176, -261.0077486038208, -262.3989667892456, -246.1669807434082]
+[2026-06-23 14:07:18] utils.py(236) : train_score_list = [2828.770278930664, 1659.6095657348633, 1442.9161682128906, 1362.563003540039, 1289.4888763427734, 1264.075180053711, 1242.2097702026367, 1202.6873779296875, 1167.716049194336, 1131.9496002197266, 1112.495216369629, 1071.7790908813477, 1037.1377449035645, 998.1225357055664, 973.5395240783691, 944.4922332763672, 921.9454154968262, 905.3738441467285, 894.9388771057129, 871.4829940795898, 873.4160461425781, 844.4048805236816, 833.8364601135254, 827.2340316772461, 814.3067932128906, 806.8041915893555, 790.1910514831543, 796.1590538024902, 781.5599174499512, 761.8621520996094, 761.3618469238281, 784.9357528686523, 765.8921012878418, 788.6366310119629, 779.4674682617188, 754.8697471618652, 735.3677101135254, 724.3224105834961, 731.2276878356934, 735.8399963378906, 724.5121841430664, 720.3127403259277, 702.5686302185059, 711.9730224609375, 713.3094062805176, 706.6402435302734, 702.1661682128906, 697.1510925292969, 719.8360557556152, 695.4512481689453, 696.3455772399902, 688.9712791442871, 683.2317314147949, 687.4888458251953, 685.0424194335938, 667.0238304138184, 685.2950057983398, 680.0687789916992, 690.4031181335449, 668.5661735534668, 662.6372413635254, 673.4969024658203, 662.9851608276367, 669.0111618041992, 672.6522445678711, 656.2627716064453, 644.3988342285156, 660.5166320800781, 641.6562843322754, 645.023609161377, 632.9831809997559, 645.0590324401855, 639.1485824584961, 635.804515838623, 641.3918991088867, 632.5964279174805, 632.4331855773926, 628.1730651855469, 619.7868041992188, 629.3438720703125, 609.8605804443359, 612.8238906860352, 598.4681587219238, 603.961009979248, 600.2450752258301, 598.4783325195312, 598.7386169433594, 605.9097709655762, 601.1152191162109, 605.7701148986816, 598.4706611633301, 602.6337547302246, 597.1959762573242, 602.5790748596191, 594.2738876342773, 602.7416763305664, 593.8462295532227, 590.3771095275879, 593.3835372924805, 601.1352806091309]

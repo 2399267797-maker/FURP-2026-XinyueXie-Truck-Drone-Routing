@@ -1,0 +1,7 @@
+[2026-06-23 13:53:59] test_n100.py(107) : DEBUG_MODE: False
+[2026-06-23 13:53:59] test_n100.py(108) : USE_CUDA: True, CUDA_DEVICE_NUM: 0
+[2026-06-23 13:53:59] test_n100.py(109) : env_params{'problem_size': 50, 'pomo_size': 50}
+[2026-06-23 13:53:59] test_n100.py(109) : model_params{'embedding_dim': 128, 'sqrt_embedding_dim': 11.313708498984761, 'encoder_layer_num': 6, 'qkv_dim': 16, 'head_num': 8, 'logit_clipping': 8, 'ff_hidden_dim': 512, 'eval_type': 'argmax'}
+[2026-06-23 13:53:59] test_n100.py(109) : tester_params{'use_cuda': True, 'cuda_device_num': 0, 'model_load': {'path': './result/20260623_135527_train_cvrp_n100_with_instNorm', 'epoch': 100}, 'test_episodes': 1024, 'test_batch_size': 400, 'augmentation_enable': True, 'aug_factor': 8, 'aug_batch_size': 400, 'test_data_load': {'enable': True, 'filename': '../vrp100_test_seed1234.pt'}}
+[2026-06-23 13:53:59] test_n100.py(109) : logger_params{'log_file': {'desc': 'test_cvrp50', 'filename': 'log.txt', 'filepath': './result/20260623_145358_test_cvrp50'}}
+[2026-06-23 13:53:59] CVRPTester.py(51) : ✓ 模型加载成功 (完整checkpoint)

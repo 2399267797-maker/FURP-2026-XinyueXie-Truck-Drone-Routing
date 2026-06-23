@@ -158,11 +158,6 @@ class CVRPTester:
                 energy_str = f"{state.current_energy[0,0].item():.3f}" if state.current_energy is not None else 'N/A'
                 self.logger.info(f"Step {step_count}: selected={selected[0,0].item()}, valid_nodes={valid_nodes}/{self.env.problem_size+1}, load={state.load[0,0].item():.3f}, time={state.current_time[0,0].item():.3f}, energy={energy_str}")
                 
-                # 输出depot_node_demand的前5个值（调试demand处理）
-                if step_count == 5:
-                    self.logger.info(f"  depot_node_demand[0,:5]: {self.env.depot_node_demand[0,:5].tolist()}")
-                    self.logger.info(f"  selected_demand计算: 节点{selected[0,0].item()}的需求")
-                
                 # 输出前10个可选节点的索引
                 if step_count <= 15:
                     valid_indices = (state.ninf_mask[0, 0] == 0).nonzero().squeeze().tolist()

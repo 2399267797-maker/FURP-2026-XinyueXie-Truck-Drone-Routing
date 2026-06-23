@@ -30,6 +30,28 @@
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
 
+---
+
+## Week template — copy me
+
+### Week 2 — 2026-6-12
+
+**Attended this week's meeting:** Yes 
+
+**Progress this week**
+- Download ROS2 turtlesim
+- finish Week3 lab
+**Challenges & blockers**
+-POMO takes a long time to train
+
+**Next steps**
+- week3 lab
+
+**Hours spent (optional):** 72
+
+**Links (optional):**[link for report2](src/Week2-report.md)
+
+---
 ### Week 1 — 2026-06-08
 
 **Attended this week's meeting:** No
@@ -47,3 +69,5 @@
 **Hours spent (optional):** 4h
 
 **Links (optional):**[link for report](src/Week1-lab.md)
+
+

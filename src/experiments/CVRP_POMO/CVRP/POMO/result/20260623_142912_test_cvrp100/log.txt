@@ -1,0 +1,132 @@
+[2026-06-23 13:29:12] CVRPTester.py(53) : ✓ 模型加载成功 (完整checkpoint)
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=12
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0010, avg_other_prob=0.0100, argmax=28
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9991, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 5: selected=0, valid_nodes=97/101, load=1.000, time=0.682, energy=N/A
+[2026-06-23 13:29:13] CVRPTester.py(163) :   depot_node_demand[0,:5]: [0.0, 0.20000000298023224, 0.14000000059604645, 0.25999999046325684, 0.3799999952316284]
+[2026-06-23 13:29:13] CVRPTester.py(164) :   selected_demand计算: 节点0的需求
+[2026-06-23 13:29:13] CVRPTester.py(171) :   可选节点（前10个）: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=78
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=29
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=24
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0002, avg_other_prob=0.0100, argmax=34
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0355, avg_other_prob=0.0096, argmax=54
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 10: selected=54, valid_nodes=9/101, load=0.060, time=2.025, energy=N/A
+[2026-06-23 13:29:13] CVRPTester.py(171) :   可选节点（前10个）: [0, 6, 17, 46, 55, 60, 90, 91, 92]
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9999, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=35
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=25
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=65
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.6647, avg_other_prob=0.0034, argmax=0
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 15: selected=0, valid_nodes=89/101, load=1.000, time=5.048, energy=N/A
+[2026-06-23 13:29:13] CVRPTester.py(171) :   可选节点（前10个）: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=80
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=79
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0658, avg_other_prob=0.0093, argmax=77
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9347, avg_other_prob=0.0007, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=33
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 20: selected=33, valid_nodes=85/101, load=0.780, time=6.270, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=3
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0171, avg_other_prob=0.0098, argmax=76
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.8097, avg_other_prob=0.0019, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=51
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=9
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 25: selected=9, valid_nodes=65/101, load=0.480, time=7.180, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.3035, avg_other_prob=0.0070, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=50
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=81
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9710, avg_other_prob=0.0003, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=71
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 30: selected=71, valid_nodes=76/101, load=0.700, time=8.999, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0834, avg_other_prob=0.0092, argmax=55
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.2859, avg_other_prob=0.0071, argmax=20
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.8717, avg_other_prob=0.0013, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=70
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0003, avg_other_prob=0.0100, argmax=66
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 35: selected=66, valid_nodes=56/101, load=0.400, time=11.259, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9696, avg_other_prob=0.0003, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=69
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0001, avg_other_prob=0.0100, argmax=30
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9271, avg_other_prob=0.0007, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=90
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 40: selected=90, valid_nodes=72/101, load=0.940, time=12.946, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0032, avg_other_prob=0.0100, argmax=32
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.8110, avg_other_prob=0.0019, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=27
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=53
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0002, avg_other_prob=0.0100, argmax=26
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 45: selected=26, valid_nodes=7/101, load=0.060, time=13.789, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9983, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=88
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=10
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9261, avg_other_prob=0.0007, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=63
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 50: selected=63, valid_nodes=64/101, load=0.800, time=15.172, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0050, avg_other_prob=0.0100, argmax=64
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0356, avg_other_prob=0.0096, argmax=11
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9612, avg_other_prob=0.0004, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=7
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0001, avg_other_prob=0.0100, argmax=62
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 55: selected=62, valid_nodes=50/101, load=0.520, time=16.464, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9702, avg_other_prob=0.0003, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=68
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9938, avg_other_prob=0.0001, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=52
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=89
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 60: selected=89, valid_nodes=48/101, load=0.520, time=17.746, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=18
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9360, avg_other_prob=0.0006, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=31
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9963, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=6
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 65: selected=6, valid_nodes=55/101, load=0.940, time=18.744, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=60
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=83
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0001, avg_other_prob=0.0100, argmax=82
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.9951, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=46
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 70: selected=46, valid_nodes=51/101, load=0.980, time=19.961, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0056, avg_other_prob=0.0099, argmax=19
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.5030, avg_other_prob=0.0050, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=40
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=58
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0073, avg_other_prob=0.0099, argmax=13
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 75: selected=13, valid_nodes=1/101, load=-0.000, time=20.987, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=1.0000, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=36
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0966, avg_other_prob=0.0090, argmax=49
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=1.0000, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=8
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 80: selected=8, valid_nodes=44/101, load=0.820, time=22.907, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0002, avg_other_prob=0.0100, argmax=84
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0001, avg_other_prob=0.0100, argmax=17
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0001, avg_other_prob=0.0100, argmax=91
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=61
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.7255, avg_other_prob=0.0027, argmax=0
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 85: selected=0, valid_nodes=39/101, load=1.000, time=23.843, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=92
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=99
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=96
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=95
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=1.0000, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 90: selected=0, valid_nodes=35/101, load=1.000, time=24.480, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=4
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0007, avg_other_prob=0.0100, argmax=47
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=1.0000, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=21
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0004, avg_other_prob=0.0100, argmax=73
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 95: selected=73, valid_nodes=28/101, load=0.600, time=26.521, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0014, avg_other_prob=0.0100, argmax=94
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=1.0000, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=56
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0007, avg_other_prob=0.0100, argmax=48
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=1.0000, avg_other_prob=0.0000, argmax=0
+[2026-06-23 13:29:13] CVRPTester.py(159) : Step 100: selected=0, valid_nodes=28/101, load=1.000, time=28.650, energy=N/A
+[2026-06-23 13:29:13] CVRPModel.py(100) : [DEBUG] 模型输出: depot_prob=0.0000, avg_other_prob=0.0100, argmax=2
+[2026-06-23 13:29:13] CVRPTester.py(175) : ⚠ 超过 100 步，强制停止
+[2026-06-23 13:29:13] CVRPTester.py(176) : 选择的节点序列: [0, 1, 12, 28, 0, 78, 29, 24, 34, 54, 0, 35, 25, 65, 0, 80, 79, 77, 0, 33, 3, 76, 0, 51, 9, 0, 50, 81, 0, 71, 55, 20, 0, 70, 66, 0, 69, 30, 0, 90, 32, 0, 27, 53, 26, 0, 88, 10, 0, 63]
+[2026-06-23 13:29:13] CVRPTester.py(181) : 强制计算的reward形状: torch.Size([1, 100])
+[2026-06-23 13:29:13] CVRPTester.py(108) : episode   1/  1, Elapsed[0.01m], Remain[0.00m], score:25.861, aug_score:25.861
+[2026-06-23 13:29:13] CVRPTester.py(114) :  *** Test Done *** 
+[2026-06-23 13:29:13] CVRPTester.py(115) :  NO-AUG SCORE: 25.8610 
+[2026-06-23 13:29:13] CVRPTester.py(116) :  AUGMENTATION SCORE: 25.8610 

@@ -13,14 +13,8 @@ from .utils import make_dirs_for_file, exist, load_instance, merge_rules
 
 
 def ind2route(individual, instance, energy_constraint=False, battery_capacity=None, energy_consumption=None,
-              hard_time_window=False):
-    '''gavrptw.core.ind2route(individual, instance, energy_constraint=False, battery_capacity=None, 
-        energy_consumption=None, hard_time_window=False)
-        
-        New parameter: hard_time_window - if True, uses hard constraint (start new route if late)
-                       instead of soft constraint (penalty cost for late arrival)
-        NOTE: Aligned with CVRP-POMO TW constraint when hard_time_window=True
-    '''
+              hard_time_window=False, hard_energy_constraint=False): # 【新增：硬约束开关参数】
+    '''gavrptw.core.ind2route(...)'''
     route = []
     vehicle_capacity = instance['vehicle_capacity']
     depart_due_time = instance['depart']['due_time']
@@ -36,23 +30,16 @@ def ind2route(individual, instance, energy_constraint=False, battery_capacity=No
         # Calculate distance to next customer
         distance_to_customer = instance['distance_matrix'][last_customer_id][customer_id]
         
-        # Check energy constraint if enabled
-        if energy_constraint:
+        # 【修改：判断电量是否作为硬约束强制切分路线】
+        is_out_of_energy = False
+        if energy_constraint and hard_energy_constraint:
             # Energy needed to reach customer and return to depot
             distance_to_depot = instance['distance_matrix'][customer_id][0]
             total_energy_needed = (distance_to_customer + distance_to_depot) * energy_consumption
             
-            # If not enough energy to reach customer and return to depot, start new route
+            # If not enough energy and it's a HARD constraint, trigger route split
             if remaining_energy < total_energy_needed:
-                if sub_route != []:
-                    route.append(sub_route)
-                # Start new route from depot (recharge)
-                sub_route = [customer_id]
-                vehicle_load = instance[f'customer_{customer_id}']['demand']
-                elapsed_time = instance['distance_matrix'][0][customer_id] + instance[f'customer_{customer_id}']['service_time']
-                remaining_energy = battery_capacity - distance_to_customer * energy_consumption
-                last_customer_id = customer_id
-                continue
+                is_out_of_energy = True
         
         # Update vehicle load
         demand = instance[f'customer_{customer_id}']['demand']
@@ -69,8 +56,8 @@ def ind2route(individual, instance, energy_constraint=False, battery_capacity=No
             if arrival_time > instance[f'customer_{customer_id}']['due_time']:
                 is_late = True
         
-        # Validate vehicle load, elapsed time, and time window
-        if (updated_vehicle_load <= vehicle_capacity) and (updated_elapsed_time <= depart_due_time) and (not is_late):
+        # Validate vehicle load, elapsed time, and time window AND energy
+        if (updated_vehicle_load <= vehicle_capacity) and (updated_elapsed_time <= depart_due_time) and (not is_late) and (not is_out_of_energy):
             # Add to current sub-route
             sub_route.append(customer_id)
             vehicle_load = updated_vehicle_load
@@ -116,24 +103,20 @@ def print_route(route, merge=False):
 
 def eval_vrptw(individual, instance, unit_cost=1.0, init_cost=0, wait_cost=0, delay_cost=0, 
                energy_constraint=False, battery_capacity=None, energy_consumption=None,
-               hard_time_window=False):
-    '''gavrptw.core.eval_vrptw(individual, instance, unit_cost=1.0, init_cost=0, wait_cost=0,
-        delay_cost=0, energy_constraint=False, battery_capacity=None, energy_consumption=None,
-        hard_time_window=False)
-        
-        New parameter: hard_time_window - if True, uses hard constraint (infeasible if late)
-                       instead of soft constraint (penalty cost for late arrival)
-        NOTE: Aligned with CVRP-POMO TW constraint when hard_time_window=True
-    '''
+               hard_time_window=False, hard_energy_constraint=False, energy_penalty_cost=5.0): # 【新增：电量软惩罚系数】
+    '''gavrptw.core.eval_vrptw(...)'''
     total_cost = 0
     route = ind2route(individual, instance, energy_constraint, battery_capacity, energy_consumption,
-                     hard_time_window=hard_time_window)
+                      hard_time_window=hard_time_window, hard_energy_constraint=hard_energy_constraint)
     total_cost = 0
     for sub_route in route:
         sub_route_time_cost = 0
+        sub_route_energy_cost = 0 # 【新增：追踪子路线的缺电罚单】
         sub_route_distance = 0
         elapsed_time = 0
         last_customer_id = 0
+        remaining_energy = battery_capacity if energy_constraint else None
+        
         for customer_id in sub_route:
             # Calculate section distance
             distance = instance['distance_matrix'][last_customer_id][customer_id]
@@ -141,29 +124,48 @@ def eval_vrptw(individual, instance, unit_cost=1.0, init_cost=0, wait_cost=0, de
             sub_route_distance = sub_route_distance + distance
             # Calculate time cost
             arrival_time = elapsed_time + distance
+            
             # POMO-aligned hard TW constraint: infeasible if late
             if hard_time_window:
                 if arrival_time > instance[f'customer_{customer_id}']['due_time']:
                     # Hard constraint violated - return infeasible
                     return (0.0,)  # Zero fitness = infeasible
             else:
-                # Soft TW constraint: penalty for late/early arrival
-                time_cost = wait_cost * max(instance[f'customer_{customer_id}']['ready_time'] - \
-                    arrival_time, 0) + delay_cost * max(arrival_time - \
-                    instance[f'customer_{customer_id}']['due_time'], 0)
-                # Update sub-route time cost
+                # Soft TW constraint: penalty for late/early arrival (已经包含了你的时间软惩罚逻辑)
+                time_cost = wait_cost * max(instance[f'customer_{customer_id}']['ready_time'] - arrival_time, 0) + \
+                            delay_cost * max(arrival_time - instance[f'customer_{customer_id}']['due_time'], 0)
                 sub_route_time_cost = sub_route_time_cost + time_cost
+            
+            # 【新增：计算耗电与软惩罚】
+            if energy_constraint:
+                remaining_energy -= distance * energy_consumption
+                if not hard_energy_constraint and remaining_energy < 0:
+                    # 如果变成负数，累加巨额罚金 (类似 DRL 中的惩罚)
+                    sub_route_energy_cost += (-remaining_energy) * energy_penalty_cost
+            
             # Update elapsed time
             elapsed_time = arrival_time + instance[f'customer_{customer_id}']['service_time']
             # Update last customer ID
             last_customer_id = customer_id
-        # Calculate transport cost
-        sub_route_distance = sub_route_distance + instance['distance_matrix'][last_customer_id][0]
+            
+        # Calculate transport cost (return to depot)
+        return_distance = instance['distance_matrix'][last_customer_id][0]
+        sub_route_distance = sub_route_distance + return_distance
+        
+        # 【新增：回程也要算电量，如果因为回不来导致没电，一样要扣分】
+        if energy_constraint:
+            remaining_energy -= return_distance * energy_consumption
+            if not hard_energy_constraint and remaining_energy < 0:
+                sub_route_energy_cost += (-remaining_energy) * energy_penalty_cost
+                
         sub_route_transport_cost = init_cost + unit_cost * sub_route_distance
-        # Obtain sub-route cost
-        sub_route_cost = sub_route_time_cost + sub_route_transport_cost
+        
+        # 【修改：将电量超标的罚金算进总成本里】
+        sub_route_cost = sub_route_time_cost + sub_route_transport_cost + sub_route_energy_cost
+        
         # Update total cost
         total_cost = total_cost + sub_route_cost
+        
     fitness = 1.0 / total_cost if total_cost > 0 else 0.0
     return (fitness, )
 
@@ -197,15 +199,9 @@ def mut_inverse_indexes(individual):
 
 def run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost, ind_size, pop_size, \
     cx_pb, mut_pb, n_gen, export_csv=False, customize_data=False, energy_constraint=False, \
-    battery_capacity=None, energy_consumption=None, hard_time_window=False):
-    '''gavrptw.core.run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost,
-        ind_size, pop_size, cx_pb, mut_pb, n_gen, export_csv=False, customize_data=False,
-        energy_constraint=False, battery_capacity=None, energy_consumption=None, hard_time_window=False)
-        
-        New parameter: hard_time_window - if True, uses hard constraint (infeasible if late)
-                       instead of soft constraint (penalty cost for late arrival)
-        NOTE: Aligned with CVRP-POMO TW constraint when hard_time_window=True
-    '''
+    battery_capacity=None, energy_consumption=None, hard_time_window=False, 
+    hard_energy_constraint=False, energy_penalty_cost=5.0): # 【新增相关参数】
+    '''gavrptw.core.run_gavrptw(...)'''
     if customize_data:
         json_data_dir = os.path.join(BASE_DIR, 'data', 'json_customize')
     else:
@@ -217,28 +213,30 @@ def run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost, ind_
     
     # Calculate battery capacity if not provided and energy constraint is enabled
     if energy_constraint and battery_capacity is None:
-        # battery_capacity = sqrt(2) * problem_size / 10 * (0.8 ~ 1.2)
         problem_size = ind_size  # Assuming ind_size equals number of customers
         battery_capacity = (np.sqrt(2) * problem_size / 10) * (0.8 + random.random() * 0.4)
     
     # Calculate energy consumption if not provided and energy constraint is enabled
     if energy_constraint and energy_consumption is None:
-        # energy_consumption = 1.0 ~ 1.2
         energy_consumption = 1.0 + random.random() * 0.2
     
     # Print constraint info if enabled
     if energy_constraint:
-        print(f'\nEnergy Constraint Enabled (E):')
-        print(f'  Battery Capacity: {battery_capacity:.2f}')
-        print(f'  Energy Consumption Rate: {energy_consumption:.2f}')
-        print(f'  Energy Check: remaining_energy >= distance_to_node + distance_to_depot')
-    
+        if hard_energy_constraint:
+            print(f'\nEnergy Constraint (E) - Hard Mode:')
+            print(f'  Battery Capacity: {battery_capacity:.2f}, Consumption Rate: {energy_consumption:.2f}')
+            print(f'  Rule: Forces route split when energy is insufficient')
+        else:
+            print(f'\nEnergy Constraint (E) - Soft Mode:')
+            print(f'  Battery Capacity: {battery_capacity:.2f}, Consumption Rate: {energy_consumption:.2f}')
+            print(f'  Rule: Allows negative battery but adds penalty cost (weight: {energy_penalty_cost})')
+            
     if hard_time_window:
         print(f'\nTime Window Constraint (TW) - Hard Mode:')
-        print(f'  Late arrival = infeasible (ninf_mask)')
+        print(f'  Late arrival = infeasible (Fitness 0)')
     else:
         print(f'\nTime Window Constraint (TW) - Soft Mode:')
-        print(f'  Late arrival = penalty cost')
+        print(f'  Late arrival = penalty cost (added to total route cost)')
     
     creator.create('FitnessMax', base.Fitness, weights=(1.0, ))
     creator.create('Individual', list, fitness=creator.FitnessMax)
@@ -248,11 +246,14 @@ def run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost, ind_
     # Structure initializers
     toolbox.register('individual', tools.initIterate, creator.Individual, toolbox.indexes)
     toolbox.register('population', tools.initRepeat, list, toolbox.individual)
-    # Operator registering
+    
+    # 【修改：将新参数注册进 evaluate 函数里】
     toolbox.register('evaluate', eval_vrptw, instance=instance, unit_cost=unit_cost, \
         init_cost=init_cost, wait_cost=wait_cost, delay_cost=delay_cost, \
         energy_constraint=energy_constraint, battery_capacity=battery_capacity, \
-        energy_consumption=energy_consumption, hard_time_window=hard_time_window)
+        energy_consumption=energy_consumption, hard_time_window=hard_time_window, \
+        hard_energy_constraint=hard_energy_constraint, energy_penalty_cost=energy_penalty_cost)
+        
     toolbox.register('select', tools.selRoulette)
     toolbox.register('mate', cx_partially_matched)
     toolbox.register('mutate', mut_inverse_indexes)
@@ -315,13 +316,18 @@ def run_gavrptw(instance_name, unit_cost, init_cost, wait_cost, delay_cost, ind_
     best_ind = tools.selBest(pop, 1)[0]
     print(f'Best individual: {best_ind}')
     print(f'Fitness: {best_ind.fitness.values[0]}')
-    print_route(ind2route(best_ind, instance, energy_constraint, battery_capacity, energy_consumption, hard_time_window))
+    
+    # 【修改：打印最佳路线时传入硬约束状态】
+    print_route(ind2route(best_ind, instance, energy_constraint, battery_capacity, energy_consumption, 
+                          hard_time_window=hard_time_window, hard_energy_constraint=hard_energy_constraint))
+                          
     print(f'Total cost: {1 / best_ind.fitness.values[0]}')
     if export_csv:
+        # 【修改：将硬约束开关的状态也记录在文件名中】
         csv_file_name = f'{instance_name}_uC{unit_cost}_iC{init_cost}_wC{wait_cost}' \
             f'_dC{delay_cost}_iS{ind_size}_pS{pop_size}_cP{cx_pb}_mP{mut_pb}_nG{n_gen}' \
             f'_eC{int(energy_constraint)}_bC{battery_capacity:.1f}_eR{energy_consumption:.2f}' \
-            f'_hTW{int(hard_time_window)}.csv'
+            f'_hTW{int(hard_time_window)}_hE{int(hard_energy_constraint)}.csv'
         csv_file = os.path.join(BASE_DIR, 'results', csv_file_name)
         print(f'Write to file: {csv_file}')
         make_dirs_for_file(path=csv_file)

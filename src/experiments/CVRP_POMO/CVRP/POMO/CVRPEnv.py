@@ -118,18 +118,6 @@ class CVRPEnv:
         self.saved_energy_consumption = loaded_dict.get('energy_consumption', None)
         self.saved_index = 0
 
-    def use_saved_problems_from_dict(self, data_dict):
-        """Load problems from a dictionary instead of a file"""
-        self.FLAG__use_saved_problems = True
-        
-        self.saved_depot_xy = data_dict['depot_xy']
-        self.saved_node_xy = data_dict['node_xy']
-        self.saved_node_demand = data_dict['node_demand']
-        self.saved_node_time_windows = data_dict.get('node_time_windows', None)
-        self.saved_battery_capacity = data_dict.get('battery_capacity', None)
-        self.saved_energy_consumption = data_dict.get('energy_consumption', None)
-        self.saved_index = 0
-
     def load_problems(self, batch_size, aug_factor=1):
         self.batch_size = batch_size
 
