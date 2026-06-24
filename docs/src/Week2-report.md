@@ -182,7 +182,7 @@ energy_consumption = torch.ones(batch_size) * (1.0 + torch.rand(batch_size) * 0.
 |---|---|---|---|---|---|---|
 |CVRP-POMO (无增强)|100客户|50.49|0.15分钟|✅ 可行|E + TW（软约束）|RL|
 |CVRP-POMO (8×增强)|100客户|40.85|0.15分钟|✅ 可行|E + TW（软约束）|RL|
-|E-VRPTW (GA)|100客户|~2.03e-05|约100代|✅ 可行|E + TW（硬约束）|GA|
+|E-VRPTW (GA)|100客户|~2.03e-05|约100代|✅ 可行|E + TW（软约束）|GA|
 |ETRD-NL (MILP)|7客户|38.79|60.01秒|✅ 最优|E + 非线性充电|MILP|
 |ETRD-NL (MILP)|15客户|132.23|118.80秒|✅ 最优|E + 非线性充电|MILP|
 |ETRD-NL (MILP)|30客户|443.47|174.74秒|✅ 最优|E + 非线性充电|MILP|
@@ -321,4 +321,4 @@ print(f"实际容量范围: [{battery_cap_base * 0.8:.2f}, {battery_cap_base * 1
 |-------|-------|-----|-------|---------|------|
 |CVRP-POMO |CVRP + E + TW| 强化学习 (RL) |100|- 模型地址：`src\experiments\CVRP_POMO\CVRP\POMO\result\20260623_135527_train_cvrp_n100_with_instNorm\checkpoint-100.pt `- 结果对比（test结果）:`src\experiments\CVRP_POMO\CVRP\POMO\result\20260623_151248_test_cvrp100\log.txt`|test_n100.py|
 |E-VRPTW |VRPTW + E |遗传算法 (GA) |100|`FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\E-VRPTW\results\100.csv`|sample_R101.py
-|ETRD-NL| ETRD-NL + 非线性充电 |-OR(MIPS): 7(tiny)/15(small)/30(medium)-ALNS:50/60(large)/100/200|OR (MILP精确求解) + ALNS启发式|`src\experiments\ETRD-NL\results`|hybrid_solver.py
+|ETRD-NL| ETRD-NL + 非线性充电 |OR (MILP精确求解) + ALNS启发式|-OR(MIPS): 7(tiny)/15(small)/30(medium)-ALNS:50/60(large)/100/200|`src\experiments\ETRD-NL\results`|hybrid_solver.py
