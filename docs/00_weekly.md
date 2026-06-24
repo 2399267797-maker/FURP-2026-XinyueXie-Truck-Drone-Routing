@@ -49,7 +49,7 @@
 
 **Hours spent (optional):** 72
 
-**Links (optional):**[link for report2](src/Week2 -report.md)
+**Links (optional):**[link for report2](src/Week2-report.md)
 
 ---
 ### Week 1 — 2026-06-08
