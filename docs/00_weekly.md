@@ -29,10 +29,23 @@
 ---
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
+### Week 3 — 2026-6-24
 
+**Attended this week's meeting:** Yes 
+
+**Progress this week**
+- finish Week3 lab
+**Challenges & blockers**
+- PACO takes a long time to train
+- Hard to get ideal results
+
+**Next steps**
+- week4 lab
+
+**Hours spent (optional):** 72
+
+**Links (optional):**[link for report2](src/Week2-report.md)
 ---
-
-## Week template — copy me
 
 ### Week 2 — 2026-6-12
 
@@ -40,7 +53,7 @@
 
 **Progress this week**
 - Download ROS2 turtlesim
-- finish Week3 lab
+- finish Week2 lab
 **Challenges & blockers**
 -POMO takes a long time to train
 
