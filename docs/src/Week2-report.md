@@ -182,7 +182,7 @@ energy_consumption = torch.ones(batch_size) * (1.0 + torch.rand(batch_size) * 0.
 |---|---|---|---|---|---|---|
 |CVRP-POMO (无增强)|100客户|50.49|0.15分钟|✅ 可行|E + TW（软约束）|RL|
 |CVRP-POMO (8×增强)|100客户|40.85|0.15分钟|✅ 可行|E + TW（软约束）|RL|
-|E-VRPTW (GA)|100客户|~2.03e-05|约100代|✅ 可行|E + TW（软约束）|GA|
+|E-VRPTW (GA)|100客户|~1.495e-05|约100代|✅ 可行|E + TW（软约束）|GA|
 |ETRD-NL (MILP)|7客户|38.79|60.01秒|✅ 最优|E + 非线性充电|MILP|
 |ETRD-NL (MILP)|15客户|132.23|118.80秒|✅ 最优|E + 非线性充电|MILP|
 |ETRD-NL (MILP)|30客户|443.47|174.74秒|✅ 最优|E + 非线性充电|MILP|
