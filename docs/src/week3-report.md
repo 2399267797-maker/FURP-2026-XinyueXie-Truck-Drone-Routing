@@ -196,12 +196,12 @@ Experiments were run on the following environment:
 
 ### 2.4 Pareto Front Visualizations
 
-![25c RC1 medium](FURP-2026-XinyueXie-Truck-Drone-Routing/src/experiments/PACO_vs_NSGA2/results/pareto_25c_RC101_medium.png)
-![25c RC2 medium](FURP-2026-XinyueXie-Truck-Drone-Routing/src/experiments/PACO_vs_NSGA2/results/pareto_25c_RC201_medium.png)
-![50c 4T+4D RC1 medium](FURP-2026-XinyueXie-Truck-Drone-Routing/src/experiments/PACO_vs_NSGA2/results/pareto_50c_RC101_medium.png)
-![50c 4T+4D RC2 medium](FURP-2026-XinyueXie-Truck-Drone-Routing/src/experiments/PACO_vs_NSGA2/results/pareto_50c_RC201_medium.png)
-![50c 6T+6D RC1 medium](FURP-2026-XinyueXie-Truck-Drone-Routing/src/experiments/PACO_vs_NSGA2/results/6D_pareto_50c_RC101_medium.png)
-![50c 6T+6D RC2 medium](FURP-2026-XinyueXie-Truck-Drone-Routing/src/experiments/PACO_vs_NSGA2/results/6D_pareto_50c_RC201_medium.png)
+![25c RC1 medium](../../src/experiments/PACO_vs_NSGA2/results/pareto_25c_RC101_medium.png)
+![25c RC2 medium](../../src/experiments/PACO_vs_NSGA2/results/pareto_25c_RC201_medium.png)
+![50c 4T+4D RC1 medium](../../src/experiments/PACO_vs_NSGA2/results/pareto_50c_RC101_medium.png)
+![50c 4T+4D RC2 medium](../../src/experiments/PACO_vs_NSGA2/results/pareto_50c_RC201_medium.png)
+![50c 6T+6D RC1 medium](../../src/experiments/PACO_vs_NSGA2/results/6D_pareto_50c_RC101_medium.png)
+![50c 6T+6D RC2 medium](../../src/experiments/PACO_vs_NSGA2/results/6D_pareto_50c_RC201_medium.png)
 
 - X-axis: Travel Cost, range 60–160
 - Y-axis: Tardiness, range 60–140
@@ -212,11 +212,11 @@ Experiments were run on the following environment:
 
 #### P-ACO Route Example (25c RC1 medium best solution)
 
-![P-ACO 25c RC1 medium](file:///c:/Users/23992/FURP-2026-XinyueXie-Truck-Drone-Routing/src/experiments/PACO_vs_NSGA2/results/paco_25c_RC101_medium.png)
+![P-ACO 25c RC1 medium](../../src/experiments/PACO_vs_NSGA2/results/paco_25c_RC101_medium.png)
 
 #### NSGA-II Route Example (25c RC1 medium best solution)
 
-![NSGA-II 25c RC1 medium](file:///c:/Users/23992/FURP-2026-XinyueXie-Truck-Drone-Routing/src/experiments/PACO_vs_NSGA2/results/nsga2_25c_RC101_medium.png)
+![NSGA-II 25c RC1 medium](../../src/experiments/PACO_vs_NSGA2/results/nsga2_25c_RC101_medium.png)
 
 ---
 
