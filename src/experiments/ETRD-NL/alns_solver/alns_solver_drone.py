@@ -235,7 +235,10 @@ class ETRD_ALNS_Collaborative_Solver:
         
         for from_node, to_node in solution['truck_route']:
             travel_time = self._compute_travel_time_truck(from_node, to_node)
-            service_time = self.service_times.get(to_node, 0)
+            if 1 <= to_node <= self.n_customers:
+                service_time = self.service_times[to_node - 1]
+            else:
+                service_time = 0
             current_time += travel_time + service_time
             current_node = to_node
         
@@ -251,7 +254,10 @@ class ETRD_ALNS_Collaborative_Solver:
         
         for from_node, to_node in solution['robot_route']:
             travel_time = self._compute_travel_time_robot(from_node, to_node)
-            service_time = self.service_times.get(to_node, 0)
+            if 1 <= to_node <= self.n_customers:
+                service_time = self.service_times[to_node - 1]
+            else:
+                service_time = 0
             current_time += travel_time + service_time
             current_node = to_node
         

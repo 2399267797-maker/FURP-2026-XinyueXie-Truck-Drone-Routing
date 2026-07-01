@@ -7,19 +7,34 @@ import numpy as np
 import time
 from typing import Dict, Optional
 import os
+import importlib.util
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+etrd_nl_dir = os.path.dirname(current_dir)
 
 # 尝试导入求解器
+def _import_from_module(module_path, class_name):
+    spec = importlib.util.spec_from_file_location(class_name, module_path)
+    if spec:
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return getattr(module, class_name)
+    return None
+
+milp_path = os.path.join(etrd_nl_dir, 'or_solver', 'milp_model_pulp.py')
+alns_path = os.path.join(etrd_nl_dir, 'alns_solver', 'alns_solver_drone.py')
+
 try:
-    from or_solver.milp_model_pulp import ETRD_MILP_Solver_PULP
+    ETRD_MILP_Solver_PULP = _import_from_module(milp_path, 'ETRD_MILP_Solver_PULP')
     MILP_AVAILABLE = True
-except ImportError:
+except Exception:
     MILP_AVAILABLE = False
     print("Warning: PuLP not available, ALNS only mode")
 
 try:
-    from alns_solver.alns_solver_drone import ETRD_ALNS_Collaborative_Solver
+    ETRD_ALNS_Collaborative_Solver = _import_from_module(alns_path, 'ETRD_ALNS_Collaborative_Solver')
     ALNS_AVAILABLE = True
-except ImportError:
+except Exception:
     ALNS_AVAILABLE = False
     print("Warning: ALNS solver not available")
 

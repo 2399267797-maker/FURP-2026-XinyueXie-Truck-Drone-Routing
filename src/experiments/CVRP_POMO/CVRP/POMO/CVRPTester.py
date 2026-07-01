@@ -42,12 +42,12 @@ class CVRPTester:
         self.env = Env(**self.env_params)
         self.model = Model(**self.model_params)
 
-        # Restore - 智能加载：支持3维和5维checkpoint
+        # Restore 
         model_load = tester_params['model_load']
         checkpoint_fullname = '{path}/checkpoint-{epoch}.pt'.format(**model_load)
         checkpoint = torch.load(checkpoint_fullname, map_location=device)
         
-        # 尝试加载完整模型
+    
         try:
             self.model.load_state_dict(checkpoint['model_state_dict'])
             self.logger.info(f"✓ 模型加载成功 (完整checkpoint)")

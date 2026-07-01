@@ -82,8 +82,19 @@ class ETRDInstanceGenerator:
         customers = np.random.rand(n_customers, 2) * 100
         charging_stations = np.random.rand(n_charging_stations, 2) * 100
         
-        # 服务时间
-        service_times = np.random.uniform(5, 15, n_customers)  # 5-15分钟
+        # 服务时间（5-15分钟）
+        service_times = np.random.uniform(5, 15, n_customers)
+        
+        # 时间窗 - 基于距离计算合理的时间窗
+        time_windows = {}
+        for i in range(n_customers):
+            dist_to_depot = np.linalg.norm(customers[i] - depot)
+            # 卡车行驶到客户的时间（距离/速度，转换为分钟）
+            truck_time = dist_to_depot / self.truck_speed * 60
+            # 时间窗设置：ready_time=0, due_time=2-4倍卡车行驶时间
+            ready_time = 0.0
+            due_time = truck_time * np.random.uniform(2.0, 4.0)
+            time_windows[i + 1] = [ready_time, due_time]
         
         instance = {
             'name': f'ETRD-NL-{n_customers}',
@@ -91,6 +102,7 @@ class ETRDInstanceGenerator:
             'customers': customers.tolist(),
             'charging_stations': charging_stations.tolist(),
             'service_times': service_times.tolist(),
+            'time_windows': time_windows,
             'truck': {
                 'speed': self.truck_speed,
                 'energy_rate': self.truck_energy_rate,
