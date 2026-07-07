@@ -52,12 +52,25 @@ class NSGA2VRP:
         # 严格遵守论文 2) 3)：基于非支配等级和拥挤距离的二元竞赛选择（用于父母交配）
         self.toolbox.register("select_mating", tools.selTournamentDCD)
 
+    # def _cx_pmx(self, ind1, ind2):
+    #     """论文指定的 PMX 交叉算子 (适配双层编码)"""
+    #     n = self.n_customers
+    #     # 对客户顺序序列执行 PMX
+    #     tools.cxPartialyMatched(ind1[:n], ind2[:n])
+    #     # 对模式序列 (无人机/卡车) 执行单点交叉
+    #     cxpoint = random.randint(1, n - 1)
+    #     ind1[n+cxpoint:], ind2[n+cxpoint:] = ind2[n+cxpoint:], ind1[n+cxpoint:]
+    #     return ind1, ind2
+    #bug fix
     def _cx_pmx(self, ind1, ind2):
-        """论文指定的 PMX 交叉算子 (适配双层编码)"""
         n = self.n_customers
-        # 对客户顺序序列执行 PMX
-        tools.cxPartialyMatched(ind1[:n], ind2[:n])
-        # 对模式序列 (无人机/卡车) 执行单点交叉
+        # 提取副本进行交叉
+        sub1, sub2 = ind1[:n], ind2[:n]
+        tools.cxPartialyMatched(sub1, sub2)
+        # 必须显式写回原染色体！
+        ind1[:n], ind2[:n] = sub1, sub2
+        
+        # 模式序列交叉
         cxpoint = random.randint(1, n - 1)
         ind1[n+cxpoint:], ind2[n+cxpoint:] = ind2[n+cxpoint:], ind1[n+cxpoint:]
         return ind1, ind2

@@ -29,6 +29,22 @@
 ---
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
+### Week 4 — 2026-07-01
+
+**Attended this week's meeting:** Yes 
+
+**Progress this week**
+- finish Week4 lab
+**Challenges & blockers**
+- Read literatures
+**Next steps**
+- week5 lab
+
+**Hours spent (optional):** 48
+
+**Links (optional):**[link for report3](src/Week4-report.md)
+
+---
 ### Week 3 — 2026-6-24
 
 **Attended this week's meeting:** Yes 

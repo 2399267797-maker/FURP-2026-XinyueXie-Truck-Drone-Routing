@@ -1,0 +1,531 @@
+Solomon Instance Metadata Summary
+============================================================
+
+Dataset: C1 (short horizon)
+  Customers: 100, Vehicles: 10
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 6.0 km
+    C101: 100 customers, ISSUES
+    C102: 100 customers, ISSUES
+    C103: 100 customers, ISSUES
+    C104: 100 customers, ISSUES
+    C105: 100 customers, ISSUES
+    C106: 100 customers, ISSUES
+    C107: 100 customers, ISSUES
+    C108: 100 customers, ISSUES
+    C109: 100 customers, ISSUES
+
+Dataset: C1 (short horizon)
+  Customers: 100, Vehicles: 10
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 4.0 km
+    C101: 100 customers, ISSUES
+    C102: 100 customers, ISSUES
+    C103: 100 customers, ISSUES
+    C104: 100 customers, ISSUES
+    C105: 100 customers, ISSUES
+    C106: 100 customers, ISSUES
+    C107: 100 customers, ISSUES
+    C108: 100 customers, ISSUES
+    C109: 100 customers, ISSUES
+
+Dataset: C1 (short horizon)
+  Customers: 25, Vehicles: 3
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 6.0 km
+    C101: 25 customers, valid
+    C102: 25 customers, valid
+    C103: 25 customers, valid
+    C104: 25 customers, valid
+    C105: 25 customers, valid
+    C106: 25 customers, valid
+    C107: 25 customers, valid
+    C108: 25 customers, valid
+    C109: 25 customers, valid
+
+Dataset: C1 (short horizon)
+  Customers: 25, Vehicles: 3
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 4.0 km
+    C101: 25 customers, valid
+    C102: 25 customers, valid
+    C103: 25 customers, valid
+    C104: 25 customers, valid
+    C105: 25 customers, valid
+    C106: 25 customers, valid
+    C107: 25 customers, valid
+    C108: 25 customers, valid
+    C109: 25 customers, valid
+
+Dataset: C1 (short horizon)
+  Customers: 50, Vehicles: 5
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 6.0 km
+    C101: 50 customers, valid
+    C102: 50 customers, valid
+    C103: 50 customers, valid
+    C104: 50 customers, valid
+    C105: 50 customers, valid
+    C106: 50 customers, valid
+    C107: 50 customers, valid
+    C108: 50 customers, valid
+    C109: 50 customers, valid
+
+Dataset: C1 (short horizon)
+  Customers: 50, Vehicles: 5
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 4.0 km
+    C101: 50 customers, valid
+    C102: 50 customers, valid
+    C103: 50 customers, valid
+    C104: 50 customers, valid
+    C105: 50 customers, valid
+    C106: 50 customers, valid
+    C107: 50 customers, valid
+    C108: 50 customers, valid
+    C109: 50 customers, valid
+
+Dataset: C2 (long horizon)
+  Customers: 100, Vehicles: 4
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 6.0 km
+    C201: 100 customers, ISSUES
+    C202: 100 customers, ISSUES
+    C203: 100 customers, ISSUES
+    C204: 100 customers, ISSUES
+    C205: 100 customers, ISSUES
+    C206: 100 customers, ISSUES
+    C207: 100 customers, ISSUES
+    C208: 100 customers, ISSUES
+    C209: ERROR
+
+Dataset: C2 (long horizon)
+  Customers: 100, Vehicles: 4
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 4.0 km
+    C201: 100 customers, ISSUES
+    C202: 100 customers, ISSUES
+    C203: 100 customers, ISSUES
+    C204: 100 customers, ISSUES
+    C205: 100 customers, ISSUES
+    C206: 100 customers, ISSUES
+    C207: 100 customers, ISSUES
+    C208: 100 customers, ISSUES
+    C209: ERROR
+
+Dataset: C2 (long horizon)
+  Customers: 25, Vehicles: 2
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 6.0 km
+    C201: 25 customers, valid
+    C202: 25 customers, valid
+    C203: 25 customers, valid
+    C204: 25 customers, valid
+    C205: 25 customers, valid
+    C206: 25 customers, valid
+    C207: 25 customers, valid
+    C208: 25 customers, valid
+    C209: ERROR
+
+Dataset: C2 (long horizon)
+  Customers: 25, Vehicles: 2
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 4.0 km
+    C201: 25 customers, valid
+    C202: 25 customers, valid
+    C203: 25 customers, valid
+    C204: 25 customers, valid
+    C205: 25 customers, valid
+    C206: 25 customers, valid
+    C207: 25 customers, valid
+    C208: 25 customers, valid
+    C209: ERROR
+
+Dataset: C2 (long horizon)
+  Customers: 50, Vehicles: 2
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 6.0 km
+    C201: 50 customers, valid
+    C202: 50 customers, valid
+    C203: 50 customers, valid
+    C204: 50 customers, valid
+    C205: 50 customers, valid
+    C206: 50 customers, valid
+    C207: 50 customers, valid
+    C208: 50 customers, valid
+    C209: ERROR
+
+Dataset: C2 (long horizon)
+  Customers: 50, Vehicles: 2
+  Instances: 9 ([1, 2, 3, 4, 5, 6, 7, 8, 9])
+  Drone range: 4.0 km
+    C201: 50 customers, valid
+    C202: 50 customers, valid
+    C203: 50 customers, valid
+    C204: 50 customers, valid
+    C205: 50 customers, valid
+    C206: 50 customers, valid
+    C207: 50 customers, valid
+    C208: 50 customers, valid
+    C209: ERROR
+
+Dataset: R1 (short horizon)
+  Customers: 100, Vehicles: 10
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 6.0 km
+    R101: 100 customers, ISSUES
+    R102: 100 customers, ISSUES
+    R103: 100 customers, ISSUES
+    R104: 100 customers, ISSUES
+    R105: 100 customers, ISSUES
+    R106: 100 customers, ISSUES
+    R107: 100 customers, ISSUES
+    R108: 100 customers, ISSUES
+    R109: 100 customers, ISSUES
+    R110: 100 customers, ISSUES
+    R111: 100 customers, ISSUES
+    R112: 100 customers, ISSUES
+
+Dataset: R1 (short horizon)
+  Customers: 100, Vehicles: 10
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 4.0 km
+    R101: 100 customers, ISSUES
+    R102: 100 customers, ISSUES
+    R103: 100 customers, ISSUES
+    R104: 100 customers, ISSUES
+    R105: 100 customers, ISSUES
+    R106: 100 customers, ISSUES
+    R107: 100 customers, ISSUES
+    R108: 100 customers, ISSUES
+    R109: 100 customers, ISSUES
+    R110: 100 customers, ISSUES
+    R111: 100 customers, ISSUES
+    R112: 100 customers, ISSUES
+
+Dataset: R1 (short horizon)
+  Customers: 25, Vehicles: 3
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 6.0 km
+    R101: 25 customers, valid
+    R102: 25 customers, valid
+    R103: 25 customers, valid
+    R104: 25 customers, valid
+    R105: 25 customers, valid
+    R106: 25 customers, valid
+    R107: 25 customers, valid
+    R108: 25 customers, valid
+    R109: 25 customers, valid
+    R110: 25 customers, valid
+    R111: 25 customers, valid
+    R112: 25 customers, valid
+
+Dataset: R1 (short horizon)
+  Customers: 25, Vehicles: 3
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 4.0 km
+    R101: 25 customers, valid
+    R102: 25 customers, valid
+    R103: 25 customers, valid
+    R104: 25 customers, valid
+    R105: 25 customers, valid
+    R106: 25 customers, valid
+    R107: 25 customers, valid
+    R108: 25 customers, valid
+    R109: 25 customers, valid
+    R110: 25 customers, valid
+    R111: 25 customers, valid
+    R112: 25 customers, valid
+
+Dataset: R1 (short horizon)
+  Customers: 50, Vehicles: 5
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 6.0 km
+    R101: 50 customers, valid
+    R102: 50 customers, valid
+    R103: 50 customers, valid
+    R104: 50 customers, valid
+    R105: 50 customers, valid
+    R106: 50 customers, valid
+    R107: 50 customers, valid
+    R108: 50 customers, valid
+    R109: 50 customers, valid
+    R110: 50 customers, valid
+    R111: 50 customers, valid
+    R112: 50 customers, valid
+
+Dataset: R1 (short horizon)
+  Customers: 50, Vehicles: 5
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 4.0 km
+    R101: 50 customers, valid
+    R102: 50 customers, valid
+    R103: 50 customers, valid
+    R104: 50 customers, valid
+    R105: 50 customers, valid
+    R106: 50 customers, valid
+    R107: 50 customers, valid
+    R108: 50 customers, valid
+    R109: 50 customers, valid
+    R110: 50 customers, valid
+    R111: 50 customers, valid
+    R112: 50 customers, valid
+
+Dataset: R2 (long horizon)
+  Customers: 100, Vehicles: 4
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 6.0 km
+    R201: 100 customers, ISSUES
+    R202: 100 customers, ISSUES
+    R203: 100 customers, ISSUES
+    R204: 100 customers, ISSUES
+    R205: 100 customers, ISSUES
+    R206: 100 customers, ISSUES
+    R207: 100 customers, ISSUES
+    R208: 100 customers, ISSUES
+    R209: 100 customers, ISSUES
+    R210: 100 customers, ISSUES
+    R211: 100 customers, ISSUES
+    R212: ERROR
+
+Dataset: R2 (long horizon)
+  Customers: 100, Vehicles: 4
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 4.0 km
+    R201: 100 customers, ISSUES
+    R202: 100 customers, ISSUES
+    R203: 100 customers, ISSUES
+    R204: 100 customers, ISSUES
+    R205: 100 customers, ISSUES
+    R206: 100 customers, ISSUES
+    R207: 100 customers, ISSUES
+    R208: 100 customers, ISSUES
+    R209: 100 customers, ISSUES
+    R210: 100 customers, ISSUES
+    R211: 100 customers, ISSUES
+    R212: ERROR
+
+Dataset: R2 (long horizon)
+  Customers: 25, Vehicles: 2
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 6.0 km
+    R201: 25 customers, valid
+    R202: 25 customers, valid
+    R203: 25 customers, valid
+    R204: 25 customers, valid
+    R205: 25 customers, valid
+    R206: 25 customers, valid
+    R207: 25 customers, valid
+    R208: 25 customers, valid
+    R209: 25 customers, valid
+    R210: 25 customers, valid
+    R211: 25 customers, valid
+    R212: ERROR
+
+Dataset: R2 (long horizon)
+  Customers: 25, Vehicles: 2
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 4.0 km
+    R201: 25 customers, valid
+    R202: 25 customers, valid
+    R203: 25 customers, valid
+    R204: 25 customers, valid
+    R205: 25 customers, valid
+    R206: 25 customers, valid
+    R207: 25 customers, valid
+    R208: 25 customers, valid
+    R209: 25 customers, valid
+    R210: 25 customers, valid
+    R211: 25 customers, valid
+    R212: ERROR
+
+Dataset: R2 (long horizon)
+  Customers: 50, Vehicles: 2
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 6.0 km
+    R201: 50 customers, valid
+    R202: 50 customers, valid
+    R203: 50 customers, valid
+    R204: 50 customers, valid
+    R205: 50 customers, valid
+    R206: 50 customers, valid
+    R207: 50 customers, valid
+    R208: 50 customers, valid
+    R209: 50 customers, valid
+    R210: 50 customers, valid
+    R211: 50 customers, valid
+    R212: ERROR
+
+Dataset: R2 (long horizon)
+  Customers: 50, Vehicles: 2
+  Instances: 12 ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+  Drone range: 4.0 km
+    R201: 50 customers, valid
+    R202: 50 customers, valid
+    R203: 50 customers, valid
+    R204: 50 customers, valid
+    R205: 50 customers, valid
+    R206: 50 customers, valid
+    R207: 50 customers, valid
+    R208: 50 customers, valid
+    R209: 50 customers, valid
+    R210: 50 customers, valid
+    R211: 50 customers, valid
+    R212: ERROR
+
+Dataset: RC1 (short horizon)
+  Customers: 100, Vehicles: 10
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 6.0 km
+    RC101: 100 customers, valid
+    RC102: 100 customers, valid
+    RC103: 100 customers, valid
+    RC104: 100 customers, valid
+    RC105: 100 customers, valid
+    RC106: 100 customers, valid
+    RC107: 100 customers, valid
+    RC108: 100 customers, valid
+
+Dataset: RC1 (short horizon)
+  Customers: 100, Vehicles: 10
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 4.0 km
+    RC101: 100 customers, valid
+    RC102: 100 customers, valid
+    RC103: 100 customers, valid
+    RC104: 100 customers, valid
+    RC105: 100 customers, valid
+    RC106: 100 customers, valid
+    RC107: 100 customers, valid
+    RC108: 100 customers, valid
+
+Dataset: RC1 (short horizon)
+  Customers: 25, Vehicles: 3
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 6.0 km
+    RC101: 25 customers, valid
+    RC102: 25 customers, valid
+    RC103: 25 customers, valid
+    RC104: 25 customers, valid
+    RC105: 25 customers, valid
+    RC106: 25 customers, valid
+    RC107: 25 customers, valid
+    RC108: 25 customers, valid
+
+Dataset: RC1 (short horizon)
+  Customers: 25, Vehicles: 3
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 4.0 km
+    RC101: 25 customers, valid
+    RC102: 25 customers, valid
+    RC103: 25 customers, valid
+    RC104: 25 customers, valid
+    RC105: 25 customers, valid
+    RC106: 25 customers, valid
+    RC107: 25 customers, valid
+    RC108: 25 customers, valid
+
+Dataset: RC1 (short horizon)
+  Customers: 50, Vehicles: 5
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 6.0 km
+    RC101: 50 customers, valid
+    RC102: 50 customers, valid
+    RC103: 50 customers, valid
+    RC104: 50 customers, valid
+    RC105: 50 customers, valid
+    RC106: 50 customers, valid
+    RC107: 50 customers, valid
+    RC108: 50 customers, valid
+
+Dataset: RC1 (short horizon)
+  Customers: 50, Vehicles: 5
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 4.0 km
+    RC101: 50 customers, valid
+    RC102: 50 customers, valid
+    RC103: 50 customers, valid
+    RC104: 50 customers, valid
+    RC105: 50 customers, valid
+    RC106: 50 customers, valid
+    RC107: 50 customers, valid
+    RC108: 50 customers, valid
+
+Dataset: RC2 (long horizon)
+  Customers: 100, Vehicles: 4
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 6.0 km
+    RC201: 100 customers, valid
+    RC202: 100 customers, valid
+    RC203: 100 customers, valid
+    RC204: 100 customers, valid
+    RC205: 100 customers, valid
+    RC206: 100 customers, valid
+    RC207: 100 customers, valid
+    RC208: 100 customers, valid
+
+Dataset: RC2 (long horizon)
+  Customers: 100, Vehicles: 4
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 4.0 km
+    RC201: 100 customers, valid
+    RC202: 100 customers, valid
+    RC203: 100 customers, valid
+    RC204: 100 customers, valid
+    RC205: 100 customers, valid
+    RC206: 100 customers, valid
+    RC207: 100 customers, valid
+    RC208: 100 customers, valid
+
+Dataset: RC2 (long horizon)
+  Customers: 25, Vehicles: 2
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 6.0 km
+    RC201: 25 customers, valid
+    RC202: 25 customers, valid
+    RC203: 25 customers, valid
+    RC204: 25 customers, valid
+    RC205: 25 customers, valid
+    RC206: 25 customers, valid
+    RC207: 25 customers, valid
+    RC208: 25 customers, valid
+
+Dataset: RC2 (long horizon)
+  Customers: 25, Vehicles: 2
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 4.0 km
+    RC201: 25 customers, valid
+    RC202: 25 customers, valid
+    RC203: 25 customers, valid
+    RC204: 25 customers, valid
+    RC205: 25 customers, valid
+    RC206: 25 customers, valid
+    RC207: 25 customers, valid
+    RC208: 25 customers, valid
+
+Dataset: RC2 (long horizon)
+  Customers: 50, Vehicles: 2
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 6.0 km
+    RC201: 50 customers, valid
+    RC202: 50 customers, valid
+    RC203: 50 customers, valid
+    RC204: 50 customers, valid
+    RC205: 50 customers, valid
+    RC206: 50 customers, valid
+    RC207: 50 customers, valid
+    RC208: 50 customers, valid
+
+Dataset: RC2 (long horizon)
+  Customers: 50, Vehicles: 2
+  Instances: 8 ([1, 2, 3, 4, 5, 6, 7, 8])
+  Drone range: 4.0 km
+    RC201: 50 customers, valid
+    RC202: 50 customers, valid
+    RC203: 50 customers, valid
+    RC204: 50 customers, valid
+    RC205: 50 customers, valid
+    RC206: 50 customers, valid
+    RC207: 50 customers, valid
+    RC208: 50 customers, valid
+

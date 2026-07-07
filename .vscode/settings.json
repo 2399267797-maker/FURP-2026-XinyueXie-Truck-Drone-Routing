@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/experiments/PACO_vs_NSGA2/utils",
+        "./src/experiments/PACO"
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:system"
+}
