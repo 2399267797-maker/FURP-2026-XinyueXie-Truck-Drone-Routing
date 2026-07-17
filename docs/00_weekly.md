@@ -29,6 +29,23 @@
 ---
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
+
+### Week 5 — 2026-07-08
+
+**Attended this week's meeting:** No meeting this week
+
+**Progress this week**
+- finish Week5 lab
+**Challenges & blockers**
+- Consolidate the work
+**Next steps**
+- week6 lab
+
+**Hours spent (optional):** 24
+
+**Links (optional):**[link for report4](src/Week5-report.md)
+
+---
 ### Week 4 — 2026-07-01
 
 **Attended this week's meeting:** Yes 
