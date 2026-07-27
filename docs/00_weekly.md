@@ -30,6 +30,22 @@
 
 <!-- =================  YOUR ENTRIES BELOW  ================= -->
 
+### Week 6 — 2026-07-17
+
+**Attended this week's meeting:** yes
+
+**Progress this week**
+- finish Week6 lab
+**Challenges & blockers**
+- Arrage the past work, to make it clear
+- The combined method is feasible in practice
+**Next steps**
+- week7 lab
+
+**Hours spent (optional):** 24
+
+**Links (optional):**[link for report6](src/Week6-report.md)
+
 ### Week 5 — 2026-07-08
 
 **Attended this week's meeting:** No meeting this week

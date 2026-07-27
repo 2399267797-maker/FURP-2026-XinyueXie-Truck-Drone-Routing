@@ -165,11 +165,57 @@ class Route:
         return time
 
     def total_cost(self, model: 'VRPTruckDroneModel') -> float:
-        distance = self.total_distance(model)
         vehicle = model.get_vehicle(self.vehicle_id)
         if vehicle is None:
             return 0.0
-        return vehicle.fixed_cost + vehicle.variable_cost * distance
+            
+        cost = vehicle.fixed_cost
+        
+        # 1. Calculate Truck Cost
+        truck_dist = 0.0
+        nodes = [model.depot]
+        for cust_id in self.customers:
+            nodes.append(model.customers[cust_id])
+        nodes.append(model.depot)
+
+        for i in range(len(nodes) - 1):
+            truck_dist += nodes[i].distance_to(nodes[i + 1])
+            
+        cost += vehicle.variable_cost * truck_dist
+
+        # 2. Calculate Drone Cost (drone missions are attached to truck routes)
+        if self.vehicle_type == 'truck' and self.drone_missions:
+            used_drone_ids = set()
+            for mission in self.drone_missions:
+                used_drone_ids.add(mission.drone_id)
+            # 累加每台启用无人机的固定成本
+            for did in used_drone_ids:
+                drone = model.get_drone(did)
+                if drone:
+                    cost += drone.fixed_cost
+            for mission in self.drone_missions:
+                drone = model.get_drone(mission.drone_id)
+                # Fallback to 10% of truck cost if drone rate isn't set
+                drone_vc = drone.variable_cost if drone else (vehicle.variable_cost * 0.1) 
+                
+                # Get launch coordinates
+                if mission.launch_point >= 0 and mission.launch_point < len(self.customers):
+                    launch_pos = model.customers[self.customers[mission.launch_point]]
+                else:
+                    launch_pos = model.depot
+                    
+                # Get return coordinates
+                if mission.return_point >= 0 and mission.return_point < len(self.customers):
+                    return_pos = model.customers[self.customers[mission.return_point]]
+                else:
+                    return_pos = model.depot
+                    
+                for cust_id in mission.customer_ids:
+                    cust = model.customers[cust_id]
+                    drone_dist = launch_pos.distance_to(cust) + cust.distance_to(return_pos)
+                    cost += drone_vc * drone_dist
+                    
+        return cost
 
     def is_feasible(self, model: 'VRPTruckDroneModel') -> bool:
         total_demand = sum(model.customers[c].demand for c in self.customers)
@@ -350,6 +396,82 @@ class VRPTruckDroneModel:
         customer_satisfaction = max(0.0, customer_satisfaction - unserved_count * 0.2)
 
         return makespan, customer_satisfaction
+
+    def calculate_pure_tardiness(self, routes: List[Route]) -> float:
+        """
+        Calculate raw priority-weighted tardiness penalty from time window violations.
+        [100% Paper Compliant: Truck NEVER waits for drones. Constraint (8)]
+        """
+        total_tardiness = 0.0
+        truck_speed = self.get_vehicle_speed("truck")
+        drone_speed = self.get_vehicle_speed("drone")
+        
+        launch_prep = getattr(self, 'launch_prep_time', 0.5)
+        retrieval_time = getattr(self, 'retrieval_time', 0.5)
+
+        for route in routes:
+            if route.vehicle_type == "truck":
+                cust_list = route.customers
+                if not cust_list:
+                    continue
+
+                current_time = 0.0
+                prev_node = self.depot
+                
+                launch_missions = {m.launch_point: m for m in route.drone_missions if 0 <= m.launch_point < len(cust_list)}
+                return_missions = {m.return_point: m for m in route.drone_missions if 0 <= m.return_point < len(cust_list)}
+
+                for idx, cid in enumerate(cust_list):
+                    cust = self.customers[cid]
+                    travel_dist = prev_node.distance_to(cust)
+                    arr_time = current_time + travel_dist / truck_speed
+
+                    # 【论文约束 (8) 核心校验】如果这里是回收点，检查无人机是否按时赶到
+                    if idx in return_missions:
+                        m = return_missions[idx]
+                        launch_node = self.customers[cust_list[m.launch_point]]
+                        target_node = self.customers[m.customer_ids[0]]
+                        
+                        fly_dist_to_target = launch_node.distance_to(target_node)
+                        fly_dist_to_return = target_node.distance_to(cust)
+                        
+                        drone_arr_time = m.launch_time + (fly_dist_to_target / drone_speed) + (fly_dist_to_return / drone_speed)
+                        # 卡车到达时间需包含回收时间（与P-ACO构建时一致）
+                        truck_arr_with_recovery = arr_time + retrieval_time
+                        if drone_arr_time > truck_arr_with_recovery:
+                            total_tardiness += 50.0 * cust.priority
+
+                    wait_time = max(0.0, cust.time_window[0] - arr_time)
+                    tard = max(0.0, arr_time - cust.time_window[1]) * cust.priority
+                    total_tardiness += tard
+
+                    # 停留时间（包括服务客户、发射无人机、回收无人机的额外耗时）
+                    dwell = cust.service_time
+                    if idx in return_missions: dwell += retrieval_time
+                    if idx in launch_missions: dwell += launch_prep
+
+                    leave_time = arr_time + wait_time + dwell
+
+                    # 记录起飞时间
+                    if idx in launch_missions:
+                        m = launch_missions[idx]
+                        m.launch_time = leave_time - launch_prep 
+                        
+                        # 计算无人机到达目标客户的延迟
+                        target_node = self.customers[m.customer_ids[0]]
+                        dist_to_target = self.customers[cid].distance_to(target_node)
+                        drone_arr_at_target = m.launch_time + (dist_to_target / drone_speed)
+                        drone_tard = max(0.0, drone_arr_at_target - target_node.time_window[1]) * target_node.priority
+                        total_tardiness += drone_tard
+
+                    current_time = leave_time
+                    prev_node = cust
+
+            else:
+                # 兜底
+                total_tardiness += 100000.0
+
+        return total_tardiness    
 
     def is_solution_feasible(self, routes: List[Route]) -> bool:
         served_customers = set()

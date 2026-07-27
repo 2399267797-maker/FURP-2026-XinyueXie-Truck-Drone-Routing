@@ -24,7 +24,7 @@ class SolomonLoader:
         # Adapted for urban drone logistics benchmark
         # Target cost range: 60-160, tardiness range: 60-130
         self.truck_speed = 25.0/60  # km/min
-        self.truck_capacity = 200.0  # RC1 series standard capacity, 2 trucks needed for 25 customers
+        self.truck_capacity = 350.0  # RC1 series standard capacity, 2 trucks needed for 25 customers
         self.truck_fixed_cost = 100.0
         self.truck_variable_cost = 2  # Distance-based cost
         

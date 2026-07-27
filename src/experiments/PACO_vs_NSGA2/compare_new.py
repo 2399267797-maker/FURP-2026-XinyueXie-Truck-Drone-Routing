@@ -22,8 +22,8 @@ paco_path = r'C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experim
 nsga2_path = r'C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\NSGA2'
 sys.path.insert(0, paco_path)
 sys.path.insert(0, nsga2_path)
-
-from algorithms.paco_imp import CollaborativePACO
+#imp和imp2共用
+from algorithms.paco_imp2 import CollaborativePACO
 from data.solomon_loader_imp import SolomonLoaderImp
 
 # Import NSGA2
@@ -620,7 +620,7 @@ def main():
     - Multi-run: 10 repetitions per experiment
     """
     results_dir = os.path.dirname(os.path.abspath(__file__))
-    results_dir = os.path.join(results_dir, 'results.new')
+    results_dir = os.path.join(results_dir, 'results.new2')
     os.makedirs(results_dir, exist_ok=True)
     
     n_runs_per_exp = 10
@@ -690,8 +690,8 @@ def main():
     print(f"\n{'='*60}")
     print("Experiment Complete!")
     print(f"{'='*60}")
-    print(f"Results: {os.path.join(results_dir, 'solomon_results.json')}")
-    print(f"Summary: {os.path.join(results_dir, 'solomon_summary.md')}")
+    print(f"Results: {os.path.join(results_dir, 'solomon_results100.json')}")
+    print(f"Summary: {os.path.join(results_dir, 'solomon_summary100.md')}")
     print(f"Pareto plots: {results_dir}")
 
 

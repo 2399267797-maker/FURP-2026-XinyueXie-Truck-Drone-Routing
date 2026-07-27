@@ -53,6 +53,8 @@ class Route:
     customers: List[int] = field(default_factory=list)
     drone_missions: List[DroneMission] = field(default_factory=list)
     depot_id: int = 0
+    _timeline: List[float] = field(default_factory=list)
+    _timeline_dirty: bool = True
 
     def total_distance(self, model: 'VRPTruckDroneModel') -> float:
         if len(self.customers) == 0 and len(self.drone_missions) == 0:
