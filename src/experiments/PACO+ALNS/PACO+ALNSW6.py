@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 from models.vrp_model import VRPTruckDroneModel, Route, DroneMission
 
 # =============================================================================
-# PACO+ALNS 终极膜拜版 (Memetic Algorithm)
+# PACO+ALNS (Memetic Algorithm)
 # [核心架构升级]:
 #   1. [Elite ALNS] 废除全量ALNS，改为评估蚂蚁后，仅对 Top 20% 精英解进行深度局部搜索，释放巨大算力。
 #   2. [SA Acceptance] 废除帕累托接受，引入模拟退火(SA)，基于综合 Score 控制退火概率，拒绝无效横跳。

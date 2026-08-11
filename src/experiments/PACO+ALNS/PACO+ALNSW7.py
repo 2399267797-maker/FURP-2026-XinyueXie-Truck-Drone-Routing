@@ -10,11 +10,11 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 from models.vrp_model import VRPTruckDroneModel, Route, DroneMission
 
 # =============================================================================
-# PACO+ALNS 终极膜拜版 (Memetic Algorithm) + imp2 稳健构造 (Fix Missing Bugs)
+# PACO+ALNS  (Memetic Algorithm) + imp2 稳健构造 (Fix Missing Bugs)
 # [修复日志]:
-#   1. [Fix] 彻底解决 ALNS 评分漏洞：将 missing 和 overload 惩罚同步到 SA 退火判断中。
-#   2. [Fix] 构造解兜底修复：消除 greedy 阶段 break 导致的直接抛弃。
-#   3. [Fix] 废弃无人机清理修复：失效任务中的客户将强制退回卡车，杜绝凭空消失。
+#   1. [Fix Drone ID] 彻底修复 ALNS 阶段生成的无人机 ID 为卡车 ID 的致命越界 bug，防止底层静默丢弃任务。
+#   2. [Fix Timeline] 在所有兜底插入、恢复任务的地方增加 _timeline_dirty = True，杜绝脏读引发的时序崩溃。
+#   3. [Fix SA Eval] ALNS 内部评分增加绝对护栏，包含 Missing 和 Overload 惩罚，拒绝 SA 发生掩耳盗铃式的退火。
 # =============================================================================
 
 class ScaleAdaptiveParams:
@@ -31,12 +31,12 @@ class ScaleAdaptiveParams:
             'Q_c': max(120.0, int(120.0 * (scale ** 0.6))),
             'Q_t': max(60.0, int(60.0 * (scale ** 0.6))),
             'archive_capacity': max(10, min(100, int(n_customers * 0.25))),
-            'DRONE_WAIT_THRESHOLD': 3.0,
+            'DRONE_WAIT_THRESHOLD': 5.0,
             'ALNS_DECAY': 0.85,
             'SCORE_BEST': 5.0, 'SCORE_BETTER': 3.0, 'SCORE_ACCEPT': 1.0,
             'TARD_PENALTY_TRUCK': 10.0, 'TARD_PENALTY_DRONE': 5.0,
-            'KNN_RATIO': 0.3, 'MAX_DRONE_GAP': 4,
-            'WARM_START_MAX_RATIO': 0.15  
+            'KNN_RATIO': 0.3, 'MAX_DRONE_GAP': 6,
+            'WARM_START_MAX_RATIO': 0.3  
         }
 
 class CollaborativePACOALNS:
@@ -85,6 +85,9 @@ class CollaborativePACOALNS:
         self.truck_speed, self.truck_capacity = model.trucks[0].speed, model.trucks[0].capacity
         self.drone_speed, self.drone_capacity = model.get_vehicle_speed('drone'), model.drones[0].capacity
         self.drone_range = model.drone_range
+        self.truck_vc = model.trucks[0].variable_cost
+        self.drone_vc = model.drones[0].variable_cost
+        self.drone_fixed_cost = model.drones[0].fixed_cost
         self.launch_prep_time, self.retrieval_time = getattr(model, 'launch_prep_time', 0.5), getattr(model, 'retrieval_time', 0.5)
 
         self.drone_knn = {}
@@ -99,17 +102,39 @@ class CollaborativePACOALNS:
         self.score_best, self.score_better, self.score_accept = p['SCORE_BEST'], p['SCORE_BETTER'], p['SCORE_ACCEPT']
         self.alns_decay = p['ALNS_DECAY']
 
-    # -------------------------- 工具与时间线 --------------------------
+    
     def _alloc_drone_id(self, truck_id: int = 0, proposed_launch_time: float = 0.0, current_route: Optional[Route] = None) -> int:
-        did = truck_id
-        if current_route and current_route.drone_missions:
-            last_m = max((m for m in current_route.drone_missions if m.drone_id == did), key=lambda x: x.return_point, default=None)
-            if last_m and last_m.return_point < len(current_route.customers):
-                dc = last_m.customer_ids[0]
-                dr_end, _, feas = self._compute_drone_mission_timeline(self._compute_truck_time_at(current_route, last_m.launch_point), self._get_node_index(current_route, last_m.launch_point), dc, self._get_node_index(current_route, last_m.return_point))
-                if dr_end and proposed_launch_time < dr_end + 1e-4: return -1
-        return did
+    # 一对一硬绑定：ID空间隔离，无人机起始编号 = 卡车总数
+        did = self.n_trucks + truck_id
+        busy = False
 
+        if current_route and current_route.drone_missions:
+            for m in current_route.drone_missions:
+                if m.drone_id != did:
+                    continue
+                # 过滤非法异常任务
+                if not (0 <= m.launch_point < len(current_route.customers) and
+                        0 <= m.return_point < len(current_route.customers) and
+                        m.launch_point < m.return_point):
+                    continue
+
+                dc = m.customer_ids[0]
+                dr_end, _, feas = self._compute_drone_mission_timeline(
+                    self._compute_truck_time_at(current_route, m.launch_point),
+                    self._get_node_index(current_route, m.launch_point),
+                    dc,
+                    self._get_node_index(current_route, m.return_point)
+                )
+                if not feas:
+                    continue
+                # 时间冲突：现有无人机任务还没有结束，不能发起新任务
+                if dr_end and proposed_launch_time < dr_end + 1e-4:
+                    busy = True
+                    break
+
+        if not busy:
+            return did
+        return -1
     def _compute_drone_mission_timeline(self, current_time, i_node, j_cust, k_node):
         d_ij, d_jk = self.dist_matrix[i_node, j_cust + 1], self.dist_matrix[j_cust + 1, k_node]
         if (d_ij + d_jk) > self.drone_range + 1e-6: return None, None, False
@@ -147,8 +172,13 @@ class CollaborativePACOALNS:
             changed, iters = False, iters + 1
             for m in missions:
                 i_idx, k_idx = m.launch_point, m.return_point
-                if not (0 <= i_idx < len(custs) and 0 <= k_idx < len(custs)): continue
-                arr_k, _, feas = self._compute_drone_mission_timeline(times[i_idx], custs[i_idx] + 1, m.customer_ids[0], custs[k_idx] + 1)
+                if not (0 <= k_idx < len(custs)): continue
+                if i_idx == -1:
+                    launch_time, launch_node = 0.0, 0
+                else:
+                    if not (0 <= i_idx < len(custs)): continue
+                    launch_time, launch_node = times[i_idx], custs[i_idx] + 1
+                arr_k, _, feas = self._compute_drone_mission_timeline(launch_time, launch_node, m.customer_ids[0], custs[k_idx] + 1)
                 if feas:
                     actual_k = max(arr_k, self.tw_start[custs[k_idx]]) + self.service_times[custs[k_idx]]
                     diff = actual_k - times[k_idx]
@@ -270,7 +300,8 @@ class CollaborativePACOALNS:
                     lt = self._compute_truck_time_at(r, pos) + self.launch_prep_time
                     arr_k, wait, feas = self._compute_drone_mission_timeline(lt - self.launch_prep_time, i_n, c, k_n)
                     if not feas: continue
-                    save = self.dist_matrix[i_n, c+1] + self.dist_matrix[c+1, k_n] - self.dist_matrix[i_n, k_n]
+                    save = (self.truck_vc - self.drone_vc) * (self.dist_matrix[i_n, c+1] + self.dist_matrix[c+1, k_n]) - self.truck_vc * self.dist_matrix[i_n, k_n]
+                    if not r.drone_missions: save -= self.drone_fixed_cost
                     if save > 0:
                         tard = max(0.0, (lt + self.dist_matrix[i_n, c+1]/self.drone_speed) - self.tw_end[c])
                         sc = -save + self.tard_penalty_drone * tard
@@ -281,7 +312,14 @@ class CollaborativePACOALNS:
 
     def _apply_insertion(self, routes: List[Route], action: tuple, c: int):
         if not action:
-            min(routes, key=lambda x: sum(self.demands[cc] for cc in x.customers)).customers.append(c)
+            # [Fix Timeline] 如果插入失败进行兜底，必须打上脏标记
+            fit_routes = [r for r in routes
+                          if sum(self.demands[cc] for cc in r.customers) + self.demands[c] <= self.truck_capacity + 1e-6
+                          and c not in r.customers]
+            min_r = min(fit_routes, key=lambda x: sum(self.demands[cc] for cc in x.customers)) if fit_routes else \
+                min(routes, key=lambda x: sum(self.demands[cc] for cc in x.customers))
+            min_r.customers.append(c)
+            min_r._timeline_dirty = True 
             return
             
         if action[0] == 'truck':
@@ -293,7 +331,7 @@ class CollaborativePACOALNS:
         else:
             tr = routes[action[1]]
             lt = self._compute_truck_time_at(tr, action[2]) + self.launch_prep_time
-            did = self._alloc_drone_id(action[1], lt, current_route=tr)
+            did = self._alloc_drone_id(tr.vehicle_id, lt, current_route=tr) # [Fix ID] 绝对匹配卡车ID
             if did < 0:
                 tr.customers.insert(action[3], c)
             else:
@@ -391,7 +429,7 @@ class CollaborativePACOALNS:
                         i_n = self._get_node_index(r, m.launch_point)
                         j_n = dc + 1
                         k_n = self._get_node_index(r, m.return_point)
-                        lt = truck_times[m.launch_point] + self.launch_prep_time
+                        lt = (0.0 if m.launch_point < 0 else truck_times[m.launch_point]) + self.launch_prep_time
                         arr_drone_k = max(lt + self.dist_matrix[i_n, j_n] / self.drone_speed, self.tw_start[dc])
                         arr_drone_k += self.service_times[dc] + self.dist_matrix[j_n, k_n] / self.drone_speed
                         truck_arr_k = lt + self.dist_matrix[i_n, k_n] / self.truck_speed
@@ -419,9 +457,12 @@ class CollaborativePACOALNS:
             placed = False
             for rr in routes:
                 if sum(self.demands[c] for c in rr.customers) + self.demands[dc] <= self.truck_capacity + 1e-6:
-                    rr.customers.append(dc); placed = True; break
+                    # [Fix Timeline]
+                    rr.customers.append(dc); rr._timeline_dirty = True; placed = True; break
             if not placed:
-                min(routes, key=lambda rr: sum(self.demands[c] for c in rr.customers)).customers.append(dc)
+                min_r = min(routes, key=lambda rr: sum(self.demands[c] for c in rr.customers))
+                min_r.customers.append(dc)
+                min_r._timeline_dirty = True # [Fix Timeline]
         return routes
 
     def _inter_route_relocate(self, routes: List[Route]) -> List[Route]:
@@ -474,13 +515,16 @@ class CollaborativePACOALNS:
                 for dc in lost_drone_custs:
                     if sum(self.demands[c] for c in from_route.customers) + self.demands[dc] <= self.truck_capacity + 1e-6:
                         from_route.customers.append(dc)
+                        from_route._timeline_dirty = True # [Fix Timeline]
                     else:
                         placed = False
                         for rr in routes:
                             if rr == from_route: continue
                             if sum(self.demands[c] for c in rr.customers) + self.demands[dc] <= self.truck_capacity + 1e-6 and dc not in rr.customers:
-                                rr.customers.append(dc); placed = True; break
-                        if not placed: from_route.customers.append(dc)
+                                rr.customers.append(dc); rr._timeline_dirty = True; placed = True; break
+                        if not placed: 
+                            from_route.customers.append(dc)
+                            from_route._timeline_dirty = True # [Fix Timeline]
 
                 to_route.customers.insert(ipos, cust)
                 for m in to_route.drone_missions:
@@ -496,7 +540,7 @@ class CollaborativePACOALNS:
         best_r = self._clone_routes(routes)
         best_cost, best_tard = self._eval_solution(best_r)[0], self._calc_tardiness(best_r)
         
-        # [Fix 1]: 确保基准 score 包含所有可能的遗漏和超载惩罚
+        # [Fix SA Eval] SA 退火初始基准 Score 加上绝对护栏，堵住评漏洞
         served_init = set([c for r in best_r for c in r.customers] + [m.customer_ids[0] for r in best_r for m in r.drone_missions])
         missing_init = self.n_customers - len(served_init)
         overload_init = sum(max(0.0, sum(self.demands[c] for c in r.customers) - self.truck_capacity) for r in best_r)
@@ -516,8 +560,8 @@ class CollaborativePACOALNS:
         if total_cust < 4: return routes
         
         k = max(1, min(int(total_cust * self.destroy_ratio), self.alns_max_remove))
-        start_temp = 10.0
-        cooling_rate = 0.93
+        start_temp = 50.0
+        cooling_rate = 0.90
 
         for it in range(self.alns_iter):
             d_op = self._select_operator('destroy')
@@ -540,7 +584,7 @@ class CollaborativePACOALNS:
             rep_c, _ = self._eval_solution(work_r)
             rep_t = self._calc_tardiness(work_r)
             
-            # [Fix 1] 计算 SA 退火用的 rep_score 时，彻底封死惩罚漏洞！
+            # [Fix SA Eval] 新解 Score 叠加绝对护栏
             served_alns = set([c for r in work_r for c in r.customers] + [m.customer_ids[0] for r in work_r for m in r.drone_missions])
             missing_alns = self.n_customers - len(served_alns)
             overload_alns = sum(max(0.0, sum(self.demands[c] for c in r.customers) - self.truck_capacity) for r in work_r)
@@ -608,8 +652,10 @@ class CollaborativePACOALNS:
                             sk, wt, feas = self._compute_drone_mission_timeline(ct, cn, j, k + 1)
                             if not feas: continue
                             dik = self.dist_matrix[cn, k + 1]
-                            save = dij + djk - dik
+                            save = (self.truck_vc - self.drone_vc) * (dij + djk) - self.truck_vc * dik
+                            if not route.drone_missions: save -= self.drone_fixed_cost
                             if save <= 0: continue
+                            
                             
                             pj = max(0.0, (ct + dij / self.drone_speed) - self.tw_end[j])
                             pk = max(0.0, sk - self.tw_end[k])
@@ -639,7 +685,11 @@ class CollaborativePACOALNS:
                     li = len(route.customers) - 1
                     ri = li + 1
                     route.customers.append(tk)
-                    route.drone_missions.append(DroneMission(self.n_trucks + (truck_id % max(1, self.n_drones)), [dj], li, ri))
+                    did = self._alloc_drone_id(truck_id, ct + self.launch_prep_time, current_route=route)
+                    if did < 0:
+                        # 保护逻辑：如果无人机数量为 0，依然赋予合法 ID，避免求余报错
+                        did = self.n_trucks + (truck_id % max(1, self.n_drones))
+                    route.drone_missions.append(DroneMission(did, [dj], li, ri))
                     remaining.remove(dj); remaining.remove(tk)
                     cl += self.demands[tk]
                     ct = max(sk, self.tw_start[tk]) + self.service_times[tk]
@@ -668,9 +718,12 @@ class CollaborativePACOALNS:
                 br._timeline_dirty = True
                 remaining.remove(bc)
             else: 
-                # [Fix 2] 兜底强制插入，绝不允许 break 导致客户直接凭空消失！
+                # [Fix] 优先塞进仍有容量的路线；实在放不下才交给容量修复阶段处理
                 bc = list(remaining)[0]
-                min_r = min(routes, key=lambda r: sum(self.demands[c] for c in r.customers))
+                fit_routes = [r for r in routes
+                              if sum(self.demands[c] for c in r.customers) + self.demands[bc] <= self.truck_capacity + 1e-6]
+                min_r = min(fit_routes, key=lambda r: sum(self.demands[c] for c in r.customers)) if fit_routes else \
+                    min(routes, key=lambda r: sum(self.demands[c] for c in r.customers))
                 min_r.customers.append(bc)
                 min_r._timeline_dirty = True
                 remaining.remove(bc)
@@ -680,7 +733,7 @@ class CollaborativePACOALNS:
             valid_m = []
             for m in r.drone_missions:
                 dc = m.customer_ids[0]
-                # [Fix 3] 收紧判断：如果不满足限制，不仅要剔除 mission，必须将失去的客户强塞回卡车！
+                # [Fix Timeline] 收紧判断：如果不满足限制，不仅要剔除 mission，必须将失去的客户强塞回卡车！
                 if dc not in tvs and 0 <= m.launch_point < len(r.customers) and 0 <= m.return_point < len(r.customers) and m.launch_point < m.return_point:
                     valid_m.append(m)
                 else:
@@ -747,7 +800,9 @@ class CollaborativePACOALNS:
                         la, ret = best_i + 1 + (best_j - ret), best_i + 1 + (best_j - la)
 
                     if la >= len(customers) or ret >= len(customers) or la >= ret: lost.append(dc); continue
-                    arr_k, _, feas = self._compute_drone_mission_timeline(truck_times_at[la], customers[la]+1, dc, customers[ret]+1)
+                    launch_time = 0.0 if la < 0 else truck_times_at[la]
+                    launch_node = 0 if la < 0 else customers[la] + 1
+                    arr_k, _, feas = self._compute_drone_mission_timeline(launch_time, launch_node, dc, customers[ret]+1)
                     if not feas: lost.append(dc); continue
                     
                     m.launch_point, m.return_point = la, ret
@@ -782,7 +837,8 @@ class CollaborativePACOALNS:
                     k_n = custs[kidx] + 1
                     dij, djk = self.dist_matrix[i_n, j_n], self.dist_matrix[j_n, k_n]
                     if dij + djk > self.drone_range + 1e-6: continue
-                    save = dij + djk - self.dist_matrix[i_n, k_n]
+                    save = (self.truck_vc - self.drone_vc) * (dij + djk) - self.truck_vc * self.dist_matrix[i_n, k_n]
+                    if not r.drone_missions: save -= self.drone_fixed_cost
                     if save <= 0: continue
                     
                     cur_t = self._compute_truck_time_at(r, idx - 1)
@@ -798,7 +854,7 @@ class CollaborativePACOALNS:
                 kidx = best_na
 
                 lt = self._compute_truck_time_at(r, idx - 1) + self.launch_prep_time
-                did = self._alloc_drone_id(tid, lt, current_route=r)
+                did = self._alloc_drone_id(r.vehicle_id, lt, current_route=r) # [Fix ID]
                 if did < 0:
                     idx += 1; continue 
 
@@ -818,9 +874,11 @@ class CollaborativePACOALNS:
                     placed = False
                     for rr in routes:
                         if sum(self.demands[cc] for cc in rr.customers) + self.demands[lc] <= self.truck_capacity + 1e-6 and lc not in rr.customers:
-                            rr.customers.append(lc); rr._timeline_dirty = True; placed = True; break
+                            rr.customers.append(lc); rr._timeline_dirty = True; placed = True; break # [Fix Timeline]
                     if not placed:
-                        min(routes, key=lambda rr: sum(self.demands[cc] for cc in rr.customers)).customers.append(lc)
+                        min_r = min(routes, key=lambda rr: sum(self.demands[cc] for cc in rr.customers))
+                        min_r.customers.append(lc)
+                        min_r._timeline_dirty = True # [Fix Timeline]
                 
                 r.customers.pop(idx)
                 adj_kidx = kidx - 1
@@ -832,26 +890,44 @@ class CollaborativePACOALNS:
 
     def _repair_capacity(self, routes: List[Route]) -> List[Route]:
         if len(routes) < 2: return routes
-        for _ in range(len(routes) * 3):
+        max_passes = max(30, len(routes) * 10, self.n_customers * 2)
+        for _ in range(max_passes):
             overloaded = [r for r in routes if sum(self.demands[c] for c in r.customers) > self.truck_capacity + 1e-6]
             if not overloaded: break
-            src = overloaded[0]
-            target = min(routes, key=lambda r: sum(self.demands[c] for c in r.customers))
-            if src is target and len(overloaded) > 1: src = overloaded[1]
 
-            if src is not target:
-                dst_load = sum(self.demands[c] for c in target.customers)
-                if dst_load <= self.truck_capacity + 1e-6:
-                    moved = False
-                    for pos, cust in enumerate(src.customers):
-                        if dst_load + self.demands[cust] > self.truck_capacity + 1e-6 or any(cust in m.customer_ids for m in src.drone_missions) or any(m.launch_point == pos or m.return_point == pos for m in src.drone_missions): continue
-                        src.customers.pop(pos); target.customers.append(cust)
-                        for m in src.drone_missions:
-                            if m.launch_point > pos: m.launch_point -= 1
-                            if m.return_point > pos: m.return_point -= 1
-                        moved = True; src._timeline_dirty = target._timeline_dirty = True; break
-                    if moved: continue
+            # 1) 直接把可移动客户搬到仍有容量的路线，优先从超载量最大的路线搬
+            moved = False
+            for src in sorted(overloaded, key=lambda r: -sum(self.demands[c] for c in r.customers)):
+                if sum(self.demands[c] for c in src.customers) <= self.truck_capacity + 1e-6:
+                    continue
+                targets = sorted(
+                    [r for r in routes if r is not src],
+                    key=lambda r: sum(self.demands[c] for c in r.customers)
+                )
+                for pos, cust in enumerate(src.customers):
+                    if any(cust in m.customer_ids for m in src.drone_missions):
+                        continue
+                    if any(m.launch_point == pos or m.return_point == pos for m in src.drone_missions):
+                        continue
+                    for target in targets:
+                        if sum(self.demands[c] for c in target.customers) + self.demands[cust] <= self.truck_capacity + 1e-6:
+                            src.customers.pop(pos)
+                            target.customers.append(cust)
+                            for m in src.drone_missions:
+                                if m.launch_point > pos: m.launch_point -= 1
+                                if m.return_point > pos: m.return_point -= 1
+                            src._timeline_dirty = target._timeline_dirty = True
+                            moved = True
+                            break
+                    if moved:
+                        break
+                if moved:
+                    break
+            if moved:
+                continue
 
+            # 2) 把超载路线上的客户转成无人机任务
+            converted = False
             for r in overloaded:
                 pos = 0
                 while pos < len(r.customers) - 1:
@@ -881,25 +957,36 @@ class CollaborativePACOALNS:
                         r._timeline_dirty = True
                         converted = True
                         break
-                    
-                    if not converted:
-                        pos += 1
+                    if converted:
+                        break
+                    pos += 1
+                if converted:
+                    break
+            if converted:
+                continue
 
-            overloaded = [r for r in routes if sum(self.demands[c] for c in r.customers) > self.truck_capacity + 1e-6]
-            if not overloaded: break
-
+            # 3) 最后尝试超载路线与低载路线之间交换客户
+            swapped = False
             src = overloaded[0]
-            target = min(routes, key=lambda r: sum(self.demands[c] for c in r.customers))
-            if src is not target:
-                swapped = False
+            targets = sorted(
+                [r for r in routes if r is not src],
+                key=lambda r: sum(self.demands[c] for c in r.customers)
+            )
+            for target in targets:
+                if swapped:
+                    break
                 for tpos, tcust in enumerate(target.customers):
-                    if any(tcust in m.customer_ids for m in target.drone_missions) or any(m.launch_point == tpos or m.return_point == tpos for m in target.drone_missions): continue
+                    if any(tcust in m.customer_ids for m in target.drone_missions):
+                        continue
+                    if any(m.launch_point == tpos or m.return_point == tpos for m in target.drone_missions):
+                        continue
                     target.customers.pop(tpos)
                     for m in target.drone_missions:
                         if m.launch_point > tpos: m.launch_point -= 1
                         if m.return_point > tpos: m.return_point -= 1
                     for spos, scust in enumerate(src.customers):
-                        if scust == tcust or any(scust in m.customer_ids for m in src.drone_missions) or any(m.launch_point == spos or m.return_point == spos for m in src.drone_missions): continue
+                        if scust == tcust or any(scust in m.customer_ids for m in src.drone_missions) or any(m.launch_point == spos or m.return_point == spos for m in src.drone_missions):
+                            continue
                         if sum(self.demands[c] for c in target.customers) + self.demands[scust] <= self.truck_capacity + 1e-6:
                             src.customers.pop(spos); target.customers.append(scust)
                             for m in src.drone_missions:
@@ -907,13 +994,16 @@ class CollaborativePACOALNS:
                                 if m.return_point > spos: m.return_point -= 1
                             src.customers.append(tcust)
                             target._timeline_dirty = src._timeline_dirty = True
-                            swapped = True; break
-                    if swapped: break
-                    
+                            swapped = True
+                            break
+                    if swapped:
+                        break
                     target.customers.insert(tpos, tcust)
                     for m in target.drone_missions:
                         if m.launch_point > tpos: m.launch_point += 1
                         if m.return_point > tpos: m.return_point += 1
+            if not swapped:
+                break
         return routes
 
     # -------------------------- 信息素与主流程 --------------------------
@@ -1023,6 +1113,12 @@ class CollaborativePACOALNS:
 
             all_candidates = list(zip(self.pareto_solutions, self.pareto_front))
             for sol, obj in iteration_solutions:
+                # [Fix] 缺客户或超载的解一律不进存档，避免用不可行解污染帕累托前沿
+                served = set([c for r in sol for c in r.customers] + [m.customer_ids[0] for r in sol for m in r.drone_missions])
+                missing = self.n_customers - len(served)
+                overload = sum(max(0.0, sum(self.demands[c] for c in r.customers) - self.truck_capacity) for r in sol)
+                if missing > 0 or overload > 1e-6:
+                    continue
                 if not any(self._dominates(ex_obj, obj) for ex_obj in self.pareto_front): all_candidates.append((sol, obj))
 
             new_front, new_solutions = [], []
@@ -1049,7 +1145,7 @@ class CollaborativePACOALNS:
                 self._update_pheromones(zip(self.pareto_solutions, self.pareto_front))
 
             if (iteration + 1) % 10 == 0:
-                print(f"[PACO+ALNS Fixed+imp2] Iteration {iteration + 1}/{self.max_iter} - Pareto Archive: {len(self.pareto_front)}")
+                print(f"[PACO+ALNS ] Iteration {iteration + 1}/{self.max_iter} - Pareto Archive: {len(self.pareto_front)}")
                 print(f"  ALNS weights: Destroy={['%.2f'%w for w in self.d_weights.values()]} Repair={['%.2f'%w for w in self.r_weights.values()]}")
 
         return self.pareto_solutions, self.pareto_front

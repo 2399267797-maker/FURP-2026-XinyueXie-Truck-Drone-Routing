@@ -1,0 +1,2582 @@
+[start] 25c_RC101_2V_medium imp2 runs=10 max_iter=100
+[start] 25c_RC101_2V_medium w7 runs=10 max_iter=100
+[start] 25c_RC101_2V_high imp2 runs=10 max_iter=100
+[start] 25c_RC101_2V_high w7 runs=10 max_iter=100
+[start] 25c_RC201_2V_medium imp2 runs=10 max_iter=100
+[start] 25c_RC201_2V_medium w7 runs=10 max_iter=100
+[start] 25c_RC201_2V_high imp2 runs=10 max_iter=100
+[start] 25c_RC201_2V_high w7 runs=10 max_iter=100
+[start] 50c_RC101_4V_medium imp2 runs=10 max_iter=100
+[start] 50c_RC101_4V_medium w7 runs=10 max_iter=100
+[start] 50c_RC101_4V_high imp2 runs=10 max_iter=100
+[start] 50c_RC101_4V_high w7 runs=10 max_iter=100
+[start] 50c_RC201_4V_medium imp2 runs=10 max_iter=100
+[start] 50c_RC201_4V_medium w7 runs=10 max_iter=100
+[start] 50c_RC201_4V_high imp2 runs=10 max_iter=100
+[start] 50c_RC201_4V_high w7 runs=10 max_iter=100
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 6
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 7
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 9
+[P-ACO-imp2] Iteration 60/100 - Archive: 9
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 9
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 4
+[P-ACO-imp2] Iteration 20/100 - Archive: 4
+[P-ACO-imp2] Iteration 30/100 - Archive: 7
+[P-ACO-imp2] Iteration 40/100 - Archive: 7
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 8
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 6
+[P-ACO-imp2] Iteration 60/100 - Archive: 8
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 10
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 3
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 2
+[P-ACO-imp2] Iteration 20/100 - Archive: 7
+[P-ACO-imp2] Iteration 30/100 - Archive: 9
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 6
+[P-ACO-imp2] Iteration 20/100 - Archive: 6
+[P-ACO-imp2] Iteration 30/100 - Archive: 8
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 10
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 12
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 11
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_medium_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_medium_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_medium_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_medium_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_medium_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_medium_compromise.png
+[done] 25c_RC101_2V_medium imp2 time=9.1s cost=236.3 tard=1230.9
+[start] 50c_RC101_6V_medium imp2 runs=10 max_iter=100
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 10
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 6
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 6
+[P-ACO-imp2] Iteration 20/100 - Archive: 7
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 12
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 10
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 5
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 6
+[P-ACO-imp2] Iteration 20/100 - Archive: 5
+[P-ACO-imp2] Iteration 30/100 - Archive: 5
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 7
+[P-ACO-imp2] Iteration 60/100 - Archive: 7
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 4
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 10
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_medium_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_medium_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_medium_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_medium_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_medium_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_medium_compromise.png
+[done] 25c_RC201_2V_medium imp2 time=9.8s cost=244.0 tard=2861.5
+[start] 50c_RC101_6V_medium w7 runs=10 max_iter=100
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.21', '2.46', '1.74', '2.39', '2.08'] Repair=['2.16', '2.33', '2.33']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.92', '2.62', '2.71', '2.34', '2.20'] Repair=['2.29', '2.58', '2.05']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.23', '2.36', '2.34', '1.91', '2.72'] Repair=['2.04', '2.11', '2.67']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.00', '2.14', '2.95', '2.04', '2.83'] Repair=['2.63', '2.26', '2.10']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.15', '2.14', '2.37', '2.63', '1.98'] Repair=['2.42', '2.09', '2.06']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.60', '2.44', '1.94', '2.21', '2.25'] Repair=['1.67', '2.33', '2.16']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.87', '2.42', '2.60', '2.16', '2.61'] Repair=['1.95', '2.60', '1.74']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.89', '2.89', '2.89', '1.60', '2.46'] Repair=['2.39', '2.32', '1.79']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.80', '1.94', '1.59', '1.89', '2.39'] Repair=['2.27', '2.02', '1.47']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.81', '1.95', '2.75', '2.36', '2.51'] Repair=['1.97', '2.52', '2.48']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.47', '2.54', '2.10', '2.62', '2.54'] Repair=['1.99', '2.81', '2.46']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['1.85', '2.19', '2.87', '1.93', '2.39'] Repair=['2.11', '2.52', '2.07']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.45', '2.41', '2.81', '1.78', '2.69'] Repair=['2.40', '2.81', '2.01']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.03', '1.95', '2.69', '2.36', '2.15'] Repair=['2.12', '2.18', '2.43']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.28', '1.97', '2.12', '2.01', '2.58'] Repair=['1.98', '2.21', '2.32']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.77', '1.77', '2.60', '2.66', '2.45'] Repair=['2.28', '2.44', '2.07']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.54', '1.94', '2.96', '2.61', '1.71'] Repair=['2.12', '2.47', '2.13']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.90', '2.29', '1.96', '1.73', '2.08'] Repair=['2.21', '1.55', '2.40']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.83', '2.01', '2.34', '2.18', '1.60'] Repair=['2.06', '2.51', '1.53']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.47', '1.95', '1.44', '1.61', '2.00'] Repair=['1.52', '2.16', '1.41']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['2.60', '2.16', '2.63', '2.34', '2.19'] Repair=['2.43', '2.42', '2.03']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.89', '2.23', '2.24', '1.90', '2.64'] Repair=['2.44', '1.82', '1.87']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.53', '2.62', '2.37', '2.13', '2.56'] Repair=['2.20', '2.67', '2.48']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.46', '1.86', '2.76', '1.59', '2.05'] Repair=['1.46', '1.54', '2.12']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.16', '2.31', '2.78', '2.32', '2.84'] Repair=['2.57', '2.60', '1.96']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.99', '1.91', '2.46', '2.15', '2.18'] Repair=['2.20', '2.17', '1.84']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.56', '2.33', '2.62', '2.38', '2.02'] Repair=['1.43', '2.17', '2.88']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.20', '1.77', '2.77', '1.65', '2.28'] Repair=['2.07', '2.16', '1.82']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.67', '1.65', '2.49', '2.10', '2.08'] Repair=['2.00', '1.88', '1.59']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.40', '1.57', '2.56', '1.75', '2.03'] Repair=['1.14', '2.43', '1.42']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.19', '2.30', '2.73', '2.28', '2.31'] Repair=['2.02', '2.51', '2.45']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.01', '2.80', '2.89', '1.99', '2.55'] Repair=['2.47', '2.31', '2.35']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.45', '2.60', '2.57', '1.96', '2.13'] Repair=['2.39', '2.76', '2.19']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.89', '2.79', '2.47', '2.01', '2.46'] Repair=['1.84', '2.89', '2.07']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.63', '2.14', '2.97', '1.58', '1.66'] Repair=['1.50', '2.43', '1.81']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.92', '2.48', '2.47', '2.36', '2.13'] Repair=['2.28', '2.27', '2.42']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.12', '2.63', '2.66', '1.94', '2.23'] Repair=['2.42', '2.66', '2.21']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.43', '1.67', '2.41', '2.27', '2.87'] Repair=['1.66', '1.63', '2.27']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.84', '1.64', '2.34', '2.31', '1.68'] Repair=['1.98', '1.98', '1.86']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.26', '1.91', '2.39', '1.44', '1.26'] Repair=['1.50', '2.05', '1.46']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.39', '2.13', '2.67', '2.17', '2.52'] Repair=['2.16', '2.44', '2.17']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.48', '2.27', '2.67', '2.36', '2.93'] Repair=['2.34', '2.62', '2.51']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.61', '2.77', '1.84', '2.21', '2.56'] Repair=['2.27', '2.43', '2.60']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.37', '2.44', '2.66', '1.78', '2.59'] Repair=['2.15', '1.60', '2.01']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.47', '2.50', '2.36', '2.43', '2.49'] Repair=['1.90', '2.23', '2.49']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.25', '2.55', '2.80', '1.99', '2.52'] Repair=['2.73', '2.16', '2.03']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.44', '2.06', '2.37', '2.05', '2.19'] Repair=['1.73', '1.73', '2.07']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.21', '2.20', '2.65', '2.10', '2.49'] Repair=['2.51', '1.97', '2.11']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.90', '1.85', '2.66', '2.00', '2.47'] Repair=['1.88', '2.29', '1.63']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.46', '2.85', '2.56', '1.50', '2.46'] Repair=['2.01', '2.35', '2.57']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['1.69', '1.71', '2.51', '1.83', '1.83'] Repair=['2.03', '1.74', '1.53']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.57', '1.87', '2.18', '2.48', '2.59'] Repair=['2.27', '2.34', '1.95']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.49', '2.34', '2.03', '2.00', '2.61'] Repair=['2.00', '1.94', '1.81']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.67', '2.21', '2.08', '1.79', '2.62'] Repair=['1.20', '2.19', '2.22']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.62', '1.96', '2.54', '2.67', '2.80'] Repair=['2.12', '2.79', '1.97'][P-ACO-imp2] Iteration 10/100 - Archive: 4
+[P-ACO-imp2] Iteration 20/100 - Archive: 5
+[P-ACO-imp2] Iteration 30/100 - Archive: 7
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 7
+[P-ACO-imp2] Iteration 60/100 - Archive: 9
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 5
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 8
+[P-ACO-imp2] Iteration 40/100 - Archive: 7
+[P-ACO-imp2] Iteration 50/100 - Archive: 7
+[P-ACO-imp2] Iteration 60/100 - Archive: 7
+[P-ACO-imp2] Iteration 70/100 - Archive: 7
+[P-ACO-imp2] Iteration 80/100 - Archive: 9
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 9
+[P-ACO-imp2] Iteration 10/100 - Archive: 11
+[P-ACO-imp2] Iteration 20/100 - Archive: 12
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 11
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 6
+[P-ACO-imp2] Iteration 20/100 - Archive: 6
+[P-ACO-imp2] Iteration 30/100 - Archive: 6
+[P-ACO-imp2] Iteration 40/100 - Archive: 7
+[P-ACO-imp2] Iteration 50/100 - Archive: 7
+[P-ACO-imp2] Iteration 60/100 - Archive: 7
+[P-ACO-imp2] Iteration 70/100 - Archive: 7
+[P-ACO-imp2] Iteration 80/100 - Archive: 7
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 9
+[P-ACO-imp2] Iteration 10/100 - Archive: 3
+[P-ACO-imp2] Iteration 20/100 - Archive: 3
+[P-ACO-imp2] Iteration 30/100 - Archive: 6
+[P-ACO-imp2] Iteration 40/100 - Archive: 6
+[P-ACO-imp2] Iteration 50/100 - Archive: 7
+[P-ACO-imp2] Iteration 60/100 - Archive: 8
+[P-ACO-imp2] Iteration 70/100 - Archive: 7
+[P-ACO-imp2] Iteration 80/100 - Archive: 8
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 7
+[P-ACO-imp2] Iteration 50/100 - Archive: 9
+[P-ACO-imp2] Iteration 60/100 - Archive: 8
+[P-ACO-imp2] Iteration 70/100 - Archive: 10
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 10
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 6
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 8
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 9
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 6
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_high_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_high_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_high_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_high_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_high_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC101_2V_high_compromise.png
+[done] 25c_RC101_2V_high imp2 time=16.4s cost=239.1 tard=1248.1
+[start] 50c_RC101_6V_high imp2 runs=10 max_iter=100
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.44', '1.83', '2.45', '1.63', '2.11'] Repair=['2.18', '2.40', '2.00']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.82', '2.15', '2.04', '1.56', '2.87'] Repair=['1.74', '2.39', '1.67']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.72', '1.72', '2.71', '2.23', '2.15'] Repair=['1.56', '2.07', '1.82']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.68', '2.16', '1.74', '1.89', '2.27'] Repair=['2.01', '2.18', '1.46']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.54', '2.20', '2.52', '1.73', '2.09'] Repair=['1.76', '2.26', '2.16']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.26', '1.54', '1.56', '1.88', '2.41'] Repair=['1.69', '1.44', '1.61']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.09', '1.87', '1.23', '1.82', '2.44'] Repair=['1.55', '1.20', '1.79']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.20', '1.40', '1.61', '1.22', '2.06'] Repair=['1.09', '1.28', '1.80']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.52', '1.59', '2.01', '1.17', '2.12'] Repair=['1.41', '1.60', '1.49']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.67', '2.18', '1.79', '2.09', '2.45'] Repair=['1.90', '1.67', '2.20']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.76', '1.80', '1.83', '2.14', '2.81'] Repair=['1.74', '1.88', '1.87']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 5
+  ALNS weights: Destroy=['1.44', '2.69', '2.18', '2.66', '2.23'] Repair=['2.39', '2.35', '2.26']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['1.77', '1.97', '2.36', '1.81', '2.20'] Repair=['1.96', '2.37', '1.96']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['1.81', '1.68', '2.85', '1.66', '2.51'] Repair=['2.10', '1.50', '1.67']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.10', '1.62', '2.64', '1.79', '2.00'] Repair=['1.20', '1.98', '2.22']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['1.12', '1.55', '2.32', '1.54', '1.79'] Repair=['1.63', '1.55', '1.28']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['1.41', '1.62', '2.34', '1.76', '1.45'] Repair=['1.36', '1.45', '1.88']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.15', '1.92', '2.60', '1.43', '1.36'] Repair=['1.12', '1.78', '1.70']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.32', '1.38', '2.66', '1.18', '1.16'] Repair=['1.31', '1.32', '1.20']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.36', '1.35', '2.75', '1.41', '1.04'] Repair=['1.14', '1.82', '1.30']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.72', '2.30', '2.43', '2.48', '1.56'] Repair=['2.19', '1.98', '2.30']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.95', '2.59', '1.78', '2.60', '2.45'] Repair=['2.03', '2.61', '2.15']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.68', '1.68', '2.67', '1.55', '2.15'] Repair=['1.82', '1.79', '1.78']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.97', '1.84', '2.89', '1.95', '2.80'] Repair=['1.95', '2.49', '2.21']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.82', '2.27', '2.66', '1.68', '2.19'] Repair=['2.01', '1.96', '1.97']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.24', '2.03', '2.36', '1.46', '2.50'] Repair=['2.28', '1.66', '2.14']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.55', '1.82', '1.76', '2.33', '2.02'] Repair=['2.10', '1.69', '1.91']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.74', '1.87', '1.84', '2.44', '2.28'] Repair=['1.90', '2.19', '1.88']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.70', '2.15', '2.61', '1.69', '2.15'] Repair=['2.09', '1.84', '1.90']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.06', '2.14', '1.39', '1.87', '2.02'] Repair=['1.91', '2.10', '2.08']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.76', '2.03', '2.32', '1.90', '2.35'] Repair=['1.64', '2.00', '2.14']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.92', '2.28', '2.18', '2.32', '2.24'] Repair=['2.02', '2.60', '1.78']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.84', '1.61', '2.82', '2.11', '2.49'] Repair=['1.52', '2.25', '2.27']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.21', '1.90', '2.14', '1.95', '1.48'] Repair=['2.13', '2.02', '2.07']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.96', '1.98', '2.87', '2.58', '1.65'] Repair=['2.57', '2.28', '1.99']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.88', '1.73', '2.71', '1.60', '1.78'] Repair=['2.37', '1.99', '1.78']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.75', '2.27', '2.38', '2.20', '2.53'] Repair=['1.87', '2.13', '2.49']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.02', '1.94', '2.80', '1.52', '2.38'] Repair=['2.32', '2.30', '1.71']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.11', '1.89', '2.09', '2.31', '2.22'] Repair=['1.77', '2.32', '2.04']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.72', '1.83', '1.51', '1.21', '1.55'] Repair=['1.70', '1.62', '1.38']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.90', '2.26', '2.30', '2.33', '1.56'] Repair=['2.04', '2.20', '2.57']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.65', '2.40', '2.64', '2.11', '2.32'] Repair=['2.20', '2.25', '2.06']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.41', '2.33', '2.78', '2.43', '2.31'] Repair=['1.82', '2.51', '2.64']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.64', '2.41', '2.86', '2.88', '2.24'] Repair=['2.47', '2.75', '1.90']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.88', '2.60', '2.58', '1.56', '2.23'] Repair=['1.97', '2.31', '2.31']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.59', '1.81', '2.80', '2.08', '2.25'] Repair=['2.38', '1.65', '1.65']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.11', '2.59', '2.76', '2.33', '2.32'] Repair=['2.83', '2.40', '1.69']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.65', '2.08', '1.69', '1.58', '1.78'] Repair=['1.55', '2.09', '1.48']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.83', '2.03', '2.12', '1.22', '1.70'] Repair=['1.36', '1.56', '1.82']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.88', '1.43', '2.03', '2.24', '1.79'] Repair=['2.44', '1.58', '1.93']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.28', '2.28', '2.80', '2.83', '2.25'] Repair=['2.45', '2.96', '2.18']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.91', '2.23', '2.47', '2.17', '2.57'] Repair=['2.26', '2.32', '2.19']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.39', '1.88', '2.77', '2.21', '2.65'] Repair=['2.01', '2.31', '2.00']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.82', '2.14', '2.31', '1.63', '2.83'] Repair=['1.70', '2.11', '2.09']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.88', '2.36', '2.95', '2.26', '2.55'] Repair=['2.42', '2.42', '1.81'][P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 8
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 4
+[P-ACO-imp2] Iteration 20/100 - Archive: 6
+[P-ACO-imp2] Iteration 30/100 - Archive: 6
+[P-ACO-imp2] Iteration 40/100 - Archive: 6
+[P-ACO-imp2] Iteration 50/100 - Archive: 6
+[P-ACO-imp2] Iteration 60/100 - Archive: 6
+[P-ACO-imp2] Iteration 70/100 - Archive: 6
+[P-ACO-imp2] Iteration 80/100 - Archive: 6
+[P-ACO-imp2] Iteration 90/100 - Archive: 8
+[P-ACO-imp2] Iteration 100/100 - Archive: 8
+[P-ACO-imp2] Iteration 10/100 - Archive: 4
+[P-ACO-imp2] Iteration 20/100 - Archive: 5
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 5
+[P-ACO-imp2] Iteration 30/100 - Archive: 7
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 9
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 9
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 9
+[P-ACO-imp2] Iteration 10/100 - Archive: 5
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 9
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 9
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 9
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 9
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 9
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 9
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 8
+[P-ACO-imp2] Iteration 80/100 - Archive: 8
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_high_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_high_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_high_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_high_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_high_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_25c_RC201_2V_high_compromise.png
+[done] 25c_RC201_2V_high imp2 time=17.6s cost=256.3 tard=2472.9
+[start] 50c_RC101_6V_high w7 runs=10 max_iter=100
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.50', '2.62', '2.86', '2.11', '2.64'] Repair=['2.39', '2.35', '2.68']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.59', '2.17', '2.28', '2.30', '2.26'] Repair=['1.83', '2.66', '2.37']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.05', '2.89', '2.13', '1.44', '2.63'] Repair=['2.16', '2.19', '2.27']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.50', '2.26', '2.18', '2.33', '2.68'] Repair=['1.93', '2.14', '2.17']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.01', '2.34', '2.35', '2.40', '2.71'] Repair=['2.43', '2.34', '2.01']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.08', '1.74', '2.48', '1.96', '2.66'] Repair=['1.91', '2.12', '2.29']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.92', '2.15', '2.43', '1.96', '2.49'] Repair=['1.60', '2.24', '2.47']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.41', '1.60', '2.40', '1.68', '2.45'] Repair=['1.99', '2.50', '1.58']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.39', '2.02', '2.32', '1.71', '2.57'] Repair=['1.65', '1.94', '1.69']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.95', '1.96', '2.60', '2.09', '2.88'] Repair=['2.07', '2.38', '2.00']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.91', '2.56', '2.65', '2.45', '1.74'] Repair=['2.57', '2.59', '2.00']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.58', '2.61', '1.94', '2.16', '2.82'] Repair=['2.17', '2.92', '2.10']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.44', '2.16', '2.89', '2.02', '2.55'] Repair=['2.40', '2.51', '2.37']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.65', '2.13', '2.79', '2.67', '2.61'] Repair=['2.13', '2.00', '2.55']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.40', '2.46', '2.77', '1.94', '1.88'] Repair=['2.55', '2.15', '2.44']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.23', '1.54', '2.31', '1.64', '2.45'] Repair=['2.18', '2.10', '1.59']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.67', '2.17', '2.74', '2.38', '2.34'] Repair=['2.17', '2.25', '2.28']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.04', '2.06', '2.03', '1.94', '1.82'] Repair=['2.06', '2.04', '2.08']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.54', '1.97', '2.73', '1.77', '1.92'] Repair=['1.71', '1.79', '1.93']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.64', '2.62', '3.00', '2.26', '2.09'] Repair=['2.78', '2.32', '2.76']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.59', '2.78', '2.74', '2.45', '2.44'] Repair=['2.48', '2.90', '2.64']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['1.62', '2.23', '2.68', '1.99', '1.68'] Repair=['2.24', '1.65', '2.13']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.19', '2.02', '2.39', '2.41', '1.73'] Repair=['2.25', '2.12', '1.97']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.93', '2.54', '2.85', '2.12', '2.54'] Repair=['2.43', '2.16', '1.97']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.43', '2.57', '2.48', '1.89', '2.03'] Repair=['2.20', '2.32', '2.39']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.88', '1.92', '2.22', '2.02', '1.64'] Repair=['1.84', '1.95', '2.16']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.71', '2.65', '2.78', '2.20', '2.34'] Repair=['2.56', '2.57', '1.90']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.45', '2.02', '2.70', '1.96', '2.02'] Repair=['1.72', '2.19', '1.94']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.81', '2.57', '2.37', '2.27', '2.34'] Repair=['2.25', '2.37', '2.39']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.50', '2.05', '2.77', '2.01', '1.87'] Repair=['1.63', '2.43', '2.09']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['2.49', '2.51', '2.31', '2.23', '2.59'] Repair=['2.44', '2.32', '2.51']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.74', '2.10', '2.28', '2.37', '2.73'] Repair=['2.27', '1.46', '2.55']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.29', '2.20', '2.49', '2.05', '2.59'] Repair=['2.28', '2.36', '2.41']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.04', '2.30', '2.34', '2.23', '1.99'] Repair=['1.94', '2.50', '2.28']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.05', '2.19', '2.33', '1.46', '2.12'] Repair=['2.16', '1.48', '2.23']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.88', '2.61', '2.51', '1.87', '2.25'] Repair=['2.39', '1.91', '2.12']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.02', '1.92', '2.70', '1.72', '1.85'] Repair=['2.27', '1.78', '1.89']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.71', '1.54', '2.29', '1.64', '2.45'] Repair=['2.16', '1.42', '1.65']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.55', '2.14', '2.53', '2.34', '2.37'] Repair=['1.58', '2.69', '1.86']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.71', '2.54', '2.51', '2.15', '1.70'] Repair=['2.25', '2.16', '1.99']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 4
+  ALNS weights: Destroy=['1.91', '2.19', '2.74', '2.21', '2.38'] Repair=['2.21', '2.31', '2.16']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.21', '2.32', '2.96', '1.98', '2.04'] Repair=['2.11', '2.36', '1.95']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['1.85', '2.14', '2.57', '2.54', '2.56'] Repair=['2.08', '2.41', '2.30']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.72', '2.35', '2.61', '2.21', '2.34'] Repair=['2.51', '2.13', '2.19']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.38', '2.47', '2.46', '2.52', '2.44'] Repair=['2.41', '2.29', '2.80']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.16', '1.94', '2.75', '1.77', '2.51'] Repair=['2.04', '1.97', '1.73']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.08', '1.94', '1.83', '1.70', '2.41'] Repair=['1.88', '2.28', '1.83']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.34', '2.67', '2.86', '2.27', '2.47'] Repair=['2.55', '2.87', '2.13']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.14', '1.73', '2.68', '2.42', '2.76'] Repair=['2.83', '2.00', '2.23']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.47', '2.34', '2.28', '2.24', '2.46'] Repair=['1.74', '2.48', '2.19']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.93', '1.94', '1.95', '2.02', '2.19'] Repair=['1.82', '2.19', '1.57']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.18', '2.73', '2.22', '2.21', '2.88'] Repair=['2.38', '2.33', '2.44']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.86', '2.04', '1.45', '2.48', '2.60'] Repair=['2.23', '2.09', '1.79']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.72', '2.31', '2.14', '2.29', '2.41'] Repair=['1.78', '2.35', '2.27']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.51', '2.49', '2.53', '1.89', '2.10'] Repair=['2.38', '2.25', '2.09'][PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.86', '2.28', '2.67', '2.36', '2.47'] Repair=['2.28', '2.50', '2.14']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.90', '1.84', '1.75', '2.19', '2.34'] Repair=['2.06', '2.42', '1.74']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.27', '1.77', '2.48', '1.99', '2.76'] Repair=['2.25', '2.23', '1.79']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.99', '2.45', '2.57', '2.07', '2.43'] Repair=['1.91', '2.23', '2.55']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.94', '2.08', '2.93', '1.81', '2.36'] Repair=['2.05', '2.35', '1.99']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.60', '1.59', '1.78', '1.59', '2.20'] Repair=['1.48', '1.44', '1.79']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.65', '1.99', '2.80', '1.99', '2.19'] Repair=['2.00', '2.05', '1.40']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.08', '2.15', '1.98', '2.14', '2.33'] Repair=['2.21', '2.04', '2.24']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.70', '1.77', '1.97', '1.72', '2.37'] Repair=['1.64', '1.73', '1.95']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.92', '1.98', '1.89', '1.64', '2.23'] Repair=['1.94', '1.81', '2.07']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.74', '1.57', '1.67', '1.52', '2.52'] Repair=['1.80', '1.52', '1.56']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.67', '2.09', '2.20', '2.08', '2.75'] Repair=['2.01', '2.20', '1.95']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.90', '2.18', '2.88', '2.32', '2.28'] Repair=['2.11', '2.46', '1.87']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.98', '1.93', '1.71', '1.98', '2.56'] Repair=['1.57', '2.19', '1.87']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.02', '1.60', '2.76', '1.70', '2.44'] Repair=['1.60', '2.29', '2.08']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.42', '1.72', '1.30', '1.28', '2.01'] Repair=['1.17', '1.56', '1.13']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.73', '1.71', '2.13', '1.84', '1.87'] Repair=['1.78', '1.42', '2.33']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.62', '1.92', '1.92', '1.44', '2.15'] Repair=['1.88', '1.43', '1.79']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.57', '1.76', '1.68', '1.88', '2.58'] Repair=['1.89', '1.84', '1.72']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.93', '2.06', '1.74', '1.49', '2.29'] Repair=['1.72', '1.69', '2.50']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.92', '2.34', '2.86', '1.90', '2.79'] Repair=['1.98', '2.85', '2.04']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.94', '2.08', '2.42', '2.48', '2.62'] Repair=['2.37', '2.15', '2.27']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.63', '1.53', '2.59', '2.00', '2.33'] Repair=['1.74', '1.43', '1.99']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.81', '2.62', '2.56', '1.96', '2.74'] Repair=['2.19', '2.57', '2.44']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.80', '2.79', '2.16', '2.13', '1.91'] Repair=['1.77', '2.15', '2.39']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.68', '2.34', '2.54', '2.40', '2.26'] Repair=['2.17', '2.49', '2.33']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.73', '2.08', '2.44', '1.65', '1.95'] Repair=['1.70', '1.97', '2.07']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.99', '2.81', '2.04', '2.00', '2.52'] Repair=['2.50', '2.20', '2.33']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.48', '2.22', '2.15', '1.98', '2.19'] Repair=['2.39', '1.91', '1.47']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.99', '2.26', '2.25', '1.99', '1.81'] Repair=['2.19', '2.04', '2.00']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.70', '1.91', '1.87', '2.07', '2.05'] Repair=['1.70', '1.83', '1.78']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.59', '2.49', '2.61', '2.30', '2.52'] Repair=['2.36', '2.51', '1.80']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.48', '2.37', '1.82', '2.45', '2.79'] Repair=['2.32', '2.26', '1.86']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.74', '1.89', '2.27', '1.97', '2.27'] Repair=['2.01', '1.76', '1.91']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.84', '1.59', '2.80', '1.60', '2.22'] Repair=['1.57', '1.97', '1.75']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.58', '1.66', '2.46', '1.92', '2.46'] Repair=['1.59', '1.52', '2.39']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.70', '2.11', '2.92', '1.92', '1.48'] Repair=['2.19', '2.05', '2.31']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.58', '1.46', '2.63', '1.21', '1.68'] Repair=['1.76', '1.64', '1.49']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.04', '1.22', '2.81', '1.38', '1.36'] Repair=['1.73', '1.14', '1.10']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.78', '1.94', '2.91', '1.60', '1.19'] Repair=['2.13', '2.03', '1.26']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.99', '2.28', '1.88', '2.32', '2.36'] Repair=['1.99', '2.21', '2.48']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.98', '1.99', '2.61', '2.36', '2.74'] Repair=['1.80', '2.28', '2.46']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.72', '1.68', '2.46', '1.93', '2.63'] Repair=['1.72', '1.70', '1.79']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.53', '2.11', '2.46', '1.90', '2.55'] Repair=['1.85', '2.30', '1.44']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.61', '1.57', '2.00', '1.40', '2.96'] Repair=['1.53', '1.62', '1.75']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.57', '1.47', '2.00', '1.89', '2.34'] Repair=['2.11', '1.93', '2.29']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.86', '2.25', '1.92', '1.94', '1.94'] Repair=['1.95', '2.35', '1.70']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.91', '2.10', '2.72', '1.46', '1.77'] Repair=['1.90', '1.99', '1.85']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.24', '1.94', '2.13', '2.20', '2.05'] Repair=['2.22', '1.95', '1.81']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.52', '2.23', '1.71', '1.43', '1.83'] Repair=['1.31', '1.66', '2.22']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.01', '2.59', '2.57', '1.58', '2.24'] Repair=['2.39', '2.21', '2.00']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.93', '2.26', '1.93', '2.05', '2.24'] Repair=['2.05', '1.94', '2.10']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.15', '1.81', '2.89', '1.65', '2.43'] Repair=['1.67', '2.04', '2.50']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.20', '1.59', '2.74', '1.42', '2.81'] Repair=['2.14', '1.92', '1.77']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.89', '1.99', '2.29', '1.82', '2.71'] Repair=['1.82', '1.72', '2.10']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.10', '2.07', '1.38', '1.82', '2.64'] Repair=['1.79', '1.48', '2.13']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.16', '2.54', '2.82', '1.76', '2.20'] Repair=['2.26', '2.84', '1.73']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.88', '2.82', '2.13', '1.88', '2.17'] Repair=['1.87', '2.73', '2.05']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.87', '2.60', '2.65', '1.84', '1.84'] Repair=['2.26', '1.96', '2.34']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.97', '2.29', '2.96', '2.67', '2.11'] Repair=['2.47', '2.01', '2.59']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.88', '2.48', '2.34', '2.23', '2.27'] Repair=['2.08', '2.46', '2.01']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.74', '2.08', '2.88', '2.09', '1.95'] Repair=['2.37', '1.68', '2.13']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.72', '2.35', '2.64', '1.79', '2.41'] Repair=['1.85', '2.58', '1.94']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.94', '1.97', '2.47', '2.44', '1.92'] Repair=['2.01', '1.88', '2.46']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.39', '2.44', '2.73', '2.57', '2.52'] Repair=['2.82', '2.36', '2.34']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.51', '2.63', '2.03', '2.49', '2.63'] Repair=['2.39', '2.70', '2.30']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.03', '2.09', '2.55', '2.27', '2.49'] Repair=['2.28', '2.07', '2.30']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.43', '2.28', '2.29', '1.58', '2.01'] Repair=['2.00', '1.74', '1.48']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.54', '1.58', '1.83', '1.81', '2.63'] Repair=['1.32', '1.67', '2.18']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.15', '2.47', '2.39', '2.40', '2.40'] Repair=['2.90', '1.88', '2.33']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.30', '2.54', '2.38', '2.74', '2.61'] Repair=['2.47', '2.28', '2.40']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.89', '2.25', '2.96', '2.41', '2.15'] Repair=['2.22', '2.46', '2.66']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.73', '1.79', '2.51', '1.54', '2.17'] Repair=['1.98', '1.75', '1.66']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.56', '2.19', '2.28', '2.77', '1.88'] Repair=['2.17', '2.31', '2.11']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.68', '2.62', '2.20', '2.50', '2.19'] Repair=['2.49', '2.08', '2.35']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.30', '2.39', '1.89', '1.98', '2.51'] Repair=['1.94', '2.21', '1.99']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.75', '1.96', '2.21', '1.74', '2.16'] Repair=['1.70', '1.76', '1.94']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.69', '2.07', '1.71', '1.53', '2.50'] Repair=['1.67', '2.27', '1.72']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.35', '2.03', '2.72', '1.75', '2.43'] Repair=['2.08', '2.13', '2.12']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.79', '2.26', '2.26', '2.22', '2.37'] Repair=['2.62', '1.68', '2.24']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.35', '1.91', '2.92', '2.15', '2.74'] Repair=['2.41', '2.10', '2.12']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.81', '2.10', '1.94', '2.16', '2.83'] Repair=['2.02', '2.35', '1.53']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.79', '1.95', '1.93', '1.66', '2.35'] Repair=['2.21', '1.73', '1.37']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['1.81', '1.89', '2.65', '2.13', '2.17'] Repair=['1.83', '2.19', '1.97']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.12', '1.52', '2.86', '1.71', '2.32'] Repair=['1.86', '2.06', '1.97']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.85', '1.81', '1.70', '2.79', '2.27'] Repair=['1.79', '2.42', '2.26']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.92', '2.32', '2.93', '1.68', '1.54'] Repair=['2.08', '2.15', '1.64']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.29', '2.70', '2.68', '1.52', '1.40'] Repair=['2.37', '1.88', '2.33']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.81', '2.14', '2.65', '1.29', '1.85'] Repair=['1.94', '2.25', '1.97']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.19', '1.56', '2.41', '1.26', '1.49'] Repair=['1.24', '1.25', '1.38']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 5
+  ALNS weights: Destroy=['2.06', '1.73', '2.83', '1.95', '2.25'] Repair=['2.41', '2.03', '1.80']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.90', '2.42', '2.60', '2.53', '2.06'] Repair=['2.13', '2.70', '2.26']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.87', '2.32', '2.61', '2.06', '2.16'] Repair=['1.79', '2.42', '2.27']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.56', '2.38', '2.56', '2.15', '2.62'] Repair=['1.96', '2.83', '2.38']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.30', '1.39', '2.74', '2.18', '2.40'] Repair=['2.08', '2.18', '2.10']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.42', '1.38', '2.57', '2.34', '2.00'] Repair=['1.98', '2.40', '1.84']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.76', '1.69', '2.32', '2.25', '2.52'] Repair=['1.80', '1.92', '2.46']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.29', '2.09', '2.60', '2.30', '1.85'] Repair=['2.23', '2.12', '2.36']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.11', '2.22', '2.91', '2.23', '2.16'] Repair=['2.15', '2.20', '2.59']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.18', '2.11', '2.76', '2.74', '1.53'] Repair=['2.46', '2.59', '2.43']
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_medium_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_medium_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_medium_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_medium_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_medium_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_medium_compromise.png
+[done] 25c_RC101_2V_medium w7 time=35.7s cost=239.0 tard=806.6
+[start] 50c_RC201_6V_medium imp2 runs=10 max_iter=100
+
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.61', '1.46', '2.56', '2.34', '2.96'] Repair=['2.55', '1.59', '1.57']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.10', '2.20', '2.28', '2.01', '2.43'] Repair=['2.19', '2.05', '2.18']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.26', '1.94', '2.47', '1.89', '2.86'] Repair=['2.37', '2.40', '2.31']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.21', '1.62', '2.39', '2.00', '2.92'] Repair=['1.92', '2.33', '1.78']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.80', '2.29', '2.15', '2.13', '2.99'] Repair=['2.31', '2.55', '1.44']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.82', '1.82', '2.22', '2.20', '2.58'] Repair=['2.03', '2.50', '1.70']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.26', '2.46', '2.27', '1.54', '2.32'] Repair=['2.22', '1.85', '2.70']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.92', '2.06', '1.83', '1.92', '2.25'] Repair=['2.10', '1.49', '2.01']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.57', '1.91', '1.97', '1.59', '2.78'] Repair=['1.94', '1.74', '1.74']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.61', '2.54', '2.35', '1.93', '2.82'] Repair=['2.24', '1.99', '2.34']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.24', '1.77', '1.87', '1.71', '2.98'] Repair=['1.96', '1.44', '1.76']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.58', '2.34', '2.25', '2.26', '2.33'] Repair=['2.12', '2.35', '2.12']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.78', '1.94', '2.05', '2.19', '2.71'] Repair=['2.00', '1.93', '2.25']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.57', '2.07', '2.12', '2.35', '2.58'] Repair=['1.94', '2.07', '2.24']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.35', '1.69', '1.62', '1.51', '2.61'] Repair=['2.11', '1.36', '1.25']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.29', '2.15', '2.83', '1.80', '2.35'] Repair=['2.36', '2.19', '1.96']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.01', '2.31', '2.85', '2.42', '2.61'] Repair=['2.39', '2.39', '2.39']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['1.34', '1.89', '2.32', '2.10', '2.14'] Repair=['1.94', '2.21', '1.75']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.88', '2.21', '2.67', '1.98', '2.40'] Repair=['1.84', '2.15', '2.17']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['1.89', '2.15', '1.92', '2.22', '2.21'] Repair=['2.22', '2.00', '2.07']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.29', '1.86', '1.92', '1.47', '2.15'] Repair=['1.63', '1.67', '1.65']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.47', '1.96', '2.17', '1.52', '1.72'] Repair=['1.56', '1.96', '1.69']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.51', '1.55', '1.52', '1.57', '1.82'] Repair=['1.53', '1.57', '1.55']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.78', '2.16', '1.70', '1.28', '1.61'] Repair=['1.83', '1.40', '1.75']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.33', '1.49', '2.09', '1.18', '2.31'] Repair=['1.52', '1.58', '1.76']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.17', '2.36', '3.00', '2.41', '2.49'] Repair=['2.68', '2.21', '2.79']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.52', '2.27', '1.38', '2.04', '2.61'] Repair=['2.24', '1.59', '1.79']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.44', '2.40', '1.85', '1.94', '2.51'] Repair=['1.92', '2.39', '2.00']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.69', '1.97', '2.95', '1.98', '2.48'] Repair=['1.67', '2.36', '2.06']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.48', '2.59', '2.56', '1.96', '2.62'] Repair=['2.35', '2.15', '2.02']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.22', '2.20', '1.61', '1.94', '1.76'] Repair=['1.98', '1.83', '2.25']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.29', '2.26', '1.44', '2.39', '1.43'] Repair=['1.97', '1.34', '1.86']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.80', '2.16', '2.83', '1.27', '1.73'] Repair=['1.85', '2.39', '1.76']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.34', '1.48', '1.64', '1.61', '2.78'] Repair=['1.61', '1.20', '1.42']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.68', '2.14', '2.14', '1.18', '2.37'] Repair=['1.73', '1.85', '1.53']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.34', '2.47', '2.72', '2.17', '2.54'] Repair=['2.44', '2.01', '2.56']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.61', '2.32', '2.20', '1.85', '1.54'] Repair=['2.05', '2.14', '1.71']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.04', '2.39', '1.73', '2.35', '1.83'] Repair=['2.04', '2.05', '2.53']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.42', '2.51', '2.32', '2.18', '1.76'] Repair=['2.02', '2.05', '2.16']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.09', '2.15', '1.47', '1.96', '1.64'] Repair=['1.90', '1.87', '1.89']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.78', '1.83', '2.90', '2.12', '2.06'] Repair=['1.91', '2.49', '1.58']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.13', '2.07', '2.57', '1.80', '1.43'] Repair=['1.54', '2.14', '2.58']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.69', '2.40', '2.20', '2.29', '2.30'] Repair=['2.28', '2.28', '2.45']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.92', '1.88', '2.54', '2.38', '2.36'] Repair=['1.70', '2.57', '2.02']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.58', '1.64', '2.24', '1.81', '1.59'] Repair=['1.38', '1.50', '1.89']
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_medium_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_medium_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_medium_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_medium_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_medium_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_medium_compromise.png
+[done] 25c_RC201_2V_medium w7 time=37.1s cost=258.0 tard=1514.0
+[start] 50c_RC201_6V_medium w7 runs=10 max_iter=100
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 6
+[P-ACO-imp2] Iteration 50/100 - Archive: 7
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 14
+[P-ACO-imp2] Iteration 80/100 - Archive: 15
+[P-ACO-imp2] Iteration 90/100 - Archive: 16
+[P-ACO-imp2] Iteration 100/100 - Archive: 16
+[P-ACO-imp2] Iteration 10/100 - Archive: 5
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 9
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 10
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 6
+[P-ACO-imp2] Iteration 30/100 - Archive: 7
+[P-ACO-imp2] Iteration 40/100 - Archive: 6
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 13
+[P-ACO-imp2] Iteration 90/100 - Archive: 13
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 15
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 9
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 15
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 13
+[P-ACO-imp2] Iteration 50/100 - Archive: 13
+[P-ACO-imp2] Iteration 60/100 - Archive: 15
+[P-ACO-imp2] Iteration 70/100 - Archive: 15
+[P-ACO-imp2] Iteration 80/100 - Archive: 15
+[P-ACO-imp2] Iteration 90/100 - Archive: 15
+[P-ACO-imp2] Iteration 100/100 - Archive: 15
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 8
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 14
+[P-ACO-imp2] Iteration 70/100 - Archive: 19
+[P-ACO-imp2] Iteration 80/100 - Archive: 18
+[P-ACO-imp2] Iteration 90/100 - Archive: 10
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 9
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 6
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 9
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 9
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 13
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 12
+[P-ACO-imp2] Iteration 30/100 - Archive: 7
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 5
+[P-ACO-imp2] Iteration 60/100 - Archive: 5
+[P-ACO-imp2] Iteration 70/100 - Archive: 6
+[P-ACO-imp2] Iteration 80/100 - Archive: 7
+[P-ACO-imp2] Iteration 90/100 - Archive: 7
+[P-ACO-imp2] Iteration 100/100 - Archive: 7
+[P-ACO-imp2] Iteration 10/100 - Archive: 11
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 6
+[P-ACO-imp2] Iteration 60/100 - Archive: 7
+[P-ACO-imp2] Iteration 70/100 - Archive: 10
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 9
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 17
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 4
+[P-ACO-imp2] Iteration 60/100 - Archive: 5
+[P-ACO-imp2] Iteration 70/100 - Archive: 6
+[P-ACO-imp2] Iteration 80/100 - Archive: 7
+[P-ACO-imp2] Iteration 90/100 - Archive: 10
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_medium_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_medium_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_medium_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_medium_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_medium_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_medium_compromise.png
+[done] 50c_RC101_4V_medium imp2 time=42.2s cost=370.3 tard=2536.5
+[start] 50c_RC201_6V_high imp2 runs=10 max_iter=100
+
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.35', '1.65', '2.16', '2.12', '2.12'] Repair=['2.26', '2.27', '1.71']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.77', '2.15', '2.33', '1.61', '2.08'] Repair=['1.59', '1.86', '2.14']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.53', '2.01', '2.43', '1.72', '2.28'] Repair=['1.75', '1.87', '1.60']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['1.96', '2.17', '2.15', '1.44', '1.97'] Repair=['1.97', '1.93', '1.59']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.77', '2.14', '2.38', '2.35', '1.99'] Repair=['1.98', '2.50', '1.77']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.69', '2.34', '1.73', '1.96', '2.54'] Repair=['2.03', '2.24', '1.89']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.30', '2.10', '2.48', '2.89', '2.28'] Repair=['2.48', '2.77', '2.32']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.79', '2.62', '2.70', '2.07', '2.02'] Repair=['2.56', '1.31', '2.31']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.18', '2.25', '2.77', '2.03', '1.89'] Repair=['1.70', '2.45', '2.30']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.67', '2.31', '2.80', '2.15', '2.33'] Repair=['2.03', '2.14', '2.05']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.36', '1.87', '2.21', '2.39', '1.94'] Repair=['2.15', '1.92', '2.46']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.65', '2.51', '2.97', '1.30', '1.63'] Repair=['2.10', '2.03', '1.75']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.54', '1.68', '2.82', '1.91', '2.12'] Repair=['1.67', '1.91', '1.70']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.97', '1.83', '2.83', '1.31', '1.59'] Repair=['1.68', '1.57', '1.86']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.29', '1.39', '2.70', '1.47', '1.70'] Repair=['1.28', '1.38', '1.51']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['2.56', '2.87', '2.95', '1.63', '2.87'] Repair=['2.90', '2.66', '2.46']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.91', '2.63', '2.65', '2.12', '2.16'] Repair=['2.34', '2.34', '2.32']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.74', '2.54', '2.19', '2.36', '2.68'] Repair=['2.20', '2.32', '2.12']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.77', '2.18', '2.39', '2.01', '2.30'] Repair=['1.72', '2.29', '2.22']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.14', '1.98', '2.80', '2.09', '2.50'] Repair=['1.96', '2.28', '2.13']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.72', '2.15', '2.19', '2.04', '1.84'] Repair=['1.53', '1.86', '2.41']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.66', '2.65', '2.34', '2.22', '2.31'] Repair=['2.34', '2.16', '2.01']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.04', '2.36', '2.44', '2.30', '2.23'] Repair=['2.34', '2.30', '2.15']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.76', '2.24', '2.12', '2.13', '2.56'] Repair=['1.97', '1.75', '2.55']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.67', '1.68', '2.66', '1.77', '2.43'] Repair=['1.67', '2.22', '2.17']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.91', '2.13', '2.23', '2.10', '2.19'] Repair=['2.33', '1.82', '2.20']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.42', '2.22', '2.90', '1.91', '2.47'] Repair=['2.54', '2.48', '2.60']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.75', '2.30', '2.95', '2.37', '2.27'] Repair=['2.52', '2.41', '2.60']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.89', '2.49', '2.40', '2.44', '2.23'] Repair=['1.86', '2.32', '2.59']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.59', '2.04', '2.74', '2.04', '2.14'] Repair=['2.05', '2.29', '2.20']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.78', '1.91', '2.56', '2.00', '2.29'] Repair=['1.93', '1.82', '2.04']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.12', '1.78', '1.81', '1.44', '1.79'] Repair=['1.39', '1.76', '1.29']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.80', '1.98', '1.93', '1.68', '1.87'] Repair=['1.40', '2.23', '1.69']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.39', '2.12', '2.24', '1.99', '1.45'] Repair=['2.26', '1.57', '1.55']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.69', '2.35', '2.43', '1.55', '1.43'] Repair=['1.71', '1.90', '2.02']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.10', '2.54', '2.69', '2.60', '2.23'] Repair=['2.43', '2.34', '2.38']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.98', '2.54', '2.87', '2.92', '2.67'] Repair=['2.68', '2.05', '2.73']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.29', '2.34', '2.08', '1.56', '2.24'] Repair=['1.34', '1.80', '2.62']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.51', '2.24', '2.00', '2.58', '2.50'] Repair=['2.14', '2.29', '1.71']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.13', '2.48', '2.85', '2.54', '2.35'] Repair=['2.60', '2.05', '2.57']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.63', '1.82', '2.96', '2.64', '2.29'] Repair=['2.68', '2.47', '2.26']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.53', '1.29', '2.05', '1.83', '1.65'] Repair=['1.89', '1.53', '1.23']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.76', '1.48', '2.42', '2.35', '1.49'] Repair=['1.96', '2.03', '1.94']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.69', '1.63', '2.11', '1.89', '1.80'] Repair=['2.08', '1.67', '1.47']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.47', '1.90', '1.41', '1.23', '2.06'] Repair=['1.44', '1.78', '1.90']
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_high_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_high_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_high_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_high_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_high_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC101_2V_high_compromise.png
+[done] 25c_RC101_2V_high w7 time=44.7s cost=229.8 tard=647.2
+[start] 50c_RC201_6V_high w7 runs=10 max_iter=100
+
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.13', '1.71', '2.25', '1.28', '2.72'] Repair=['1.89', '1.74', '2.02']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.71', '1.99', '2.65', '1.64', '2.34'] Repair=['2.22', '1.84', '1.72']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.39', '2.23', '2.61', '1.66', '2.19'] Repair=['2.39', '1.87', '1.64']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.64', '2.01', '2.34', '1.61', '2.58'] Repair=['1.74', '1.85', '1.92']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.87', '1.50', '2.15', '1.74', '2.75'] Repair=['1.83', '2.03', '1.48']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.63', '2.20', '2.60', '2.59', '2.48'] Repair=['1.86', '2.36', '2.11']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.64', '1.61', '2.00', '2.51', '2.47'] Repair=['1.86', '1.75', '2.05']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.76', '2.07', '2.24', '2.14', '2.75'] Repair=['1.62', '2.10', '1.99']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.65', '2.45', '2.27', '1.58', '2.56'] Repair=['2.11', '2.14', '1.63']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.48', '2.00', '1.99', '1.95', '2.32'] Repair=['1.80', '2.08', '1.66']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.13', '1.93', '2.64', '1.54', '2.18'] Repair=['1.17', '1.91', '1.71']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.03', '2.31', '2.07', '1.88', '2.29'] Repair=['2.28', '2.32', '1.59']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.74', '1.71', '2.33', '1.63', '2.31'] Repair=['1.70', '2.18', '1.64']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.98', '2.14', '2.66', '2.38', '2.70'] Repair=['2.11', '2.46', '2.23']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.41', '1.79', '2.13', '1.64', '2.78'] Repair=['1.33', '2.33', '1.81']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.34', '2.09', '2.24', '2.52', '2.13'] Repair=['2.56', '1.77', '1.71']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.71', '2.40', '2.04', '1.84', '2.46'] Repair=['1.60', '2.47', '1.77']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.40', '1.79', '1.90', '2.14', '2.34'] Repair=['2.22', '1.90', '2.29']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.66', '2.35', '2.60', '2.24', '2.31'] Repair=['2.28', '2.25', '1.61']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.75', '2.07', '2.32', '2.41', '2.10'] Repair=['1.99', '2.49', '1.84']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.21', '2.51', '2.23', '2.14', '2.44'] Repair=['2.41', '2.35', '2.29']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.09', '2.51', '2.19', '2.02', '2.34'] Repair=['2.00', '2.27', '2.42']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.64', '1.70', '2.04', '1.88', '2.72'] Repair=['1.52', '1.75', '2.11']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.82', '1.99', '2.44', '2.06', '2.60'] Repair=['2.11', '1.83', '2.13']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.91', '1.95', '2.75', '1.97', '2.26'] Repair=['1.75', '2.34', '2.27']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.66', '2.24', '2.98', '2.31', '2.78'] Repair=['2.08', '2.38', '2.41']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.88', '2.14', '2.44', '1.63', '2.90'] Repair=['2.15', '1.70', '2.25']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.36', '2.13', '2.27', '2.09', '2.75'] Repair=['1.58', '2.17', '2.10']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.98', '2.21', '2.49', '1.23', '2.73'] Repair=['2.26', '1.94', '1.84']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.76', '1.96', '1.84', '2.12', '1.95'] Repair=['1.67', '1.82', '2.05']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.37', '1.98', '2.69', '2.28', '2.56'] Repair=['1.82', '1.81', '2.56']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.67', '2.26', '2.48', '1.91', '2.16'] Repair=['2.05', '1.75', '1.86']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.46', '2.50', '2.55', '1.92', '2.42'] Repair=['2.43', '1.69', '2.14']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.74', '2.43', '2.05', '2.48', '1.98'] Repair=['2.69', '2.27', '1.40']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.06', '1.85', '2.83', '1.94', '2.67'] Repair=['2.04', '2.44', '1.78']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.71', '1.87', '2.68', '2.70', '2.76'] Repair=['2.46', '2.73', '1.99']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.78', '2.25', '2.14', '2.10', '2.42'] Repair=['1.84', '2.43', '1.58']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.18', '2.13', '2.39', '1.96', '2.39'] Repair=['2.09', '2.27', '2.12']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.29', '2.18', '1.88', '2.08', '2.54'] Repair=['1.64', '1.82', '2.06']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.45', '2.05', '2.09', '1.74', '2.29'] Repair=['1.93', '1.60', '1.91']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.86', '1.73', '2.37', '1.93', '2.66'] Repair=['1.94', '1.69', '2.21']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.65', '1.88', '1.26', '1.37', '2.70'] Repair=['1.62', '1.22', '2.07']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['1.35', '2.03', '2.33', '1.66', '2.57'] Repair=['1.32', '2.15', '1.94']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.75', '2.37', '2.79', '2.16', '2.23'] Repair=['2.51', '2.46', '1.83']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['1.50', '1.64', '1.63', '1.15', '2.08'] Repair=['1.31', '1.41', '1.53']
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_high_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_high_min_cost.png
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 13
+[P-ACO-imp2] Iteration 40/100 - Archive: 13
+[P-ACO-imp2] Iteration 50/100 - Archive: 14
+[P-ACO-imp2] Iteration 60/100 - Archive: 15
+[P-ACO-imp2] Iteration 70/100 - Archive: 13
+[P-ACO-imp2] Iteration 80/100 - Archive: 16
+[P-ACO-imp2] Iteration 90/100 - Archive: 16
+[P-ACO-imp2] Iteration 100/100 - Archive: 20
+[P-ACO-imp2] Iteration 10/100 - Archive: 14
+[P-ACO-imp2] Iteration 20/100 - Archive: 15
+[P-ACO-imp2] Iteration 30/100 - Archive: 17
+[P-ACO-imp2] Iteration 40/100 - Archive: 14
+[P-ACO-imp2] Iteration 50/100 - Archive: 15
+[P-ACO-imp2] Iteration 60/100 - Archive: 16
+[P-ACO-imp2] Iteration 70/100 - Archive: 19
+[P-ACO-imp2] Iteration 80/100 - Archive: 22
+[P-ACO-imp2] Iteration 90/100 - Archive: 23
+[P-ACO-imp2] Iteration 100/100 - Archive: 25
+[P-ACO-imp2] Iteration 10/100 - Archive: 14
+[P-ACO-imp2] Iteration 20/100 - Archive: 19
+[P-ACO-imp2] Iteration 30/100 - Archive: 23
+[P-ACO-imp2] Iteration 40/100 - Archive: 24
+[P-ACO-imp2] Iteration 50/100 - Archive: 24
+[P-ACO-imp2] Iteration 60/100 - Archive: 21
+[P-ACO-imp2] Iteration 70/100 - Archive: 22
+[P-ACO-imp2] Iteration 80/100 - Archive: 22
+[P-ACO-imp2] Iteration 90/100 - Archive: 23
+[P-ACO-imp2] Iteration 100/100 - Archive: 24
+[P-ACO-imp2] Iteration 10/100 - Archive: 15
+[P-ACO-imp2] Iteration 20/100 - Archive: 13
+[P-ACO-imp2] Iteration 30/100 - Archive: 14
+[P-ACO-imp2] Iteration 40/100 - Archive: 15
+[P-ACO-imp2] Iteration 50/100 - Archive: 16
+[P-ACO-imp2] Iteration 60/100 - Archive: 20
+[P-ACO-imp2] Iteration 70/100 - Archive: 19
+[P-ACO-imp2] Iteration 80/100 - Archive: 20
+[P-ACO-imp2] Iteration 90/100 - Archive: 17
+[P-ACO-imp2] Iteration 100/100 - Archive: 17
+[P-ACO-imp2] Iteration 10/100 - Archive: 17
+[P-ACO-imp2] Iteration 20/100 - Archive: 13
+[P-ACO-imp2] Iteration 30/100 - Archive: 15
+[P-ACO-imp2] Iteration 40/100 - Archive: 15
+[P-ACO-imp2] Iteration 50/100 - Archive: 16
+[P-ACO-imp2] Iteration 60/100 - Archive: 16
+[P-ACO-imp2] Iteration 70/100 - Archive: 15
+[P-ACO-imp2] Iteration 80/100 - Archive: 15
+[P-ACO-imp2] Iteration 90/100 - Archive: 16
+[P-ACO-imp2] Iteration 100/100 - Archive: 15
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 16
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 7
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 8
+[P-ACO-imp2] Iteration 70/100 - Archive: 9
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 15
+[P-ACO-imp2] Iteration 10/100 - Archive: 14
+[P-ACO-imp2] Iteration 20/100 - Archive: 15
+[P-ACO-imp2] Iteration 30/100 - Archive: 13
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 14
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 13
+[P-ACO-imp2] Iteration 10/100 - Archive: 15
+[P-ACO-imp2] Iteration 20/100 - Archive: 13
+[P-ACO-imp2] Iteration 30/100 - Archive: 16
+[P-ACO-imp2] Iteration 40/100 - Archive: 14
+[P-ACO-imp2] Iteration 50/100 - Archive: 14
+[P-ACO-imp2] Iteration 60/100 - Archive: 9
+[P-ACO-imp2] Iteration 70/100 - Archive: 8
+[P-ACO-imp2] Iteration 80/100 - Archive: 9
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 16
+[P-ACO-imp2] Iteration 20/100 - Archive: 14
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 12
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 13
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 9
+[P-ACO-imp2] Iteration 10/100 - Archive: 17
+[P-ACO-imp2] Iteration 20/100 - Archive: 15
+[P-ACO-imp2] Iteration 30/100 - Archive: 16
+[P-ACO-imp2] Iteration 40/100 - Archive: 16
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 15
+[P-ACO-imp2] Iteration 70/100 - Archive: 18
+[P-ACO-imp2] Iteration 80/100 - Archive: 18
+[P-ACO-imp2] Iteration 90/100 - Archive: 20
+[P-ACO-imp2] Iteration 100/100 - Archive: 18
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_medium_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_medium_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_high_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_high_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_medium_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_medium_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_high_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_w7_25c_RC201_2V_high_compromise.png
+[done] 25c_RC201_2V_high w7 time=46.1s cost=262.5 tard=1534.2
+[start] 100c_RC101_10V_medium imp2 runs=10 max_iter=100
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_medium_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_medium_compromise.png
+[done] 50c_RC201_4V_medium imp2 time=46.0s cost=412.0 tard=5520.3
+[start] 100c_RC101_10V_medium w7 runs=10 max_iter=100
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 8
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 14
+[P-ACO-imp2] Iteration 60/100 - Archive: 14
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 13
+[P-ACO-imp2] Iteration 90/100 - Archive: 14
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 9
+[P-ACO-imp2] Iteration 60/100 - Archive: 9
+[P-ACO-imp2] Iteration 70/100 - Archive: 8
+[P-ACO-imp2] Iteration 80/100 - Archive: 8
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 13
+[P-ACO-imp2] Iteration 20/100 - Archive: 12
+[P-ACO-imp2] Iteration 30/100 - Archive: 13
+[P-ACO-imp2] Iteration 40/100 - Archive: 17
+[P-ACO-imp2] Iteration 50/100 - Archive: 7
+[P-ACO-imp2] Iteration 60/100 - Archive: 8
+[P-ACO-imp2] Iteration 70/100 - Archive: 8
+[P-ACO-imp2] Iteration 80/100 - Archive: 9
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 13
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 8
+[P-ACO-imp2] Iteration 80/100 - Archive: 9
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 9
+[P-ACO-imp2] Iteration 10/100 - Archive: 9
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 10
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 7
+[P-ACO-imp2] Iteration 70/100 - Archive: 7
+[P-ACO-imp2] Iteration 80/100 - Archive: 8
+[P-ACO-imp2] Iteration 90/100 - Archive: 10
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 12
+[P-ACO-imp2] Iteration 30/100 - Archive: 8
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 13
+[P-ACO-imp2] Iteration 60/100 - Archive: 15
+[P-ACO-imp2] Iteration 70/100 - Archive: 15
+[P-ACO-imp2] Iteration 80/100 - Archive: 14
+[P-ACO-imp2] Iteration 90/100 - Archive: 16
+[P-ACO-imp2] Iteration 100/100 - Archive: 16
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 14
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 4
+[P-ACO-imp2] Iteration 80/100 - Archive: 4
+[P-ACO-imp2] Iteration 90/100 - Archive: 7
+[P-ACO-imp2] Iteration 100/100 - Archive: 8
+[P-ACO-imp2] Iteration 10/100 - Archive: 11
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 10
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 9
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 9
+[P-ACO-imp2] Iteration 40/100 - Archive: 10
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 8
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 9
+[P-ACO-imp2] Iteration 30/100 - Archive: 6
+[P-ACO-imp2] Iteration 40/100 - Archive: 5
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 13
+[P-ACO-imp2] Iteration 90/100 - Archive: 13
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_medium_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_medium_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_medium_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_medium_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_medium_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_medium_compromise.png
+[done] 50c_RC101_6V_medium imp2 time=44.9s cost=369.5 tard=2496.5
+[start] 100c_RC101_10V_high imp2 runs=10 max_iter=100
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 9
+[P-ACO-imp2] Iteration 40/100 - Archive: 10
+[P-ACO-imp2] Iteration 50/100 - Archive: 9
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 10
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 16
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 13
+[P-ACO-imp2] Iteration 20/100 - Archive: 7
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 13
+[P-ACO-imp2] Iteration 80/100 - Archive: 14
+[P-ACO-imp2] Iteration 90/100 - Archive: 13
+[P-ACO-imp2] Iteration 100/100 - Archive: 15
+[P-ACO-imp2] Iteration 10/100 - Archive: 6
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 7
+[P-ACO-imp2] Iteration 40/100 - Archive: 7
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 6
+[P-ACO-imp2] Iteration 70/100 - Archive: 5
+[P-ACO-imp2] Iteration 80/100 - Archive: 7
+[P-ACO-imp2] Iteration 90/100 - Archive: 9
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 7
+[P-ACO-imp2] Iteration 30/100 - Archive: 6
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 14
+[P-ACO-imp2] Iteration 90/100 - Archive: 16
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 7
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 6
+[P-ACO-imp2] Iteration 50/100 - Archive: 5
+[P-ACO-imp2] Iteration 60/100 - Archive: 4
+[P-ACO-imp2] Iteration 70/100 - Archive: 7
+[P-ACO-imp2] Iteration 80/100 - Archive: 5
+[P-ACO-imp2] Iteration 90/100 - Archive: 7
+[P-ACO-imp2] Iteration 100/100 - Archive: 7
+[P-ACO-imp2] Iteration 10/100 - Archive: 15
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 8
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 15
+[P-ACO-imp2] Iteration 80/100 - Archive: 16
+[P-ACO-imp2] Iteration 90/100 - Archive: 13
+[P-ACO-imp2] Iteration 100/100 - Archive: 15
+[P-ACO-imp2] Iteration 10/100 - Archive: 11
+[P-ACO-imp2] Iteration 20/100 - Archive: 17
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 7
+[P-ACO-imp2] Iteration 60/100 - Archive: 8
+[P-ACO-imp2] Iteration 70/100 - Archive: 10
+[P-ACO-imp2] Iteration 80/100 - Archive: 13
+[P-ACO-imp2] Iteration 90/100 - Archive: 13
+[P-ACO-imp2] Iteration 100/100 - Archive: 13
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 6
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 10
+[P-ACO-imp2] Iteration 50/100 - Archive: 13
+[P-ACO-imp2] Iteration 60/100 - Archive: 15
+[P-ACO-imp2] Iteration 70/100 - Archive: 12
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 11
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 5
+[P-ACO-imp2] Iteration 30/100 - Archive: 7
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 11
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 4
+[P-ACO-imp2] Iteration 20/100 - Archive: 4
+[P-ACO-imp2] Iteration 30/100 - Archive: 5
+[P-ACO-imp2] Iteration 40/100 - Archive: 10
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 14
+[P-ACO-imp2] Iteration 80/100 - Archive: 14
+[P-ACO-imp2] Iteration 90/100 - Archive: 15
+[P-ACO-imp2] Iteration 100/100 - Archive: 16
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_high_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_high_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_high_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_high_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_high_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_4V_high_compromise.png
+[done] 50c_RC101_4V_high imp2 time=85.3s cost=375.0 tard=2563.7
+[start] 100c_RC101_10V_high w7 runs=10 max_iter=100
+[P-ACO-imp2] Iteration 10/100 - Archive: 14
+[P-ACO-imp2] Iteration 20/100 - Archive: 15
+[P-ACO-imp2] Iteration 30/100 - Archive: 18
+[P-ACO-imp2] Iteration 40/100 - Archive: 17
+[P-ACO-imp2] Iteration 50/100 - Archive: 17
+[P-ACO-imp2] Iteration 60/100 - Archive: 17
+[P-ACO-imp2] Iteration 70/100 - Archive: 19
+[P-ACO-imp2] Iteration 80/100 - Archive: 20
+[P-ACO-imp2] Iteration 90/100 - Archive: 22
+[P-ACO-imp2] Iteration 100/100 - Archive: 22
+[P-ACO-imp2] Iteration 10/100 - Archive: 19
+[P-ACO-imp2] Iteration 20/100 - Archive: 12
+[P-ACO-imp2] Iteration 30/100 - Archive: 18
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 12
+[P-ACO-imp2] Iteration 70/100 - Archive: 15
+[P-ACO-imp2] Iteration 80/100 - Archive: 15
+[P-ACO-imp2] Iteration 90/100 - Archive: 14
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 16
+[P-ACO-imp2] Iteration 20/100 - Archive: 18
+[P-ACO-imp2] Iteration 30/100 - Archive: 18
+[P-ACO-imp2] Iteration 40/100 - Archive: 15
+[P-ACO-imp2] Iteration 50/100 - Archive: 13
+[P-ACO-imp2] Iteration 60/100 - Archive: 15
+[P-ACO-imp2] Iteration 70/100 - Archive: 18
+[P-ACO-imp2] Iteration 80/100 - Archive: 20
+[P-ACO-imp2] Iteration 90/100 - Archive: 21
+[P-ACO-imp2] Iteration 100/100 - Archive: 22
+[P-ACO-imp2] Iteration 10/100 - Archive: 21
+[P-ACO-imp2] Iteration 20/100 - Archive: 22
+[P-ACO-imp2] Iteration 30/100 - Archive: 23
+[P-ACO-imp2] Iteration 40/100 - Archive: 22
+[P-ACO-imp2] Iteration 50/100 - Archive: 22
+[P-ACO-imp2] Iteration 60/100 - Archive: 24
+[P-ACO-imp2] Iteration 70/100 - Archive: 24
+[P-ACO-imp2] Iteration 80/100 - Archive: 25
+[P-ACO-imp2] Iteration 90/100 - Archive: 25
+[P-ACO-imp2] Iteration 100/100 - Archive: 25
+[P-ACO-imp2] Iteration 10/100 - Archive: 15
+[P-ACO-imp2] Iteration 20/100 - Archive: 23
+[P-ACO-imp2] Iteration 30/100 - Archive: 17
+[P-ACO-imp2] Iteration 40/100 - Archive: 13
+[P-ACO-imp2] Iteration 50/100 - Archive: 17
+[P-ACO-imp2] Iteration 60/100 - Archive: 20
+[P-ACO-imp2] Iteration 70/100 - Archive: 23
+[P-ACO-imp2] Iteration 80/100 - Archive: 25
+[P-ACO-imp2] Iteration 90/100 - Archive: 23
+[P-ACO-imp2] Iteration 100/100 - Archive: 19
+[P-ACO-imp2] Iteration 10/100 - Archive: 13
+[P-ACO-imp2] Iteration 20/100 - Archive: 16
+[P-ACO-imp2] Iteration 30/100 - Archive: 16
+[P-ACO-imp2] Iteration 40/100 - Archive: 13
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 10
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 13
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 20
+[P-ACO-imp2] Iteration 20/100 - Archive: 21
+[P-ACO-imp2] Iteration 30/100 - Archive: 19
+[P-ACO-imp2] Iteration 40/100 - Archive: 23
+[P-ACO-imp2] Iteration 50/100 - Archive: 23
+[P-ACO-imp2] Iteration 60/100 - Archive: 22
+[P-ACO-imp2] Iteration 70/100 - Archive: 22
+[P-ACO-imp2] Iteration 80/100 - Archive: 22
+[P-ACO-imp2] Iteration 90/100 - Archive: 22
+[P-ACO-imp2] Iteration 100/100 - Archive: 23
+[P-ACO-imp2] Iteration 10/100 - Archive: 15
+[P-ACO-imp2] Iteration 20/100 - Archive: 15
+[P-ACO-imp2] Iteration 30/100 - Archive: 16
+[P-ACO-imp2] Iteration 40/100 - Archive: 15
+[P-ACO-imp2] Iteration 50/100 - Archive: 13
+[P-ACO-imp2] Iteration 60/100 - Archive: 14
+[P-ACO-imp2] Iteration 70/100 - Archive: 15
+[P-ACO-imp2] Iteration 80/100 - Archive: 15
+[P-ACO-imp2] Iteration 90/100 - Archive: 13
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 14
+[P-ACO-imp2] Iteration 20/100 - Archive: 13
+[P-ACO-imp2] Iteration 30/100 - Archive: 12
+[P-ACO-imp2] Iteration 40/100 - Archive: 17
+[P-ACO-imp2] Iteration 50/100 - Archive: 17
+[P-ACO-imp2] Iteration 60/100 - Archive: 14
+[P-ACO-imp2] Iteration 70/100 - Archive: 18
+[P-ACO-imp2] Iteration 80/100 - Archive: 18
+[P-ACO-imp2] Iteration 90/100 - Archive: 15
+[P-ACO-imp2] Iteration 100/100 - Archive: 13
+[P-ACO-imp2] Iteration 10/100 - Archive: 17
+[P-ACO-imp2] Iteration 20/100 - Archive: 15
+[P-ACO-imp2] Iteration 30/100 - Archive: 22
+[P-ACO-imp2] Iteration 40/100 - Archive: 23
+[P-ACO-imp2] Iteration 50/100 - Archive: 18
+[P-ACO-imp2] Iteration 60/100 - Archive: 19
+[P-ACO-imp2] Iteration 70/100 - Archive: 15
+[P-ACO-imp2] Iteration 80/100 - Archive: 14
+[P-ACO-imp2] Iteration 90/100 - Archive: 16
+[P-ACO-imp2] Iteration 100/100 - Archive: 17
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_high_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_high_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_high_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_high_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_high_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_4V_high_compromise.png
+[done] 50c_RC201_4V_high imp2 time=88.3s cost=406.9 tard=4896.3
+[start] 100c_RC201_10V_medium imp2 runs=10 max_iter=100
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 16
+[P-ACO-imp2] Iteration 30/100 - Archive: 16
+[P-ACO-imp2] Iteration 40/100 - Archive: 15
+[P-ACO-imp2] Iteration 50/100 - Archive: 21
+[P-ACO-imp2] Iteration 60/100 - Archive: 18
+[P-ACO-imp2] Iteration 70/100 - Archive: 19
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 11
+[P-ACO-imp2] Iteration 100/100 - Archive: 10
+[P-ACO-imp2] Iteration 10/100 - Archive: 15
+[P-ACO-imp2] Iteration 20/100 - Archive: 21
+[P-ACO-imp2] Iteration 30/100 - Archive: 24
+[P-ACO-imp2] Iteration 40/100 - Archive: 18
+[P-ACO-imp2] Iteration 50/100 - Archive: 22
+[P-ACO-imp2] Iteration 60/100 - Archive: 23
+[P-ACO-imp2] Iteration 70/100 - Archive: 24
+[P-ACO-imp2] Iteration 80/100 - Archive: 21
+[P-ACO-imp2] Iteration 90/100 - Archive: 19
+[P-ACO-imp2] Iteration 100/100 - Archive: 19
+[P-ACO-imp2] Iteration 10/100 - Archive: 15
+[P-ACO-imp2] Iteration 20/100 - Archive: 16
+[P-ACO-imp2] Iteration 30/100 - Archive: 20
+[P-ACO-imp2] Iteration 40/100 - Archive: 20
+[P-ACO-imp2] Iteration 50/100 - Archive: 21
+[P-ACO-imp2] Iteration 60/100 - Archive: 25
+[P-ACO-imp2] Iteration 70/100 - Archive: 22
+[P-ACO-imp2] Iteration 80/100 - Archive: 19
+[P-ACO-imp2] Iteration 90/100 - Archive: 17
+[P-ACO-imp2] Iteration 100/100 - Archive: 19
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 16
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 13
+[P-ACO-imp2] Iteration 80/100 - Archive: 16
+[P-ACO-imp2] Iteration 90/100 - Archive: 17
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 14
+[P-ACO-imp2] Iteration 30/100 - Archive: 19
+[P-ACO-imp2] Iteration 40/100 - Archive: 18
+[P-ACO-imp2] Iteration 50/100 - Archive: 17
+[P-ACO-imp2] Iteration 60/100 - Archive: 19
+[P-ACO-imp2] Iteration 70/100 - Archive: 22
+[P-ACO-imp2] Iteration 80/100 - Archive: 24
+[P-ACO-imp2] Iteration 90/100 - Archive: 15
+[P-ACO-imp2] Iteration 100/100 - Archive: 16
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 14
+[P-ACO-imp2] Iteration 40/100 - Archive: 14
+[P-ACO-imp2] Iteration 50/100 - Archive: 17
+[P-ACO-imp2] Iteration 60/100 - Archive: 17
+[P-ACO-imp2] Iteration 70/100 - Archive: 17
+[P-ACO-imp2] Iteration 80/100 - Archive: 21
+[P-ACO-imp2] Iteration 90/100 - Archive: 22
+[P-ACO-imp2] Iteration 100/100 - Archive: 22
+[P-ACO-imp2] Iteration 10/100 - Archive: 18
+[P-ACO-imp2] Iteration 20/100 - Archive: 19
+[P-ACO-imp2] Iteration 30/100 - Archive: 16
+[P-ACO-imp2] Iteration 40/100 - Archive: 17
+[P-ACO-imp2] Iteration 50/100 - Archive: 17
+[P-ACO-imp2] Iteration 60/100 - Archive: 15
+[P-ACO-imp2] Iteration 70/100 - Archive: 16
+[P-ACO-imp2] Iteration 80/100 - Archive: 16
+[P-ACO-imp2] Iteration 90/100 - Archive: 14
+[P-ACO-imp2] Iteration 100/100 - Archive: 14
+[P-ACO-imp2] Iteration 10/100 - Archive: 12
+[P-ACO-imp2] Iteration 20/100 - Archive: 19
+[P-ACO-imp2] Iteration 30/100 - Archive: 17
+[P-ACO-imp2] Iteration 40/100 - Archive: 18
+[P-ACO-imp2] Iteration 50/100 - Archive: 18
+[P-ACO-imp2] Iteration 60/100 - Archive: 19
+[P-ACO-imp2] Iteration 70/100 - Archive: 22
+[P-ACO-imp2] Iteration 80/100 - Archive: 23
+[P-ACO-imp2] Iteration 90/100 - Archive: 20
+[P-ACO-imp2] Iteration 100/100 - Archive: 20
+[P-ACO-imp2] Iteration 10/100 - Archive: 13
+[P-ACO-imp2] Iteration 20/100 - Archive: 12
+[P-ACO-imp2] Iteration 30/100 - Archive: 16
+[P-ACO-imp2] Iteration 40/100 - Archive: 13
+[P-ACO-imp2] Iteration 50/100 - Archive: 21
+[P-ACO-imp2] Iteration 60/100 - Archive: 18
+[P-ACO-imp2] Iteration 70/100 - Archive: 16
+[P-ACO-imp2] Iteration 80/100 - Archive: 17
+[P-ACO-imp2] Iteration 90/100 - Archive: 21
+[P-ACO-imp2] Iteration 100/100 - Archive: 22
+[P-ACO-imp2] Iteration 10/100 - Archive: 13
+[P-ACO-imp2] Iteration 20/100 - Archive: 15
+[P-ACO-imp2] Iteration 30/100 - Archive: 16
+[P-ACO-imp2] Iteration 40/100 - Archive: 18
+[P-ACO-imp2] Iteration 50/100 - Archive: 19
+[P-ACO-imp2] Iteration 60/100 - Archive: 20
+[P-ACO-imp2] Iteration 70/100 - Archive: 19
+[P-ACO-imp2] Iteration 80/100 - Archive: 20
+[P-ACO-imp2] Iteration 90/100 - Archive: 20
+[P-ACO-imp2] Iteration 100/100 - Archive: 20
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_6V_medium_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_6V_medium_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_6V_medium_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_6V_medium_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_6V_medium_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC201_6V_medium_compromise.png
+[done] 50c_RC201_6V_medium imp2 time=53.8s cost=416.5 tard=4790.0
+[start] 100c_RC201_10V_medium w7 runs=10 max_iter=100
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 11
+[P-ACO-imp2] Iteration 30/100 - Archive: 11
+[P-ACO-imp2] Iteration 40/100 - Archive: 11
+[P-ACO-imp2] Iteration 50/100 - Archive: 12
+[P-ACO-imp2] Iteration 60/100 - Archive: 16
+[P-ACO-imp2] Iteration 70/100 - Archive: 15
+[P-ACO-imp2] Iteration 80/100 - Archive: 17
+[P-ACO-imp2] Iteration 90/100 - Archive: 15
+[P-ACO-imp2] Iteration 100/100 - Archive: 15
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 5
+[P-ACO-imp2] Iteration 30/100 - Archive: 7
+[P-ACO-imp2] Iteration 40/100 - Archive: 7
+[P-ACO-imp2] Iteration 50/100 - Archive: 6
+[P-ACO-imp2] Iteration 60/100 - Archive: 7
+[P-ACO-imp2] Iteration 70/100 - Archive: 7
+[P-ACO-imp2] Iteration 80/100 - Archive: 7
+[P-ACO-imp2] Iteration 90/100 - Archive: 6
+[P-ACO-imp2] Iteration 100/100 - Archive: 9
+[P-ACO-imp2] Iteration 10/100 - Archive: 5
+[P-ACO-imp2] Iteration 20/100 - Archive: 5
+[P-ACO-imp2] Iteration 30/100 - Archive: 6
+[P-ACO-imp2] Iteration 40/100 - Archive: 8
+[P-ACO-imp2] Iteration 50/100 - Archive: 7
+[P-ACO-imp2] Iteration 60/100 - Archive: 6
+[P-ACO-imp2] Iteration 70/100 - Archive: 7
+[P-ACO-imp2] Iteration 80/100 - Archive: 9
+[P-ACO-imp2] Iteration 90/100 - Archive: 7
+[P-ACO-imp2] Iteration 100/100 - Archive: 7
+[P-ACO-imp2] Iteration 10/100 - Archive: 9
+[P-ACO-imp2] Iteration 20/100 - Archive: 7
+[P-ACO-imp2] Iteration 30/100 - Archive: 10
+[P-ACO-imp2] Iteration 40/100 - Archive: 16
+[P-ACO-imp2] Iteration 50/100 - Archive: 17
+[P-ACO-imp2] Iteration 60/100 - Archive: 17
+[P-ACO-imp2] Iteration 70/100 - Archive: 16
+[P-ACO-imp2] Iteration 80/100 - Archive: 18
+[P-ACO-imp2] Iteration 90/100 - Archive: 15
+[P-ACO-imp2] Iteration 100/100 - Archive: 15
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 17
+[P-ACO-imp2] Iteration 40/100 - Archive: 15
+[P-ACO-imp2] Iteration 50/100 - Archive: 8
+[P-ACO-imp2] Iteration 60/100 - Archive: 9
+[P-ACO-imp2] Iteration 70/100 - Archive: 8
+[P-ACO-imp2] Iteration 80/100 - Archive: 11
+[P-ACO-imp2] Iteration 90/100 - Archive: 4
+[P-ACO-imp2] Iteration 100/100 - Archive: 6
+[P-ACO-imp2] Iteration 10/100 - Archive: 8
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 13
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 10
+[P-ACO-imp2] Iteration 80/100 - Archive: 10
+[P-ACO-imp2] Iteration 90/100 - Archive: 10
+[P-ACO-imp2] Iteration 100/100 - Archive: 6
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 10
+[P-ACO-imp2] Iteration 30/100 - Archive: 13
+[P-ACO-imp2] Iteration 40/100 - Archive: 14
+[P-ACO-imp2] Iteration 50/100 - Archive: 14
+[P-ACO-imp2] Iteration 60/100 - Archive: 14
+[P-ACO-imp2] Iteration 70/100 - Archive: 13
+[P-ACO-imp2] Iteration 80/100 - Archive: 14
+[P-ACO-imp2] Iteration 90/100 - Archive: 17
+[P-ACO-imp2] Iteration 100/100 - Archive: 17
+[P-ACO-imp2] Iteration 10/100 - Archive: 11
+[P-ACO-imp2] Iteration 20/100 - Archive: 5
+[P-ACO-imp2] Iteration 30/100 - Archive: 6
+[P-ACO-imp2] Iteration 40/100 - Archive: 9
+[P-ACO-imp2] Iteration 50/100 - Archive: 10
+[P-ACO-imp2] Iteration 60/100 - Archive: 10
+[P-ACO-imp2] Iteration 70/100 - Archive: 10
+[P-ACO-imp2] Iteration 80/100 - Archive: 12
+[P-ACO-imp2] Iteration 90/100 - Archive: 12
+[P-ACO-imp2] Iteration 100/100 - Archive: 12
+[P-ACO-imp2] Iteration 10/100 - Archive: 3
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 9
+[P-ACO-imp2] Iteration 40/100 - Archive: 10
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 15
+[P-ACO-imp2] Iteration 70/100 - Archive: 16
+[P-ACO-imp2] Iteration 80/100 - Archive: 18
+[P-ACO-imp2] Iteration 90/100 - Archive: 21
+[P-ACO-imp2] Iteration 100/100 - Archive: 18
+[P-ACO-imp2] Iteration 10/100 - Archive: 10
+[P-ACO-imp2] Iteration 20/100 - Archive: 8
+[P-ACO-imp2] Iteration 30/100 - Archive: 9
+[P-ACO-imp2] Iteration 40/100 - Archive: 10
+[P-ACO-imp2] Iteration 50/100 - Archive: 11
+[P-ACO-imp2] Iteration 60/100 - Archive: 11
+[P-ACO-imp2] Iteration 70/100 - Archive: 13
+[P-ACO-imp2] Iteration 80/100 - Archive: 14
+[P-ACO-imp2] Iteration 90/100 - Archive: 15
+[P-ACO-imp2] Iteration 100/100 - Archive: 15
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_high_min_cost.png
+  Route plot (min_cost): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_high_min_cost.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_high_min_tardiness.png
+  Route plot (min_tardiness): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_high_min_tardiness.png
+  Route plotted and saved to: C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_high_compromise.png
+  Route plot (compromise): C:\Users\23992\FURP-2026-XinyueXie-Truck-Drone-Routing\src\experiments\PACO+ALNS\results\compare_w7_imp2_full\routes_imp2_50c_RC101_6V_high_compromise.png
+[done] 50c_RC101_6V_high imp2 time=89.8s cost=387.2 tard=2447.2
+[start] 100c_RC201_10V_high imp2 runs=10 max_iter=100
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.71', '2.98', '3.00', '2.67', '2.73'] Repair=['2.99', '2.82', '2.53']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['2.72', '2.82', '2.97', '3.00', '2.87'] Repair=['2.66', '2.84', '2.98']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 5
+  ALNS weights: Destroy=['2.93', '2.84', '2.98', '3.00', '2.81'] Repair=['2.97', '2.81', '3.00']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.56', '2.91', '2.98', '2.66', '2.66'] Repair=['2.79', '2.71', '2.84']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.97', '2.88', '2.98', '3.04', '2.97'] Repair=['3.09', '3.07', '2.92']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.71', '2.88', '2.64', '2.97', '2.80'] Repair=['2.78', '2.79', '2.98']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.87', '2.99', '2.70', '2.71', '2.80'] Repair=['2.63', '2.96', '2.94']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.25', '2.60', '2.37', '2.57', '2.93'] Repair=['2.38', '2.76', '2.43']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.87', '2.69', '3.00', '2.98', '3.00'] Repair=['2.70', '2.98', '2.98']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.99', '2.96', '3.00', '2.91', '2.63'] Repair=['3.00', '2.98', '2.95']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.66', '2.78', '2.96', '2.95', '2.92'] Repair=['2.57', '2.99', '2.91']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.55', '2.64', '2.75', '2.95', '3.00'] Repair=['2.82', '2.97', '2.48']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.81', '2.95', '2.65', '2.99', '2.73'] Repair=['2.75', '2.97', '2.92']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.10', '2.90', '2.98', '2.93', '2.93'] Repair=['2.54', '2.43', '3.00']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.37', '2.75', '2.97', '2.84', '3.00'] Repair=['2.79', '2.83', '2.80']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.45', '2.69', '2.78', '2.87', '2.76'] Repair=['2.85', '2.62', '2.57']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.67', '2.98', '2.69', '2.67', '2.98'] Repair=['2.48', '2.99', '2.82']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.90', '2.58', '2.98', '2.72', '2.81'] Repair=['2.81', '2.64', '2.84']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.69', '2.97', '2.99', '2.53', '2.97'] Repair=['2.68', '2.99', '2.67']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.70', '2.43', '2.36', '1.83', '2.56'] Repair=['2.41', '2.50', '2.40']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.76', '2.82', '2.96', '2.72', '2.92'] Repair=['2.66', '2.99', '2.84']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.84', '2.88', '2.93', '2.66', '2.90'] Repair=['2.97', '2.89', '2.75']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.76', '2.92', '3.00', '2.65', '2.74'] Repair=['2.98', '2.85', '2.56']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.80', '2.97', '2.89', '2.98', '2.97'] Repair=['2.97', '2.97', '2.87']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.43', '2.97', '2.26', '2.70', '2.84'] Repair=['2.35', '2.72', '2.61']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.95', '3.00', '3.20', '2.98', '2.88'] Repair=['3.02', '3.06', '2.81']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.41', '2.94', '3.00', '2.93', '2.72'] Repair=['2.91', '2.99', '2.48']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.85', '2.95', '2.97', '2.94', '2.97'] Repair=['2.81', '2.96', '2.96']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.51', '2.95', '2.93', '2.86', '2.86'] Repair=['2.83', '2.87', '2.83']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['3.00', '2.59', '2.99', '2.87', '2.97'] Repair=['2.95', '2.70', '2.98']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.60', '3.00', '3.39', '2.79', '2.87'] Repair=['3.01', '2.77', '2.76']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.75', '2.98', '2.98', '2.88', '2.99'] Repair=['2.78', '2.90', '2.97']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.57', '2.95', '2.95', '2.72', '2.93'] Repair=['2.98', '3.00', '2.28']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.21', '2.82', '2.99', '2.36', '2.81'] Repair=['2.51', '2.36', '2.61']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['2.86', '2.97', '2.98', '2.53', '2.99'] Repair=['3.00', '2.85', '2.59']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.58', '2.82', '2.99', '2.70', '2.89'] Repair=['2.92', '2.77', '2.64']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.24', '2.77', '3.00', '2.90', '2.95'] Repair=['2.83', '2.53', '2.89']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.20', '2.97', '3.00', '2.37', '2.64'] Repair=['2.82', '2.69', '2.28']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.64', '2.64', '2.89', '2.58', '2.86'] Repair=['2.63', '2.68', '2.78']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.34', '2.84', '2.68', '2.67', '2.67'] Repair=['2.59', '2.63', '2.59']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.79', '2.96', '3.00', '2.77', '2.78'] Repair=['2.77', '2.99', '2.95']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.83', '2.98', '2.99', '2.87', '2.95'] Repair=['2.92', '2.96', '2.99']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.57', '2.93', '3.00', '2.45', '2.82'] Repair=['2.54', '3.00', '2.44']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.56', '2.57', '3.03', '2.97', '2.70'] Repair=['2.94', '2.96', '2.57']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.96', '2.97', '2.87', '2.70', '2.99'] Repair=['2.99', '2.66', '2.98']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.65', '3.00', '2.93', '2.97', '2.78'] Repair=['2.77', '3.00', '2.93']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.63', '2.92', '2.78', '3.00', '2.99'] Repair=['2.98', '2.66', '2.93']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.69', '2.99', '3.00', '2.49', '2.66'] Repair=['2.95', '2.48', '2.85']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.98', '2.98', '3.00', '2.95', '2.88'] Repair=['2.98', '2.98', '3.00']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.64', '2.80', '3.00', '2.85', '2.96'] Repair=['2.97', '2.68', '2.68']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.97', '2.78', '3.00', '2.72', '3.04'] Repair=['2.81', '2.86', '2.96']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.65', '2.95', '2.99', '2.70', '2.99'] Repair=['2.98', '2.66', '2.97']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.80', '2.75', '2.96', '2.22', '3.00'] Repair=['2.68', '2.44', '2.75']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.62', '2.89', '2.94', '2.98', '2.77'] Repair=['2.97', '2.84', '2.69']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.85', '2.92', '2.22', '2.86', '2.99'] Repair=['2.50', '2.95', '2.74'][PACO+ALNS ] Iteration 10/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.90', '2.88', '3.00', '2.96', '2.86'] Repair=['3.00', '2.97', '2.85']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.99', '2.98', '3.00', '2.95', '3.00'] Repair=['3.00', '2.96', '2.99']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.88', '2.78', '3.00', '2.69', '2.92'] Repair=['2.95', '2.70', '2.92']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['3.00', '3.00', '2.96', '2.83', '2.99'] Repair=['2.99', '2.99', '2.96']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.87', '2.98', '2.99', '3.00', '3.00'] Repair=['2.98', '2.95', '3.00']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.81', '3.00', '3.00', '3.00', '3.00'] Repair=['2.98', '2.87', '3.00']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.98', '3.00', '2.96', '2.30', '2.98'] Repair=['2.67', '2.99', '2.73']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.73', '2.97', '2.91', '2.98', '3.00'] Repair=['2.77', '2.96', '2.97']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.98', '2.93', '3.00', '2.71', '2.99'] Repair=['2.86', '2.98', '2.96']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['3.00', '2.82', '2.99', '2.97', '2.97'] Repair=['3.00', '2.84', '2.98']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.65', '2.70', '3.00', '2.77', '2.81'] Repair=['2.75', '2.62', '2.91']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.70', '2.97', '3.00', '3.00', '2.96'] Repair=['3.00', '2.70', '3.00']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.69', '3.00', '2.99', '2.85', '2.89'] Repair=['3.00', '2.86', '2.94']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.94', '2.99', '2.91', '2.89', '3.00'] Repair=['3.00', '2.95', '2.95']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.88', '2.95', '2.69', '2.92', '2.98'] Repair=['2.97', '2.82', '2.92']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.99', '3.00', '2.79', '2.85', '3.00'] Repair=['2.95', '3.00', '2.77']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.74', '2.97', '2.99', '2.65', '2.87'] Repair=['2.70', '3.00', '2.92']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.88', '2.87', '2.79', '2.95', '2.97'] Repair=['2.99', '3.00', '2.68']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.91', '2.86', '2.90', '2.64', '3.00'] Repair=['2.85', '2.87', '2.87']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.46', '2.96', '2.99', '2.01', '3.00'] Repair=['2.44', '2.70', '2.77']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.95', '3.00', '2.98', '3.00', '2.92'] Repair=['3.00', '3.00', '2.96']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.93', '3.21', '3.00', '2.91', '2.64'] Repair=['2.82', '3.00', '3.26']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.22', '2.78', '3.00', '2.37', '2.98'] Repair=['2.30', '2.86', '2.73']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['3.00', '3.08', '2.94', '3.00', '2.70'] Repair=['2.88', '3.00', '3.00']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.84', '3.00', '2.87', '2.82', '2.84'] Repair=['2.73', '2.99', '2.91']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.74', '3.00', '2.92', '2.76', '2.78'] Repair=['2.84', '2.61', '3.00']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.99', '2.97', '2.87', '2.70', '3.00'] Repair=['2.95', '2.76', '2.98']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.79', '2.71', '2.78', '2.84', '3.00'] Repair=['2.78', '2.80', '2.81']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['3.00', '2.89', '2.89', '2.87', '2.88'] Repair=['3.00', '2.90', '2.80']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.52', '2.88', '2.99', '2.55', '2.97'] Repair=['2.93', '2.36', '2.81']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.59', '2.98', '3.00', '2.73', '2.78'] Repair=['2.84', '2.95', '2.77']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.85', '2.96', '3.00', '3.05', '2.88'] Repair=['2.94', '2.89', '3.02']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.88', '2.73', '3.00', '2.81', '3.00'] Repair=['2.96', '2.81', '2.90']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.61', '2.90', '2.99', '2.87', '3.05'] Repair=['2.71', '2.99', '2.90']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.51', '3.00', '2.99', '2.00', '2.78'] Repair=['2.71', '2.58', '2.46']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.97', '3.00', '2.99', '2.95', '2.94'] Repair=['2.99', '2.98', '2.96']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['3.00', '2.97', '2.90', '2.89', '2.85'] Repair=['2.71', '2.99', '3.00']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.71', '3.00', '2.79', '2.82', '2.99'] Repair=['2.75', '2.92', '2.91']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.90', '3.08', '2.94', '2.57', '3.00'] Repair=['3.01', '2.87', '2.82']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.70', '2.99', '2.84', '2.89', '2.99'] Repair=['2.81', '2.97', '2.91']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.91', '3.00', '3.00', '2.73', '2.84'] Repair=['3.00', '2.92', '2.94']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.89', '3.00', '2.84', '2.99', '2.99'] Repair=['3.00', '3.00', '2.76']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['3.00', '2.95', '3.00', '2.71', '2.95'] Repair=['2.99', '2.97', '2.94']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['3.00', '2.97', '2.96', '3.00', '2.91'] Repair=['2.99', '3.00', '2.99']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.87', '3.00', '3.00', '2.77', '3.00'] Repair=['3.00', '2.84', '2.87']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.90', '2.81', '2.91', '2.64', '2.94'] Repair=['3.01', '2.85', '2.61']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.80', '2.99', '3.00', '2.87', '2.97'] Repair=['2.67', '2.98', '3.00']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.83', '3.07', '3.00', '2.63', '2.63'] Repair=['2.87', '2.69', '3.03']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.87', '3.11', '3.00', '2.98', '2.88'] Repair=['3.17', '2.95', '3.00']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.95', '2.96', '3.00', '3.00', '2.93'] Repair=['2.99', '2.96', '3.00']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.74', '3.02', '2.96', '2.39', '2.70'] Repair=['2.86', '2.56', '2.93']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.81', '3.00', '3.00', '2.79', '3.00'] Repair=['3.00', '2.86', '3.00']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.78', '2.77', '2.99', '2.82', '2.96'] Repair=['3.00', '2.73', '2.85']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.77', '2.92', '3.00', '2.65', '3.00'] Repair=['2.87', '2.87', '2.74']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.97', '3.00', '2.71', '2.94', '2.94'] Repair=['2.98', '2.86', '2.95'][PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.97', '3.00', '2.83', '2.99', '2.84'] Repair=['2.99', '2.92', '2.96']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.99', '2.99', '2.87', '2.78', '2.75'] Repair=['3.00', '2.78', '2.99']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.19', '3.00', '3.00', '2.65', '2.58'] Repair=['2.97', '2.48', '2.52']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['3.00', '2.89', '3.00', '2.93', '2.96'] Repair=['2.96', '3.00', '2.96']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.97', '2.68', '2.66', '3.00', '2.78'] Repair=['2.93', '2.88', '2.94']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.85', '2.78', '2.98', '2.87', '2.57'] Repair=['2.89', '2.94', '2.74']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.68', '3.00', '2.97', '2.81', '2.97'] Repair=['2.48', '2.94', '2.88']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.82', '3.00', '2.74', '2.82', '2.88'] Repair=['2.97', '2.80', '2.84']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.93', '2.91', '3.00', '2.77', '2.86'] Repair=['2.74', '2.99', '2.98']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.48', '3.00', '3.00', '2.98', '2.96'] Repair=['2.60', '3.00', '2.99']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 5
+  ALNS weights: Destroy=['2.69', '2.99', '3.00', '2.68', '2.64'] Repair=['2.59', '2.88', '2.97']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.73', '2.99', '2.96', '2.94', '2.98'] Repair=['2.98', '2.96', '2.72']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.97', '3.00', '3.00', '2.87', '2.90'] Repair=['2.90', '3.00', '2.99']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.73', '2.74', '3.00', '2.83', '2.98'] Repair=['2.77', '2.93', '2.81']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.99', '2.93', '3.00', '2.84', '2.90'] Repair=['2.95', '3.00', '2.98']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['3.00', '2.82', '3.00', '2.99', '2.78'] Repair=['2.84', '3.00', '2.98']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.64', '2.63', '2.97', '3.00', '2.34'] Repair=['2.66', '2.40', '2.90']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.93', '2.96', '2.98', '2.99', '2.84'] Repair=['3.00', '2.98', '2.93']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.88', '2.98', '2.90', '2.60', '2.96'] Repair=['2.82', '2.98', '2.93']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.61', '3.00', '2.97', '2.77', '3.00'] Repair=['2.80', '3.00', '2.82']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.55', '3.02', '2.90', '2.99', '2.72'] Repair=['2.99', '2.88', '2.69']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.92', '2.98', '2.93', '2.43', '3.00'] Repair=['3.00', '2.74', '2.80']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.95', '2.81', '3.00', '2.94', '2.84'] Repair=['2.97', '2.86', '2.98']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.89', '2.65', '2.79', '2.98', '2.96'] Repair=['2.82', '2.81', '2.96']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.98', '2.94', '2.92', '2.66', '2.81'] Repair=['2.57', '3.00', '2.94']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.55', '3.00', '2.70', '2.98', '2.96'] Repair=['3.00', '2.70', '2.58']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.94', '2.76', '3.00', '2.75', '3.00'] Repair=['2.80', '2.97', '2.77']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.59', '2.98', '3.00', '2.59', '2.82'] Repair=['2.92', '2.54', '2.93']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.94', '2.86', '3.00', '2.87', '2.95'] Repair=['2.91', '2.99', '2.85']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.95', '2.77', '2.84', '2.65', '2.98'] Repair=['2.71', '2.91', '2.87']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['3.00', '2.87', '3.00', '2.97', '2.94'] Repair=['2.90', '2.99', '3.00']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.99', '3.00', '2.92', '2.72', '2.97'] Repair=['2.88', '3.00', '2.93']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.85', '3.00', '3.00', '2.53', '3.00'] Repair=['3.00', '2.81', '2.68']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.98', '2.87', '3.00', '2.98', '2.70'] Repair=['2.94', '3.00', '2.76']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.71', '2.98', '2.98', '2.61', '2.78'] Repair=['2.94', '2.58', '2.83']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.93', '2.64', '3.00', '2.89', '2.69'] Repair=['2.82', '2.78', '2.98']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.85', '2.98', '2.87', '2.99', '2.82'] Repair=['2.99', '2.87', '3.00']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.75', '2.92', '3.00', '2.81', '2.98'] Repair=['2.98', '2.80', '2.89']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.85', '2.85', '2.94', '2.85', '2.94'] Repair=['2.85', '2.77', '2.98']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.92', '3.00', '2.88', '2.58', '3.00'] Repair=['2.81', '2.71', '2.99']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.18', '2.96', '3.00', '2.84', '2.82'] Repair=['2.93', '2.60', '2.93']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.58', '2.98', '2.90', '2.73', '2.94'] Repair=['2.69', '2.90', '2.90']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.98', '3.00', '3.00', '3.00', '3.00'] Repair=['3.00', '3.00', '3.00']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.59', '2.99', '3.00', '3.00', '3.00'] Repair=['2.70', '2.96', '2.84']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.91', '2.92', '3.00', '2.47', '3.00'] Repair=['2.73', '2.82', '2.97']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.98', '2.99', '2.89', '2.90', '2.96'] Repair=['2.98', '3.00', '2.77']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.71', '2.96', '2.93', '2.63', '3.00'] Repair=['2.78', '2.98', '2.65']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.73', '2.65', '2.92', '2.67', '3.00'] Repair=['3.00', '2.74', '2.63']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.83', '2.94', '3.00', '2.43', '2.53'] Repair=['2.66', '2.78', '2.76']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.84', '3.25', '2.49', '2.26', '2.79'] Repair=['2.69', '3.09', '2.33']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.85', '2.96', '2.78', '3.00', '2.92'] Repair=['2.96', '3.00', '2.69']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.64', '3.00', '2.70', '2.90', '2.67'] Repair=['2.98', '2.52', '2.77']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.97', '2.22', '3.00', '2.98', '2.94'] Repair=['3.07', '2.80', '2.73']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.98', '3.00', '3.00', '2.65', '2.98'] Repair=['3.00', '2.81', '2.96']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.98', '2.96', '2.97', '2.81', '2.72'] Repair=['2.96', '2.86', '2.99'][PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.99', '2.92', '2.92', '2.97', '2.94'] Repair=['2.95', '3.00', '3.00']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.83', '3.00', '2.97', '2.97', '2.88'] Repair=['2.92', '3.00', '3.00']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.14', '2.97', '2.84', '2.97', '2.67'] Repair=['2.86', '2.60', '2.44']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.76', '2.99', '3.01', '3.00', '2.99'] Repair=['3.00', '3.00', '2.78']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.91', '2.84', '2.78', '2.42', '2.92'] Repair=['2.93', '2.80', '2.57']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.58', '3.07', '2.58', '2.60', '2.98'] Repair=['2.80', '2.94', '2.66']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.53', '2.24', '2.64', '2.72', '2.94'] Repair=['2.72', '2.42', '2.47']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.39', '2.84', '2.96', '2.95', '2.93'] Repair=['2.86', '2.97', '2.79']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.37', '2.86', '3.00', '2.88', '2.99'] Repair=['2.73', '2.79', '2.81']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.29', '2.69', '3.00', '2.58', '2.81'] Repair=['2.43', '2.86', '2.81']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.56', '2.79', '3.00', '3.00', '2.44'] Repair=['2.74', '2.75', '2.73']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 6
+  ALNS weights: Destroy=['2.52', '2.76', '2.44', '2.81', '2.69'] Repair=['2.57', '2.62', '2.44']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.71', '2.98', '3.00', '2.70', '2.74'] Repair=['2.89', '2.69', '2.77']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.99', '2.97', '2.98', '2.84', '3.00'] Repair=['2.94', '3.00', '2.96']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.95', '2.81', '2.86', '2.90', '2.82'] Repair=['3.00', '2.73', '2.84']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.88', '2.91', '2.69', '2.98', '2.77'] Repair=['2.78', '3.00', '2.90']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.42', '3.00', '2.99', '3.00', '2.83'] Repair=['2.70', '2.87', '2.88']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.78', '2.92', '3.00', '2.47', '2.97'] Repair=['2.32', '3.00', '2.99']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.85', '2.98', '2.64', '2.85', '2.89'] Repair=['2.95', '2.77', '2.95']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.61', '3.00', '2.92', '2.89', '2.99'] Repair=['2.82', '2.88', '2.93']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.56', '2.92', '2.97', '2.56', '2.92'] Repair=['2.77', '2.59', '2.90']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.75', '2.84', '2.90', '2.97', '3.00'] Repair=['2.95', '2.90', '2.82']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.85', '2.97', '3.00', '2.95', '2.74'] Repair=['3.00', '2.86', '2.85']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.81', '3.00', '2.44', '2.98', '2.92'] Repair=['2.70', '2.68', '2.79']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.53', '2.78', '3.00', '2.85', '2.52'] Repair=['2.96', '2.65', '2.38']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.66', '2.99', '3.00', '2.31', '2.82'] Repair=['2.75', '2.88', '2.83']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.99', '2.99', '2.99', '2.79', '2.99'] Repair=['2.96', '2.99', '2.96']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.56', '2.98', '3.00', '2.99', '2.53'] Repair=['2.89', '2.99', '2.65']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.84', '2.97', '2.86', '2.95', '2.37'] Repair=['2.98', '2.67', '2.90']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.85', '2.82', '2.77', '2.61', '2.50'] Repair=['2.80', '2.77', '2.70']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.32', '2.96', '2.91', '2.85', '3.13'] Repair=['2.60', '2.93', '2.90']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.86', '3.00', '2.72', '2.89', '2.82'] Repair=['2.77', '2.97', '2.86']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.74', '2.96', '3.00', '2.72', '2.95'] Repair=['2.83', '2.80', '2.88']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.83', '2.54', '2.89', '2.84', '3.00'] Repair=['2.84', '2.67', '2.75']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.99', '2.74', '2.97', '2.94', '2.87'] Repair=['2.97', '3.00', '2.89']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.96', '2.83', '2.82', '2.91', '2.93'] Repair=['2.86', '2.94', '2.93']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.77', '3.00', '2.88', '2.82', '3.00'] Repair=['2.97', '2.84', '2.78']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.90', '2.87', '3.00', '3.00', '3.00'] Repair=['3.00', '2.88', '2.99']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.79', '2.97', '2.56', '2.58', '3.00'] Repair=['2.74', '2.78', '2.75']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.95', '2.93', '2.83', '2.73', '2.70'] Repair=['2.91', '2.85', '2.93']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.72', '3.00', '2.54', '2.99', '2.94'] Repair=['2.71', '2.88', '3.00']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 5
+  ALNS weights: Destroy=['2.05', '2.87', '3.00', '2.98', '2.67'] Repair=['2.90', '2.53', '2.17']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.57', '2.77', '3.00', '2.93', '2.99'] Repair=['2.74', '2.98', '2.79']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.40', '3.00', '2.63', '3.00', '2.49'] Repair=['2.88', '2.66', '2.79']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.86', '2.73', '2.64', '2.76', '2.65'] Repair=['2.65', '2.78', '2.90']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.79', '2.87', '2.84', '2.87', '2.96'] Repair=['2.84', '2.87', '2.91']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.33', '2.78', '3.00', '3.00', '2.61'] Repair=['2.74', '2.51', '2.70']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.94', '2.99', '2.97', '2.99', '2.99'] Repair=['3.00', '2.98', '2.99']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.47', '2.86', '3.00', '2.92', '2.98'] Repair=['2.76', '2.78', '2.97']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.92', '2.86', '2.99', '2.97', '2.83'] Repair=['2.97', '2.99', '2.85']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.72', '2.97', '3.00', '2.97', '2.81'] Repair=['2.66', '2.99', '3.00']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.75', '2.90', '3.00', '2.93', '2.78'] Repair=['2.90', '2.82', '2.78']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.54', '2.77', '2.99', '2.76', '2.52'] Repair=['2.40', '2.98', '2.63']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.88', '3.01', '2.75', '2.92', '2.88'] Repair=['3.00', '2.94', '2.74']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.92', '3.00', '3.00', '2.54', '3.00'] Repair=['2.95', '2.79', '2.93'][PACO+ALNS ] Iteration 10/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.76', '2.89', '3.00', '3.00', '2.70'] Repair=['3.00', '2.93', '2.65']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.56', '2.50', '3.05', '3.23', '3.00'] Repair=['3.03', '2.39', '2.72']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.47', '3.00', '2.99', '2.99', '2.92'] Repair=['3.00', '2.94', '2.79']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.88', '3.00', '2.90', '2.84', '3.00'] Repair=['2.84', '3.00', '2.92']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.88', '2.89', '3.00', '3.00', '2.92'] Repair=['2.87', '3.00', '2.84']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.28', '2.49', '3.00', '2.88', '3.00'] Repair=['2.56', '2.74', '2.58']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.51', '2.94', '2.74', '2.74', '3.00'] Repair=['2.67', '2.91', '2.80']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.72', '2.92', '2.90', '2.77', '3.00'] Repair=['2.90', '2.92', '2.82']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.60', '2.88', '2.98', '1.87', '2.48'] Repair=['2.55', '2.24', '2.29']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.22', '2.70', '3.00', '2.57', '2.90'] Repair=['2.58', '2.46', '2.97']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.99', '3.00', '2.99', '2.99', '2.42'] Repair=['2.92', '3.00', '3.00']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.25', '2.96', '2.94', '2.75', '2.94'] Repair=['2.99', '2.31', '2.86']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['3.00', '2.74', '2.74', '3.00', '3.02'] Repair=['3.00', '2.89', '2.82']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.81', '3.00', '2.75', '2.58', '2.92'] Repair=['2.78', '2.86', '2.95']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.82', '2.92', '3.00', '2.92', '3.00'] Repair=['3.00', '2.88', '2.88']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.86', '2.90', '3.00', '2.42', '2.94'] Repair=['2.96', '2.90', '2.79']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.44', '2.67', '3.00', '2.57', '2.97'] Repair=['2.56', '2.74', '2.77']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.66', '2.98', '3.00', '2.63', '3.00'] Repair=['2.94', '2.93', '2.66']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 7
+  ALNS weights: Destroy=['2.56', '2.98', '3.00', '3.00', '3.00'] Repair=['2.81', '2.87', '3.00']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.92', '3.00', '2.99', '2.94', '3.00'] Repair=['2.92', '2.99', '2.95']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.68', '3.00', '3.01', '2.81', '2.96'] Repair=['2.75', '2.98', '2.96']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.97', '2.78', '2.78', '2.96', '2.96'] Repair=['2.82', '2.77', '3.00']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.44', '2.98', '2.84', '2.65', '2.81'] Repair=['3.00', '2.51', '2.71']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.87', '2.99', '2.98', '2.88', '2.84'] Repair=['2.92', '3.00', '3.00']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.87', '3.00', '3.00', '3.00', '2.84'] Repair=['2.99', '3.00', '2.96']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['3.00', '2.50', '3.00', '2.57', '2.54'] Repair=['2.86', '2.85', '2.61']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.89', '2.91', '2.83', '2.95', '2.77'] Repair=['2.92', '2.96', '2.87']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.46', '2.87', '2.74', '2.96', '2.81'] Repair=['2.55', '2.81', '2.69']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.99', '2.80', '2.58', '2.74', '2.99'] Repair=['2.61', '2.70', '2.91']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.67', '2.67', '3.00', '2.80', '2.87'] Repair=['2.74', '2.80', '2.85']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['3.00', '2.92', '2.94', '2.94', '2.97'] Repair=['2.91', '3.00', '3.00']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 9
+  ALNS weights: Destroy=['2.43', '2.81', '2.67', '2.89', '2.94'] Repair=['2.66', '2.99', '2.56']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.85', '2.98', '3.00', '2.96', '2.98'] Repair=['2.97', '2.96', '3.00']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.84', '3.00', '2.78', '3.00', '3.00'] Repair=['2.81', '2.90', '3.00']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.80', '3.00', '3.00', '2.57', '2.80'] Repair=['2.61', '2.84', '2.92']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.89', '2.81', '3.00', '2.81', '2.55'] Repair=['2.81', '3.00', '2.94']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.95', '2.98', '2.87', '2.99', '3.00'] Repair=['2.99', '2.99', '2.98']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.68', '2.86', '2.97', '2.15', '2.93'] Repair=['2.79', '2.61', '2.86']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.89', '2.74', '2.70', '2.90', '2.96'] Repair=['2.56', '2.86', '2.95']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.91', '2.94', '3.00', '2.62', '2.96'] Repair=['2.72', '2.91', '2.94']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 10
+  ALNS weights: Destroy=['2.54', '3.00', '3.02', '2.63', '2.99'] Repair=['2.96', '2.64', '2.81']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.63', '2.99', '3.00', '2.99', '3.00'] Repair=['3.00', '2.81', '2.98']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.96', '3.01', '2.99', '2.79', '2.78'] Repair=['2.97', '2.95', '2.98']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.91', '2.76', '2.93', '2.54', '2.69'] Repair=['2.97', '2.65', '2.50']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.85', '2.99', '2.98', '2.87', '2.56'] Repair=['2.96', '2.77', '3.00']
+[PACO+ALNS ] Iteration 60/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.95', '2.95', '2.97', '2.64', '2.76'] Repair=['2.89', '2.99', '2.66']
+[PACO+ALNS ] Iteration 70/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.97', '2.99', '2.66', '2.99', '2.89'] Repair=['2.97', '2.78', '2.99']
+[PACO+ALNS ] Iteration 80/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['3.19', '3.04', '2.89', '2.40', '2.75'] Repair=['2.75', '2.94', '2.88']
+[PACO+ALNS ] Iteration 90/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.95', '3.01', '3.00', '3.00', '3.06'] Repair=['2.99', '3.00', '3.04']
+[PACO+ALNS ] Iteration 100/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.92', '2.60', '2.86', '3.00', '2.84'] Repair=['2.87', '3.00', '2.55']
+[PACO+ALNS ] Iteration 10/100 - Pareto Archive: 8
+  ALNS weights: Destroy=['2.90', '2.74', '2.94', '2.77', '2.97'] Repair=['2.94', '2.92', '2.82']
+[PACO+ALNS ] Iteration 20/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.72', '3.00', '3.00', '2.75', '3.00'] Repair=['2.87', '3.00', '2.90']
+[PACO+ALNS ] Iteration 30/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.55', '3.00', '3.00', '2.95', '3.00'] Repair=['2.95', '2.56', '3.00']
+[PACO+ALNS ] Iteration 40/100 - Pareto Archive: 11
+  ALNS weights: Destroy=['2.76', '2.81', '3.00', '2.73', '3.00'] Repair=['2.87', '2.71', '2.76']
+[PACO+ALNS ] Iteration 50/100 - Pareto Archive: 12
+  ALNS weights: Destroy=['2.78', '2.74', '2.74', '2.67', '3.00'] Repair=['2.98', '2.15', '2.74']

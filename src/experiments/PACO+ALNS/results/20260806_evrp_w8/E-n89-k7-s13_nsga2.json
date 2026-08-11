@@ -1,0 +1,12 @@
+{
+  "n_runs": 3,
+  "mean_solve_time": 1.788427432378133,
+  "mean_best_cost": 1995.8134960390537,
+  "std_best_cost": 33.69157716330773,
+  "best_cost": 1965.9810293801354,
+  "mean_cost": 2096.7491723493004,
+  "mean_std_cost": 121.3867103552658,
+  "mean_feasible_solutions": 12.666666666666666,
+  "n_missing_solutions": 0,
+  "n_overload_solutions": 0
+}

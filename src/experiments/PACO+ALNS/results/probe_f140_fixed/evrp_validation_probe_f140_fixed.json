@@ -1,0 +1,45 @@
+{
+  "instances": {
+    "F-n140-k5-s5": {
+      "optimal_value": NaN,
+      "algorithms": {
+        "nsga2": {
+          "n_runs": 1,
+          "mean_solve_time": 0.2551686763763428,
+          "mean_best_cost": null,
+          "std_best_cost": null,
+          "best_cost": null,
+          "mean_cost": 2694053.492873885,
+          "mean_std_cost": 675562.7854968114,
+          "mean_feasible_solutions": 0.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 7
+        },
+        "imp2": {
+          "n_runs": 1,
+          "mean_solve_time": 1.7167079448699951,
+          "mean_best_cost": 1791.883313914635,
+          "std_best_cost": 0.0,
+          "best_cost": 1791.883313914635,
+          "mean_cost": 1791.883313914635,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "w8": {
+          "n_runs": 1,
+          "mean_solve_time": 24.94184160232544,
+          "mean_best_cost": 1255.1637162930813,
+          "std_best_cost": 0.0,
+          "best_cost": 1255.1637162930813,
+          "mean_cost": 1255.1637162930813,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        }
+      }
+    }
+  }
+}

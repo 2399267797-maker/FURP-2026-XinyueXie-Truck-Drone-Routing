@@ -9,6 +9,8 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from models.vrp_model import VRPTruckDroneModel, Route, DroneMission
 
+OVERLOAD_PENALTY = 1000.0
+
 class NSGA2VRP:
     def __init__(self, model: VRPTruckDroneModel, pop_size: int = 100, max_gen: int = 120,
                  cxpb: float = 0.8, mutpb: float = 0.1):
@@ -179,6 +181,75 @@ class NSGA2VRP:
                 
         return creator.Individual(customer_order + mode_assignments)
 
+    def _route_load(self, route) -> float:
+        return sum(self.model.customers[c].demand for c in route.customers)
+
+    def _total_overload(self, routes) -> float:
+        capacity = self.model.trucks[0].capacity
+        return sum(max(0.0, self._route_load(r) - capacity) for r in routes)
+
+    def _repair_capacity(self, routes):
+        capacity = self.model.trucks[0].capacity
+        max_passes = max(40, self.n_customers * 4)
+        for _ in range(max_passes):
+            overloaded = [r for r in routes if self._route_load(r) > capacity + 1e-6]
+            if not overloaded:
+                return
+
+            moved = False
+            for src in sorted(overloaded, key=lambda r: -self._route_load(r)):
+                for pos in sorted(
+                        range(len(src.customers)),
+                        key=lambda p: -self.model.customers[src.customers[p]].demand):
+                    customer = src.customers[pos]
+                    demand = self.model.customers[customer].demand
+                    targets = [
+                        r for r in routes
+                        if r is not src and self._route_load(r) + demand <= capacity + 1e-6
+                    ]
+                    if not targets:
+                        continue
+                    target = max(
+                        targets,
+                        key=lambda r: (capacity - self._route_load(r), -len(r.customers)),
+                    )
+                    src.customers.pop(pos)
+                    target.customers.append(customer)
+                    moved = True
+                    break
+                if moved:
+                    break
+            if moved:
+                continue
+
+            # 单点搬不动时尝试交换；仍无法修复说明车队总容量本身不足。
+            swapped = False
+            for src in sorted(overloaded, key=lambda r: -self._route_load(r)):
+                src_load = self._route_load(src)
+                for pos in range(len(src.customers)):
+                    customer = src.customers[pos]
+                    demand = self.model.customers[customer].demand
+                    for target in routes:
+                        if target is src:
+                            continue
+                        target_load = self._route_load(target)
+                        for tpos in range(len(target.customers)):
+                            other = target.customers[tpos]
+                            other_demand = self.model.customers[other].demand
+                            if (src_load - demand + other_demand <= capacity + 1e-6 and
+                                    target_load - other_demand + demand <= capacity + 1e-6):
+                                src.customers[pos], target.customers[tpos] = other, customer
+                                swapped = True
+                                break
+                        if swapped:
+                            break
+                    if swapped:
+                        break
+                if swapped:
+                    break
+            if not swapped:
+                return
+
     def _decode_solution(self, individual):
         n = self.n_customers
         order = individual[:n]
@@ -197,7 +268,10 @@ class NSGA2VRP:
             # 初始状态：卡车包揽一切
             route = Route(vehicle_id=tid, vehicle_type='truck', customers=order[start:end].copy())
             routes.append(route)
-            
+
+        # 容量修复：按需求而不是只按客户数量切分路线
+        self._repair_capacity(routes)
+
         # =====================================================================
         # 2. Drone Extraction: 遍历卡车主干，将合法节点“剥离”给无人机
         # =====================================================================
@@ -267,6 +341,7 @@ class NSGA2VRP:
     def _evaluate(self, individual):
         routes, drone_fail_count = self._decode_solution(individual)
         cost, _ = self.model.evaluate_solution(routes)
+        cost += self._total_overload(routes) * OVERLOAD_PENALTY
         # 统一使用 evaluator 级别的延迟计算 (解决问题4：评估指标断层)
         tardiness_penalty = self.model.calculate_pure_tardiness(routes)
         # 无人机失败惩罚：每个标记为无人机但无法执行的客户，加 50 延误惩罚
@@ -316,6 +391,7 @@ class NSGA2VRP:
         for ind in pop:
             routes, drone_fail_count = self._decode_solution(ind)
             cost, _ = self.model.evaluate_solution(routes)
+            cost += self._total_overload(routes) * OVERLOAD_PENALTY
             tardiness_penalty = self.model.calculate_pure_tardiness(routes)
             DRONE_FAIL_PENALTY = 50.0
             tardiness_penalty += drone_fail_count * DRONE_FAIL_PENALTY

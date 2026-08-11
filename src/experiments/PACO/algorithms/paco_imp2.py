@@ -59,6 +59,9 @@ class CollaborativePACO:
         self.drone_speed = model.get_vehicle_speed('drone')
         self.drone_capacity = model.drones[0].capacity
         self.drone_range = model.drone_range
+        self.truck_vc = model.trucks[0].variable_cost
+        self.drone_vc = model.drones[0].variable_cost
+        self.drone_fixed_cost = model.drones[0].fixed_cost
         self.launch_prep_time = getattr(model, 'launch_prep_time', 0.5)
         self.retrieval_time = getattr(model, 'retrieval_time', 0.5)
         self.drone_wait_threshold = 3.0
@@ -104,8 +107,11 @@ class CollaborativePACO:
                             sk, wt, feas = self._compute_drone_mission_timeline(ct, cn, j, k + 1)
                             if not feas: continue
                             dik = self.dist_matrix[cn, k + 1]
-                            save = dij + djk - dik
+                            save = (self.truck_vc - self.drone_vc) * (dij + djk) - self.truck_vc * dik
+                            if not route.drone_missions: save -= self.drone_fixed_cost
                             if save <= 0: continue
+
+
                             pj = max(0.0, (ct + dij / self.drone_speed) - self.tw_end[j])
                             pk = max(0.0, sk - self.tw_end[k])
                             key = (cn, j + 1, k + 1)
@@ -117,8 +123,10 @@ class CollaborativePACO:
                             probs.append(p); acts.append(('drone', j, k, sk))
                 tp = sum(probs)
                 if tp == 0: break
+
                 if random.random() < self.q0: ci = np.argmax([p / tp for p in probs])
                 else: ci = random.choices(range(len(acts)), weights=[p / tp for p in probs])[0]
+
                 a = acts[ci]
                 if a[0] == 'truck':
                     _, j = a; route.customers.append(j); remaining.remove(j)

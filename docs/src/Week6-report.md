@@ -179,7 +179,12 @@ All 16 configurations tested (`run_paco_alns_W6.py`):
 
 ### 4.2 Comparison with P-ACO-imp2 Baseline
 
-The baseline P-ACO-imp2 data is taken from `results/new2/imp2_results.json`, which contains single-run results for all 16 Solomon RC configurations. Note that the imp2 baseline reports single (cost, tardiness) values per config (the min-cost or compromise solution), while our PACO+ALNS results report the mean across the Pareto front — this means the comparison captures algorithm-level trade-off tendencies rather than exact point-to-point differences.
+The baseline P-ACO-imp2 data is taken from `results/new2/imp2_results.json`, which contains single-run results for all 16 Solomon RC configurations. Note that the imp2 baseline:
+
+- Uses a **relaxed truck capacity of 350** (vs. 200 in our PACO+ALNS experiments), which significantly reduces capacity constraints and allows more efficient routing
+- Reports single (cost, tardiness) values per config (the min-cost or compromise solution), while our PACO+ALNS results report the mean across the Pareto front — this means the comparison captures algorithm-level trade-off tendencies rather than exact point-to-point differences
+
+The relaxed capacity means the imp2 results are not directly comparable on cost alone, as the 350 capacity allows fewer trucks to serve the same customers. Notably, even with this relaxed capacity, P-ACO-imp2 under simple lock-drone mode (fixed truck-drone pairing) does not clearly outperform the original P-ACO — this is a negative result, and this direction is being set aside.
 
 | Config | P-ACO-imp2 | PACO+ALNS | Δ Cost | Δ Tardiness |
 |--------|-------------|-----------|--------|-------------|
@@ -205,6 +210,7 @@ The baseline P-ACO-imp2 data is taken from `results/new2/imp2_results.json`, whi
 - **Cost is moderately higher** (1–40%): PACO+ALNS tends to find solutions with higher cost but much lower tardiness, representing a different region of the Pareto front compared to P-ACO-imp2. This is expected for a multi-objective optimizer that explicitly explores the cost-tardiness trade-off.
 - **The trade-off narrows at larger scales**: at 100c, the cost increase is only 1–12% while the tardiness reduction is 21–40%, suggesting that ALNS repair operators become more efficient at routing cost at larger problem sizes.
 - **P-ACO-imp2 is highly cost-aggressive**: its single-solution reporting (min-cost bias) means it naturally selects the cheapest solution in the Pareto front, while PACO+ALNS reports the mean across the front, which includes more tardiness-focused solutions.
+- **Under simple lock-drone mode (fixed truck-drone pairing) and relaxed capacity (350), P-ACO-imp2 does not clearly outperform the original P-ACO** — this is a negative result, and this direction is being set aside for now.
 
 ### 4.3 Runtime Performance
 
