@@ -414,31 +414,31 @@ To illustrate the differences among the algorithms, this section presents three 
 
 **Pareto-front figures**: Figs. 1-3 show the joint four-algorithm Pareto fronts for C101, R101, and RC102 at 100 customers with medium endurance. The fronts of PACO+ALNS and PACO lie in the lower-left region (lower cost), NSGA-II extends along the lower tardiness axis, Pure ALNS lies in the higher-cost region with limited coverage, and PACO+ALNS has the widest coverage.
 
-![Fig. 1 C101 100c medium four-algorithm Pareto front](PACO+ALNS/results/20260812_4alg/pareto_compare_100c_C101_10V_medium.png)
+![Fig. 1 C101 100c medium four-algorithm Pareto front](../src/experiments/PACO+ALNS/results/20260812_4alg/pareto_compare_100c_C101_10V_medium.png)
 
-![Fig. 2 R101 100c medium four-algorithm Pareto front](PACO+ALNS/results/20260812_4alg/pareto_compare_100c_R101_10V_medium.png)
+![Fig. 2 R101 100c medium four-algorithm Pareto front](../src/experiments/PACO+ALNS/results/20260812_4alg/pareto_compare_100c_R101_10V_medium.png)
 
-![Fig. 3 RC102 100c medium four-algorithm Pareto front](PACO+ALNS/results/20260812_4alg/pareto_compare_100c_RC102_10V_medium.png)
+![Fig. 3 RC102 100c medium four-algorithm Pareto front](../src/experiments/PACO+ALNS/results/20260812_4alg/pareto_compare_100c_RC102_10V_medium.png)
 
 **Convergence curves**: Figs. 4-5 show the best cost and HV of C101 (25 customers, medium) under iteration budgets of 5/10/20/30/50/100. PACO+ALNS reaches a lower cost within a small budget, and the HV grows steadily with iterations; NSGA-II converges slowly with a generally higher cost; PACO lies in between.
 
-![Fig. 4 Convergence curves: best cost](PACO+ALNS/results/20260809_w8/figures/convergence_cost_25c_C101_medium.png)
+![Fig. 4 Convergence curves: best cost](../src/experiments/PACO+ALNS/results/20260809_w8/figures/convergence_cost_25c_C101_medium.png)
 
-![Fig. 5 Convergence curves: hypervolume](PACO+ALNS/results/20260809_w8/figures/convergence_hv_25c_C101_medium.png)
+![Fig. 5 Convergence curves: hypervolume](../src/experiments//PACO+ALNS/results/20260809_w8/figures/convergence_hv_25c_C101_medium.png)
 
 **Route visualization**: Figs. 6-11 show the min-cost and compromise routes of C101 (100 customers, medium) for the first three algorithms. Solid lines are truck main routes, dashed/dotted lines are drone launch and return legs, and gray crosses are unserved customers (none in this experiment).
 
-![Fig. 6 NSGA-II min-cost route](PACO+ALNS/results/20260809_w8/figures/routes_nsga2_C101_100c_medium_min_cost.png)
+![Fig. 6 NSGA-II min-cost route](../src/experiments/PACO+ALNS/results/20260809_w8/figures/routes_nsga2_C101_100c_medium_min_cost.png)
 
 ![Fig. 7 NSGA-II compromise route](PACO+ALNS/results/20260809_w8/figures/routes_nsga2_C101_100c_medium_compromise.png)
 
-![Fig. 8 PACO min-cost route](PACO+ALNS/results/20260809_w8/figures/routes_imp2_C101_100c_medium_min_cost.png)
+![Fig. 8 PACO min-cost route](../src/experiments/PACO+ALNS/results/20260809_w8/figures/routes_imp2_C101_100c_medium_min_cost.png)
 
-![Fig. 9 PACO compromise route](PACO+ALNS/results/20260809_w8/figures/routes_imp2_C101_100c_medium_compromise.png)
+![Fig. 9 PACO compromise route](../src/experiments/PACO+ALNS/results/20260809_w8/figures/routes_imp2_C101_100c_medium_compromise.png)
 
-![Fig. 10 PACO+ALNS min-cost route](PACO+ALNS/results/20260809_w8/figures/routes_w8_C101_100c_medium_min_cost.png)
+![Fig. 10 PACO+ALNS min-cost route](../src/experiments/PACO+ALNS/results/20260809_w8/figures/routes_w8_C101_100c_medium_min_cost.png)
 
-![Fig. 11 PACO+ALNS compromise route](PACO+ALNS/results/20260809_w8/figures/routes_w8_C101_100c_medium_compromise.png)
+![Fig. 11 PACO+ALNS compromise route](../src/experiments/PACO+ALNS/results/20260809_w8/figures/routes_w8_C101_100c_medium_compromise.png)
 
 The route figures show that NSGA-II tends to use more trucks to share customers, forming longer detours; PACO and PACO+ALNS use drone cooperative missions more actively to compress the truck main routes, and the compromise solution of PACO+ALNS achieves a more balanced cost-tardiness allocation. The route figures of Pure ALNS and all 324 four-algorithm comparison plots are available in the `PACO+ALNS/results/20260812_4alg/` directory.
 

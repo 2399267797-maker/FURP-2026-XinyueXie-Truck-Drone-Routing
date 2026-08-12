@@ -1,0 +1,67 @@
+{
+  "n_runs": 3,
+  "mean_cost": 818.1186824830529,
+  "std_cost": 40.64042036812386,
+  "mean_tardiness": 45039.56823895371,
+  "std_tardiness": 6128.640171007921,
+  "mean_solve_time": 38.25027330716451,
+  "mean_n_solutions": 1.0,
+  "mean_drone_missions": 11.833333333333334,
+  "mean_routes": 2.6666666666666665,
+  "n_missing_solutions": 0,
+  "n_overload_solutions": 0,
+  "max_missing": 0,
+  "max_overload": 0.0,
+  "all_costs": [
+    761.9222055643396,
+    856.654000897556,
+    835.779840987263
+  ],
+  "all_tardiness": [
+    39166.358106928696,
+    42456.26410486636,
+    53496.08250506607
+  ],
+  "all_pareto_fronts": [
+    [
+      [
+        761.9222055643396,
+        39166.358106928696
+      ]
+    ],
+    [
+      [
+        856.654000897556,
+        42456.26410486636
+      ],
+      [
+        835.779840987263,
+        53496.08250506607
+      ]
+    ],
+    []
+  ],
+  "n_starts": 100,
+  "alns_iter": 23,
+  "module": "pure_alns",
+  "mean_hv": 32918527731.74127,
+  "std_hv": 23283442905.133537,
+  "combined_hv": 50053046553.799385,
+  "n_front_points": 1,
+  "all_hypervolumes": [
+    50053046553.799385,
+    48702536641.424416,
+    0.0
+  ],
+  "config": "100c_C206_4V_medium",
+  "algo": "alns",
+  "n_customers": 100,
+  "rc_type": "C2",
+  "instance_id": 6,
+  "n_vehicles": 4,
+  "endurance_type": "medium",
+  "hv_reference": [
+    408510.98594655714,
+    161920.89270861621
+  ]
+}

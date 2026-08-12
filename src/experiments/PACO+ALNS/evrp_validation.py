@@ -41,7 +41,7 @@ from models.vrp_model import (  # noqa: E402
     VRPTruckDroneModel, Customer, Vehicle,
 )
 
-ALGORITHMS = ['nsga2', 'imp2', 'w8']
+ALGORITHMS = ['nsga2', 'imp2', 'w8', 'alns']
 
 DEFAULT_INSTANCES = [
     'E-n29-k4-s7', 'E-n30-k3-s7', 'E-n35-k3-s5', 'E-n37-k4-s4',
@@ -173,6 +173,9 @@ def load_algorithm(algo: str):
     elif algo == 'imp2':
         path = os.path.join(EXPERIMENTS, 'PACO', 'algorithms', 'paco_imp2.py')
         spec = importlib.util.spec_from_file_location('paco_imp2_evrp_cmp', path)
+    elif algo == 'alns':
+        path = os.path.join(EXPERIMENTS, 'ALNS', 'pure_alns.py')
+        spec = importlib.util.spec_from_file_location('pure_alns_evrp_cmp', path)
     else:
         path = os.path.join(BASE, 'PACO+ALNSW8.py')
         spec = importlib.util.spec_from_file_location('paco_alns_w8_evrp_cmp', path)
@@ -215,6 +218,8 @@ def run_single(model, algo_mod, algo: str, max_iter: int, seed: int) -> Dict:
         algo_obj = algo_mod.NSGA2VRP(model, pop_size=100, max_gen=max_iter)
     elif algo == 'imp2':
         algo_obj = algo_mod.CollaborativePACO(model, max_iter=max_iter)
+    elif algo == 'alns':
+        algo_obj = algo_mod.PureALNS(model, max_iter=max_iter)
     else:
         algo_obj = algo_mod.CollaborativePACOALNS(model, max_iter=max_iter)
     t0 = time.time()
@@ -359,11 +364,13 @@ def main():
         json.dump(combined, f, indent=2, ensure_ascii=False)
     print(f"Saved: {combined_path}", flush=True)
 
-    lines = ["# E-CVRP Benchmark Validation (NSGA-II / PACO-imp2 / PACO+ALNS W8)", ""]
+    lines = ["# E-CVRP Benchmark Validation (NSGA-II / PACO-imp2 / PACO+ALNS W8 / Pure ALNS)", ""]
     lines.append("## Mapping")
     lines.append("- E-CVRP has no time windows: solvers receive wide [0, 1e9] windows (tardiness = 0).")
     lines.append("- Drones disabled (capacity 0, range 0); truck fixed cost 0, variable cost 1, so cost = distance.")
     lines.append("- Energy/recharging constraints are not part of these solvers and are not validated here.")
+    lines.append("- Pure ALNS uses the same outer-iteration budget (max_iter) and scale-adaptive alns_iter as W8, "
+                 "with the PACO construction and pheromone update removed.")
     lines.append("")
     lines.append("| Instance | Opt/BKS | Algo | Best Cost | Gap % | Feasible sols | Missing | Overload | Time (s) |")
     lines.append("|----------|---------|------|-----------|-------|---------------|---------|----------|----------|")

@@ -1,0 +1,67 @@
+{
+  "n_runs": 3,
+  "mean_cost": 428.34360571576076,
+  "std_cost": 13.603398662542403,
+  "mean_tardiness": 3965.097856413446,
+  "std_tardiness": 491.6879423087756,
+  "mean_solve_time": 9.695157051086426,
+  "mean_n_solutions": 1.0,
+  "mean_drone_missions": 7.166666666666667,
+  "mean_routes": 1.3333333333333333,
+  "n_missing_solutions": 0,
+  "n_overload_solutions": 0,
+  "max_missing": 0,
+  "max_overload": 0.0,
+  "all_costs": [
+    410.9912384343168,
+    429.82602851423235,
+    444.2135501987332
+  ],
+  "all_tardiness": [
+    4445.828871357454,
+    3289.6360178020786,
+    4159.828680080806
+  ],
+  "all_pareto_fronts": [
+    [
+      [
+        410.9912384343168,
+        4445.828871357454
+      ],
+      [
+        429.82602851423235,
+        3289.6360178020786
+      ]
+    ],
+    [
+      [
+        444.2135501987332,
+        4159.828680080806
+      ]
+    ],
+    []
+  ],
+  "n_starts": 100,
+  "alns_iter": 20,
+  "module": "pure_alns",
+  "mean_hv": 579011827.6146694,
+  "std_hv": 420967080.42281294,
+  "combined_hv": 988429800.0787579,
+  "n_front_points": 2,
+  "all_hypervolumes": [
+    988429800.0787579,
+    748605682.7652507,
+    0.0
+  ],
+  "config": "50c_RC202_2V_medium",
+  "algo": "alns",
+  "n_customers": 50,
+  "rc_type": "RC2",
+  "instance_id": 2,
+  "n_vehicles": 2,
+  "endurance_type": "medium",
+  "hv_reference": [
+    275931.14481841633,
+    6877.219589765733
+  ]
+}

@@ -38,6 +38,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 0.16341471672058105,
+          "mean_best_cost": 426.6245897590855,
+          "std_best_cost": 10.342278621440995,
+          "best_cost": 411.99985015077453,
+          "mean_cost": 426.6245897590855,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -75,6 +87,18 @@
           "std_best_cost": 0.0,
           "best_cost": 568.5625010705219,
           "mean_cost": 568.5625010705219,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 0.2406308650970459,
+          "mean_best_cost": 569.0032121247724,
+          "std_best_cost": 0.6232595500087879,
+          "best_cost": 568.5625010705219,
+          "mean_cost": 569.0032121247724,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -120,6 +144,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 0.37467042605082196,
+          "mean_best_cost": 562.9327386876631,
+          "std_best_cost": 6.916500332556849,
+          "best_cost": 555.1602151159634,
+          "mean_cost": 562.9327386876631,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -157,6 +193,18 @@
           "std_best_cost": 0.11961949879623221,
           "best_cost": 837.6715519725763,
           "mean_cost": 837.7561357313372,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 0.43729186058044434,
+          "mean_best_cost": 884.973030399785,
+          "std_best_cost": 5.17464809645413,
+          "best_cost": 880.3620087596727,
+          "mean_cost": 884.973030399785,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -202,6 +250,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 0.855448325475057,
+          "mean_best_cost": 681.6828340686102,
+          "std_best_cost": 31.541746340991963,
+          "best_cost": 641.4226747799355,
+          "mean_cost": 681.6828340686102,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -239,6 +299,18 @@
           "std_best_cost": 2.9476516441153073,
           "best_cost": 697.3622022738969,
           "mean_cost": 699.646939361835,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 2.3717978795369468,
+          "mean_best_cost": 824.859023983322,
+          "std_best_cost": 10.750733224798491,
+          "best_cost": 816.0297960550243,
+          "mean_cost": 824.859023983322,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -284,6 +356,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 2,
+          "mean_solve_time": 1.0848217010498047,
+          "mean_best_cost": 1115.4822742050565,
+          "std_best_cost": 26.705136621129327,
+          "best_cost": 1088.777137583927,
+          "mean_cost": 1115.4822742050565,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -321,6 +405,18 @@
           "std_best_cost": 0.834695479269206,
           "best_cost": 723.5412413095044,
           "mean_cost": 724.1314601431214,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 0.8949133555094401,
+          "mean_best_cost": 762.0535277912169,
+          "std_best_cost": 10.87267476530039,
+          "best_cost": 753.4870423061354,
+          "mean_cost": 762.0535277912169,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -366,6 +462,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 2.1429070631663003,
+          "mean_best_cost": 316.9837547396398,
+          "std_best_cost": 1.5460820301669977,
+          "best_cost": 315.2492108162209,
+          "mean_cost": 316.9837547396398,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -403,6 +511,18 @@
           "std_best_cost": 2.3279647648674513,
           "best_cost": 1188.575744399926,
           "mean_cost": 1191.817356104874,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 7.649864832560222,
+          "mean_best_cost": 1645.5362126768214,
+          "std_best_cost": 5.591010111491156,
+          "best_cost": 1641.237154297423,
+          "mean_cost": 1645.5362126768214,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -448,6 +568,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 4.1246693929036455,
+          "mean_best_cost": 1157.0735874137667,
+          "std_best_cost": 6.633238904857053,
+          "best_cost": 1152.0243190557821,
+          "mean_cost": 1157.0735874137667,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -485,6 +617,18 @@
           "std_best_cost": 4.404788258537223,
           "best_cost": 1051.7789681597849,
           "mean_cost": 1055.3977769623514,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 3,
+          "mean_solve_time": 3.856031656265259,
+          "mean_best_cost": 1721.819475757964,
+          "std_best_cost": 24.11178785013635,
+          "best_cost": 1690.8781543343455,
+          "mean_cost": 1721.819475757964,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -530,6 +674,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 2,
+          "mean_solve_time": 2.787879228591919,
+          "mean_best_cost": 1589.225699100376,
+          "std_best_cost": 13.81846417633335,
+          "best_cost": 1575.4072349240428,
+          "mean_cost": 1589.225699100376,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -567,6 +723,18 @@
           "std_best_cost": 4.9851144298982035,
           "best_cost": 1745.4908176072556,
           "mean_cost": 1750.4759320371538,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 2,
+          "mean_solve_time": 1.6091471910476685,
+          "mean_best_cost": 2997.6773154038474,
+          "std_best_cost": 40.99996521666549,
+          "best_cost": 2956.677350187182,
+          "mean_cost": 2997.6773154038474,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -612,6 +780,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 2,
+          "mean_solve_time": 1.984147310256958,
+          "mean_best_cost": 20805.716428247222,
+          "std_best_cost": 86.60656295081935,
+          "best_cost": 20719.109865296403,
+          "mean_cost": 20805.716428247222,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -649,6 +829,18 @@
           "std_best_cost": 0.0,
           "best_cost": 14274.137985251771,
           "mean_cost": 14274.137985251771,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 1,
+          "mean_solve_time": 1.8932721614837646,
+          "mean_best_cost": 20094.42425597548,
+          "std_best_cost": 0.0,
+          "best_cost": 20094.42425597548,
+          "mean_cost": 20094.42425597548,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -694,6 +886,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 1,
+          "mean_solve_time": 15.478276252746582,
+          "mean_best_cost": 57900.35314407921,
+          "std_best_cost": 0.0,
+          "best_cost": 57900.35314407921,
+          "mean_cost": 57900.35314407921,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -731,6 +935,18 @@
           "std_best_cost": 0.0,
           "best_cost": 30307.90844948676,
           "mean_cost": 30307.90844948676,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 1,
+          "mean_solve_time": 32.30426216125488,
+          "mean_best_cost": 48152.54383701035,
+          "std_best_cost": 0.0,
+          "best_cost": 48152.54383701035,
+          "mean_cost": 48152.54383701035,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -776,6 +992,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 1,
+          "mean_solve_time": 81.51039552688599,
+          "mean_best_cost": 65463.42951382397,
+          "std_best_cost": 0.0,
+          "best_cost": 65463.42951382397,
+          "mean_cost": 65463.42951382397,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -813,6 +1041,18 @@
           "std_best_cost": 0.0,
           "best_cost": 94374.59546744652,
           "mean_cost": 94374.59546744652,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 1,
+          "mean_solve_time": 186.44751143455505,
+          "mean_best_cost": 154237.73534108038,
+          "std_best_cost": 0.0,
+          "best_cost": 154237.73534108038,
+          "mean_cost": 154237.73534108038,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -858,6 +1098,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 1,
+          "mean_solve_time": 264.02324652671814,
+          "mean_best_cost": 142350.2999740955,
+          "std_best_cost": 0.0,
+          "best_cost": 142350.2999740955,
+          "mean_cost": 142350.2999740955,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -895,6 +1147,18 @@
           "std_best_cost": 0.0,
           "best_cost": 297891.4114297708,
           "mean_cost": 297891.4114297708,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 1,
+          "mean_solve_time": 416.6796553134918,
+          "mean_best_cost": 415635.1232397547,
+          "std_best_cost": 0.0,
+          "best_cost": 415635.1232397547,
+          "mean_cost": 415635.1232397547,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
@@ -940,6 +1204,18 @@
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
           "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 1,
+          "mean_solve_time": 526.1421253681183,
+          "mean_best_cost": 607314.6191685172,
+          "std_best_cost": 0.0,
+          "best_cost": 607314.6191685172,
+          "mean_cost": 607314.6191685172,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
         }
       }
     },
@@ -977,6 +1253,18 @@
           "std_best_cost": 0.0,
           "best_cost": 90816.60296695057,
           "mean_cost": 90816.60296695057,
+          "mean_std_cost": 0.0,
+          "mean_feasible_solutions": 1.0,
+          "n_missing_solutions": 0,
+          "n_overload_solutions": 0
+        },
+        "alns": {
+          "n_runs": 1,
+          "mean_solve_time": 250.65585231781006,
+          "mean_best_cost": 151028.70729288048,
+          "std_best_cost": 0.0,
+          "best_cost": 151028.70729288048,
+          "mean_cost": 151028.70729288048,
           "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,

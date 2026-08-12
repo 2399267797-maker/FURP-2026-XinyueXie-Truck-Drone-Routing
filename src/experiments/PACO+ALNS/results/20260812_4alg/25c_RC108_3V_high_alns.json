@@ -1,0 +1,68 @@
+{
+  "n_runs": 3,
+  "mean_cost": 370.44127471626115,
+  "std_cost": 0.8224148627316735,
+  "mean_tardiness": 0.0,
+  "std_tardiness": 0.0,
+  "mean_solve_time": 6.788868268330892,
+  "mean_n_solutions": 1.0,
+  "mean_drone_missions": 1.3333333333333333,
+  "mean_routes": 3.0,
+  "n_missing_solutions": 0,
+  "n_overload_solutions": 0,
+  "max_missing": 0,
+  "max_overload": 0.0,
+  "all_costs": [
+    371.5593194391254,
+    369.6047072090969,
+    370.159797500561
+  ],
+  "all_tardiness": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "all_pareto_fronts": [
+    [
+      [
+        371.5593194391254,
+        0.0
+      ]
+    ],
+    [
+      [
+        369.6047072090969,
+        0.0
+      ]
+    ],
+    [
+      [
+        370.159797500561,
+        0.0
+      ]
+    ]
+  ],
+  "n_starts": 100,
+  "alns_iter": 18,
+  "module": "pure_alns",
+  "mean_hv": 15727.340887247165,
+  "std_hv": 151.63303340362017,
+  "combined_hv": 15881.583319511672,
+  "n_front_points": 1,
+  "all_hypervolumes": [
+    15521.20099302673,
+    15881.583319511672,
+    15779.238349203095
+  ],
+  "config": "25c_RC108_3V_high",
+  "algo": "alns",
+  "n_customers": 25,
+  "rc_type": "RC1",
+  "instance_id": 8,
+  "n_vehicles": 3,
+  "endurance_type": "high",
+  "hv_reference": [
+    455.74194177137787,
+    184.3753563742355
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "n_runs": 3,
+  "mean_cost": 843.748846274211,
+  "std_cost": 19.00118427326032,
+  "mean_tardiness": 20386.505232757583,
+  "std_tardiness": 5115.873091055447,
+  "mean_solve_time": 49.72719852129618,
+  "mean_n_solutions": 0.6666666666666666,
+  "mean_drone_missions": 13.333333333333334,
+  "mean_routes": 2.6666666666666665,
+  "n_missing_solutions": 0,
+  "n_overload_solutions": 0,
+  "max_missing": 0,
+  "max_overload": 0.0,
+  "all_costs": [
+    824.7476620009506,
+    862.7500305474713
+  ],
+  "all_tardiness": [
+    25502.37832381303,
+    15270.632141702137
+  ],
+  "all_pareto_fronts": [
+    [
+      [
+        824.7476620009506,
+        25502.37832381303
+      ]
+    ],
+    [
+      [
+        862.7500305474713,
+        15270.632141702137
+      ]
+    ],
+    []
+  ],
+  "n_starts": 100,
+  "alns_iter": 23,
+  "module": "pure_alns",
+  "mean_hv": 0.0,
+  "std_hv": 0.0,
+  "combined_hv": 0.0,
+  "n_front_points": 2,
+  "all_hypervolumes": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "config": "100c_C204_4V_medium",
+  "algo": "alns",
+  "n_customers": 100,
+  "rc_type": "C2",
+  "instance_id": 4,
+  "n_vehicles": 4,
+  "endurance_type": "medium",
+  "hv_reference": [
+    254448.590902203,
+    13491.698419458895
+  ]
+}
