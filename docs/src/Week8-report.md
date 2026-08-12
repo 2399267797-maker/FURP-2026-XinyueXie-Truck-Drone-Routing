@@ -1,225 +1,210 @@
-# 第八周进展报告：W8 与 PACO/NSGA-II 在 Solomon 与 E-CVRP 上的对比
+# Week 8 Progress Report: W8 vs. PACO-imp2 / NSGA-II on Solomon and E-CVRP
 
-**日期**：2026-08-08
+**Date**: 2026-08-08
 
-**项目**：卡车-无人机协同车辆路径问题（TDRP），双目标最小化（运输成本、时间窗违反惩罚）
-
----
-
-## 1. 摘要
-
-本报告总结第 1-8 周的阶段性工作，重点呈现 **PACO+ALNS W8** 与 **PACO-imp2（PACO）**、**NSGA-II** 两类对比实验：一是在 Solomon RC 基准上的 16 组双目标实验，二是在 WCCI-2020 E-CVRP 基准上的 24 个实例验证。
-
-主要结论：
-
-1. **Solomon RC（16 组 × 10 次重复）**：PACO-imp2 成本最低（12/16 组最优），NSGA-II 延迟最低（16/16 组最优），PACO+ALNS W8 的超体积（HV）在 16/16 组中最高；W8 的 16 组平均成本为 447.35，仅比 PACO-imp2 高约 2.4%，平均延迟 2936.85，介于 PACO-imp2 与 NSGA-II 之间。
-2. **W7→W8 改进**：在质量基本持平或略优的前提下，运行时间显著下降。25c 平均 54.70s→32.55s，50c 平均 246.15s→120.46s，100c 平均 791.13s→506.75s。
-3. **E-CVRP（24 个实例）**：W8 在全部 24 个实例上都能给出可行解（无缺失客户、无超载），且在所有实例上优于或持平另外两种算法；在 4 个有公开最优值的实例上，平均 gap 为 -1.01%（CVRP 松弛口径），NSGA-II 为 +67.44%，PACO-imp2 为 +9.63%。
+**Project**: Truck-Drone Cooperative Vehicle Routing Problem (TDRP), bi-objective minimization (transportation cost, time-window violation penalty)
 
 ---
 
-## 2. 第 1-8 周工作回顾
+## 1. Abstract
 
-| 周次 | 时间 | 主要工作 |
-|------|------|----------|
-| W1 | 2026-06-08 | 搭建环境，完成 OR-Tools PDP 冒烟测试与可行性验证 |
-| W2 | 2026-06-12 | 建立 CVRP-POMO（强化学习）、E-VRPTW（遗传算法）、ETRD-NL（MILP+ALNS）三个基线 |
-| W3 | 2026-06-24 | 实现协作 P-ACO 与 NSGA-II，在 Solomon RC 25/50 客户规模上完成三方法对比 |
-| W4 | 2026-07-01 | 完成 P-ACO-imp 六项改进、100 客户大规模实验，并初步探索 PACO+ALNS 混合方法 |
-| W5 | 2026-07-08 | 对比 PACO+ALNS v1.0 与 v2.0，定位并分析 100 客户未服务客户问题 |
-| W6 | 2026-07-17 | 集成 PACO+ALNS W6 统一管线，完成 16 组 Solomon 实验，运行时间较旧版提升 7-9 倍 |
-| W7 | 2026-08-05 | 建立 NSGA-II / PACO-imp2 / PACO+ALNS W7 的 16 组全配置三算法对比 |
-| W8 | 2026-08-06~08 | 完成 W8 稳健性修复与性能优化；重测 Solomon；完成 E-CVRP 24 实例验证 |
+This report summarizes the work completed in weeks 1-8, focusing on two comparison experiments: **PACO+ALNS W8** versus **PACO-imp2 (PACO)** and **NSGA-II**. The first experiment is a set of 16 bi-objective runs on the Solomon RC benchmark; the second is a validation on 24 instances of the WCCI-2020 E-CVRP benchmark.
+
+Main findings:
+
+1. **Solomon RC (16 configurations x 10 runs)**: PACO-imp2 achieves the lowest cost (best in 12/16 configurations), NSGA-II achieves the lowest tardiness (best in 16/16 configurations), and PACO+ALNS W8 achieves the highest hypervolume (HV) in 16/16 configurations. W8 has a mean cost of 447.35 across the 16 configurations, only about 2.4% higher than PACO-imp2, and a mean tardiness of 2936.85, between PACO-imp2 and NSGA-II.
+2. **W7->W8 improvement**: with solution quality roughly unchanged or slightly better, runtime decreased significantly: 25c from 54.70s to 32.55s, 50c from 246.15s to 120.46s, and 100c from 791.13s to 506.75s.
+3. **E-CVRP (24 instances)**: W8 finds a feasible solution on all 24 instances (no missing customers, no overload), and its best cost is never worse than the other two algorithms on any instance. On the 4 instances with published optimal values, the mean gap is -1.01% (CVRP relaxation basis), compared with +67.44% for NSGA-II and +9.63% for PACO-imp2.
 
 ---
 
-## 3. 问题定义与实验设置
+## 2. Problem Definition and Experimental Setup
 
-### 3.1 问题定义
+### 2.1 Problem Definition
 
-问题为带时间窗、无人机续航约束的卡车-无人机协同配送。每辆卡车与一架无人机一对一配对，无人机可从卡车途中起飞、服务客户后返回卡车，单次任务服务一个客户。目标函数为：
+The problem is a truck-drone cooperative delivery problem with time windows and drone endurance constraints. Each truck is paired one-to-one with a drone. The drone can take off from the truck en route, serve a customer, and return to the truck; each drone mission serves exactly one customer. The objective functions are:
 
-- 目标 1（Cost）：车辆固定成本 + 卡车行驶成本 + 无人机飞行成本；
-- 目标 2（Tardiness）：所有客户时间窗违反量的加权和。
+- Objective 1 (Cost): vehicle fixed cost + truck travel cost + drone flight cost;
+- Objective 2 (Tardiness): weighted sum of time-window violations across all customers.
 
-约束包括卡车容量、无人机容量、无人机续航、时间窗以及每客户恰好被服务一次。
+The constraints include truck capacity, drone capacity, drone endurance, time windows, and the requirement that each customer be served exactly once.
 
-### 3.2 Solomon 实验配置
+### 2.2 Solomon Experimental Setup
 
-| 项目 | 取值 |
-|------|------|
-| 数据集 | Solomon RC1（紧时间窗）/ RC2（宽时间窗），instance_id=1 |
-| 规模 | 25c（2 车）、50c（4 车、6 车）、100c（10 车） |
-| 无人机续航 | medium=4 km，high=6 km |
-| 地图 | 12 × 12 km，仓库位于中心（6.0, 6.0） |
-| 重复次数 | 每组 10 次 |
-| 迭代/世代预算 | 100 |
-| NSGA-II 种群 | 100 |
+| Item | Value |
+|------|-------|
+| Dataset | Solomon RC1 (tight time windows) / RC2 (wide time windows), instance_id=1 |
+| Scale | 25c (2 vehicles), 50c (4 vehicles, 6 vehicles), 100c (10 vehicles) |
+| Drone endurance | medium = 4 km, high = 6 km |
+| Map | 12 x 12 km, depot at the center (6.0, 6.0) |
+| Repeats | 10 per configuration |
+| Iteration/generation budget | 100 |
+| NSGA-II population | 100 |
 | PACO-imp2 | n_ants=30 |
-| PACO+ALNS W8 | 自适应参数（随客户数缩放） |
-| 配置总数 | 16 组 |
+| PACO+ALNS W8 | adaptive parameters (scaled with the number of customers) |
+| Total configurations | 16 |
 
-### 3.3 E-CVRP 映射与验证预算
+### 2.3 E-CVRP Mapping and Validation Budget
 
-WCCI-2020 E-CVRP 基准没有时间窗和无人机。为保证三种算法可统一运行，采用如下映射：
+The WCCI-2020 E-CVRP benchmark has no time windows and no drones. To run all three algorithms uniformly, the following mapping is used:
 
-- 时间窗统一设为 `[0, 1e9]`，因此延迟恒为 0，问题退化为单目标成本最小化；
-- 无人机禁用（容量 0、续航 0），只使用卡车；
-- 卡车固定成本 0、可变成本 1，因此模型成本等于总距离，可与基准的 `OPTIMAL_VALUE` 比较；
-- 能量/充电约束不在本组求解器范围内，未做验证。
+- Time windows are set uniformly to `[0, 1e9]`, so tardiness is always 0 and the problem reduces to single-objective cost minimization;
+- Drones are disabled (capacity 0, range 0), and only trucks are used;
+- Truck fixed cost is 0 and variable cost is 1, so the model cost equals total distance and can be compared with the benchmark's `OPTIMAL_VALUE`;
+- Energy/recharging constraints are outside the scope of these solvers and were not validated.
 
-验证实例共 24 个（主验证目录），覆盖 E（7 个）、F（3 个）、M（4 个）、X（10 个）四个系列。计算预算按规模区分：默认实例 30 迭代 × 3 轮；中等补充实例（E-n112、M-n163、M-n212、X-n147）10 迭代 × 2 轮；X 大实例（X-n221 及以上）5 迭代 × 1 轮。
+The validation covers 24 instances (main validation directory), spanning four families: E (7), F (3), M (4), and X (10). The computation budget varies with scale: default instances use 30 iterations x 3 runs; supplementary medium instances (E-n112, M-n163, M-n212, X-n147) use 10 iterations x 2 runs; large X instances (X-n221 and above) use 5 iterations x 1 run.
 
-另外，`F-n140-k5-s5` 文件声明 `VEHICLES=5`，但总需求 14620 超过 5×2210，实例本身不可行；其文件名/注释为 `F-n140-k7`，因此主验证按 7 辆车运行。单独的 `k5` 探测实验确认三种算法在该声明下均找不到可行解。
+In addition, `F-n140-k5-s5` declares `VEHICLES=5`, but its total demand of 14620 exceeds 5 x 2210, so the instance is infeasible as declared. Its filename/comment is `F-n140-k7`, so the main validation runs it with 7 vehicles. A separate `k5` probe confirmed that none of the three algorithms can find a feasible solution under the declared vehicle count.
 
-### 3.4 指标口径
+### 2.4 Metric Definitions
 
-- 所有返回解先施加惩罚：缺失客户 10000/客户、超载量 1000/单位，再计算帕累托前沿、HV 与均值；
-- Cost 来自 `model.evaluate_solution`，Tardiness 来自 `calculate_pure_tardiness`；
-- HV 参考点取同一配置下三种算法所有解的最大成本、最大延迟分别 ×1.1，保证同配置内可比；
-- “均值”指 10 次运行帕累托前沿点的平均，而非单次最优解。
-
----
-
-## 4. 算法方法与 W8 主要改动
-
-### 4.1 PACO+ALNS W8
-
-PACO+ALNS 采用“构造 + 改进”的混合框架：
-
-1. **PACO 构造（外层）**：每只蚂蚁按信息素和节省启发式构造卡车路径与无人机任务，包含三层兜底机制（转无人机、强制插入、缺失惩罚）；
-2. **ALNS 改进（内层）**：5 个破坏算子（surgical/random/worst/related/route）与 3 个修复算子（drone-aware/greedy/regret），按自适应权重轮盘选择；
-3. **多目标存档**：非支配排序 + 拥挤度裁剪，每轮只允许支配或非支配解进入；
-4. **信息素更新**：仅由存档中的解沉积，支持成本/延迟双目标信息素矩阵。
-
-W8 相对 W7 的主要改动（源码 `PACO+ALNSW8.py` 修复日志）：
-
-| 修复项 | 内容 | 作用 |
-|--------|------|------|
-| Drone ID | ALNS 阶段生成的无人机任务统一按 `n_trucks + truck_id` 分配 ID，并校验发射/回收索引 | 修复越界导致的底层静默丢弃任务 |
-| Timeline | 所有兜底插入、任务恢复路径设置 `_timeline_dirty=True` | 杜绝脏读取引发的时序计算崩溃 |
-| SA 评分护栏 | ALNS 内部评分叠加缺失与超载绝对惩罚 | 防止模拟退火接受不可行解 |
-| 存档过滤 | 缺客户或超载的解不进存档 | 避免不可行解污染帕累托前沿 |
-
-### 4.2 PACO-imp2
-
-PACO-imp2 是第 4 周的改进版 P-ACO，六项改进为：MMAS 信息素裁剪、自适应信息素归一化、最近邻兜底、无人机启发式修正、约束预/后校验、模运算无人机 ID。W8 在其“稳健构造”基础上继续迭代。
-
-### 4.3 NSGA-II
-
-NSGA-II 使用锦标赛选择、拥挤度距离、SBX 交叉与多项式变异，解码时搜索卡车-无人机协同模式。为适配 E-CVRP，新增容量感知解码修复与超载惩罚；不可行解仍会被保留在进化过程中，仅在评价后被惩罚。
+- Penalties are applied to every returned solution before computing Pareto fronts, HV, and means: 10000 per missing customer and 1000 per unit of overload;
+- Cost is obtained from `model.evaluate_solution`, and tardiness from `calculate_pure_tardiness`;
+- The HV reference point is the maximum cost and maximum tardiness over all solutions of the three algorithms in the same configuration, each multiplied by 1.1, to keep comparisons within a configuration meaningful;
+- "Mean" refers to the average over the Pareto-front points of 10 runs, not the single best solution.
 
 ---
 
-## 5. Solomon RC 对比结果（W8）
+## 3. Algorithm Methods and Main W8 Changes
 
-### 5.1 16 组配置汇总均值
+### 3.1 PACO+ALNS W8
 
-| 算法 | Cost 均值 | Tardiness 均值 | HV 均值 | Time (s) | 前沿解数 | 无人机任务 | 路线数 |
-|------|-----------|----------------|----------|----------|----------|------------|--------|
+PACO+ALNS uses a hybrid "construction + improvement" framework:
+
+1. **PACO construction (outer loop)**: each ant constructs truck routes and drone missions guided by pheromone and savings heuristics, with a three-tier fallback mechanism (convert to drone, forced insertion, missing-customer penalty);
+2. **ALNS improvement (inner loop)**: 5 destroy operators (surgical/random/worst/related/route) and 3 repair operators (drone-aware/greedy/regret), selected by an adaptive-weight roulette;
+3. **Multi-objective archive**: non-dominated sorting plus crowding-distance pruning; each round admits only solutions that dominate the archive or are mutually non-dominated with it;
+4. **Pheromone update**: only solutions in the archive deposit pheromone, supporting separate cost/tardiness dual-objective pheromone matrices.
+
+Main changes in W8 relative to W7 (source fix log in `PACO+ALNSW8.py`):
+
+| Fix | Description | Effect |
+|-----|-------------|--------|
+| Drone ID | Drone missions generated in the ALNS phase are uniformly assigned IDs as `n_trucks + truck_id`, with launch/retrieval index validation | Fixes out-of-bounds access that silently dropped missions |
+| Timeline | All fallback insertions and task-restoration paths set `_timeline_dirty=True` | Eliminates timeline-calculation crashes caused by stale reads |
+| SA score guard | ALNS internal scoring adds absolute penalties for missing customers and overload | Prevents simulated annealing from accepting infeasible solutions |
+| Archive filter | Solutions with missing customers or overload are excluded from the archive | Prevents infeasible solutions from polluting the Pareto front |
+
+### 3.2 PACO-imp2
+
+PACO-imp2 is the improved P-ACO from week 4, with six improvements: MMAS pheromone bounds, adaptive pheromone normalization, nearest-neighbor fallback, drone heuristic correction, pre/post constraint validation, and modulo-based drone ID. W8 continues to iterate on top of its robust construction.
+
+### 3.3 NSGA-II
+
+NSGA-II uses tournament selection, crowding distance, SBX crossover, and polynomial mutation, and searches truck-drone cooperative patterns during decoding. To adapt it to E-CVRP, capacity-aware decode repair and overload penalties were added; infeasible solutions are still retained during evolution and are penalized only at evaluation.
+
+---
+
+## 4. Solomon RC Comparison Results (W8)
+
+### 4.1 Mean over 16 Configurations
+
+| Algorithm | Mean Cost | Mean Tardiness | Mean HV | Time (s) | Front solutions | Drone missions | Routes |
+|-----------|-----------|----------------|---------|----------|-----------------|----------------|--------|
 | NSGA-II | 980.82 | 1907.64 | 3,286,846 | 6.63 | 37.3 | 4.42 | 5.50 |
 | PACO-imp2 | 436.82 | 4474.33 | 6,804,584 | 101.27 | 13.6 | 16.41 | 2.42 |
 | PACO+ALNS W8 | 447.35 | 2936.85 | 8,156,083 | 195.06 | 11.8 | 10.09 | 2.69 |
 
-说明：上表是 16 组配置（25c/50c/100c 混合）的算术平均，主要用于观察总体趋势；各组明细见 `results/20260807_w8/analysis_20260807_w8.md` 及同目录 JSON。
+Note: the table shows the arithmetic mean over the 16 configurations (25c/50c/100c mixed) and is intended for overall trends. Per-configuration details are in `results/20260807_w8/analysis_20260807_w8.md` and the JSON files in the same directory.
 
-### 5.2 代表性配置明细
+### 4.2 Representative Configurations
 
-| Config | 算法 | Cost ± Std | Tardiness ± Std | HV | Time (s) |
-|--------|------|------------|-----------------|-----|----------|
-| 25c RC101 medium | NSGA-II | 305.76 ± 20.06 | 306.52 ± 273.22 | 302,409 | 3.7 |
-| 25c RC101 medium | PACO-imp2 | 240.05 ± 56.55 | 1117.62 ± 378.81 | 411,083 | 8.9 |
-| 25c RC101 medium | PACO+ALNS W8 | 242.40 ± 50.14 | 864.64 ± 664.82 | 473,337 | 29.2 |
-| 25c RC201 medium | NSGA-II | 325.54 ± 29.49 | 716.12 ± 729.10 | 873,858 | 3.9 |
-| 25c RC201 medium | PACO-imp2 | 266.40 ± 55.23 | 2312.10 ± 875.21 | 988,631 | 9.5 |
-| 25c RC201 medium | PACO+ALNS W8 | 257.81 ± 42.25 | 1429.58 ± 1083.05 | 1,271,887 | 29.0 |
-| 50c RC101 4V medium | NSGA-II | 749.68 ± 37.97 | 1424.88 ± 521.73 | 664,965 | 5.4 |
-| 50c RC101 4V medium | PACO-imp2 | 363.43 ± 54.54 | 2498.66 ± 382.33 | 1,300,021 | 31.1 |
-| 50c RC101 4V medium | PACO+ALNS W8 | 390.93 ± 55.48 | 1465.37 ± 784.34 | 2,097,826 | 102.3 |
-| 50c RC201 6V high | NSGA-II | 1029.83 ± 71.29 | 1519.09 ± 1204.34 | 4,094,721 | 6.8 |
-| 50c RC201 6V high | PACO-imp2 | 418.95 ± 74.45 | 5065.49 ± 1682.47 | 7,924,963 | 60.0 |
-| 50c RC201 6V high | PACO+ALNS W8 | 419.42 ± 61.93 | 3196.95 ± 1664.13 | 9,670,621 | 129.6 |
-| 100c RC101 10V medium | NSGA-II | 1797.40 ± 65.06 | 3211.08 ± 1180.37 | 4,806,539 | 9.9 |
-| 100c RC101 10V medium | PACO-imp2 | 644.55 ± 68.44 | 7535.28 ± 1639.02 | 12,149,729 | 208.6 |
-| 100c RC101 10V medium | PACO+ALNS W8 | 698.20 ± 58.96 | 3639.25 ± 1480.33 | 16,380,327 | 439.0 |
-| 100c RC201 10V high | NSGA-II | 1858.96 ± 90.41 | 4986.29 ± 2224.57 | 9,413,243 | 10.7 |
-| 100c RC201 10V high | PACO-imp2 | 748.45 ± 72.99 | 10057.54 ± 3303.21 | 22,766,246 | 390.1 |
-| 100c RC201 10V high | PACO+ALNS W8 | 768.80 ± 74.72 | 6998.58 ± 2423.48 | 24,116,963 | 583.9 |
+| Config | Algorithm | Cost +/- Std | Tardiness +/- Std | HV | Time (s) |
+|--------|-----------|--------------|-------------------|-----|----------|
+| 25c RC101 medium | NSGA-II | 305.76 +/- 20.06 | 306.52 +/- 273.22 | 302,409 | 3.7 |
+| 25c RC101 medium | PACO-imp2 | 240.05 +/- 56.55 | 1117.62 +/- 378.81 | 411,083 | 8.9 |
+| 25c RC101 medium | PACO+ALNS W8 | 242.40 +/- 50.14 | 864.64 +/- 664.82 | 473,337 | 29.2 |
+| 25c RC201 medium | NSGA-II | 325.54 +/- 29.49 | 716.12 +/- 729.10 | 873,858 | 3.9 |
+| 25c RC201 medium | PACO-imp2 | 266.40 +/- 55.23 | 2312.10 +/- 875.21 | 988,631 | 9.5 |
+| 25c RC201 medium | PACO+ALNS W8 | 257.81 +/- 42.25 | 1429.58 +/- 1083.05 | 1,271,887 | 29.0 |
+| 50c RC101 4V medium | NSGA-II | 749.68 +/- 37.97 | 1424.88 +/- 521.73 | 664,965 | 5.4 |
+| 50c RC101 4V medium | PACO-imp2 | 363.43 +/- 54.54 | 2498.66 +/- 382.33 | 1,300,021 | 31.1 |
+| 50c RC101 4V medium | PACO+ALNS W8 | 390.93 +/- 55.48 | 1465.37 +/- 784.34 | 2,097,826 | 102.3 |
+| 50c RC201 6V high | NSGA-II | 1029.83 +/- 71.29 | 1519.09 +/- 1204.34 | 4,094,721 | 6.8 |
+| 50c RC201 6V high | PACO-imp2 | 418.95 +/- 74.45 | 5065.49 +/- 1682.47 | 7,924,963 | 60.0 |
+| 50c RC201 6V high | PACO+ALNS W8 | 419.42 +/- 61.93 | 3196.95 +/- 1664.13 | 9,670,621 | 129.6 |
+| 100c RC101 10V medium | NSGA-II | 1797.40 +/- 65.06 | 3211.08 +/- 1180.37 | 4,806,539 | 9.9 |
+| 100c RC101 10V medium | PACO-imp2 | 644.55 +/- 68.44 | 7535.28 +/- 1639.02 | 12,149,729 | 208.6 |
+| 100c RC101 10V medium | PACO+ALNS W8 | 698.20 +/- 58.96 | 3639.25 +/- 1480.33 | 16,380,327 | 439.0 |
+| 100c RC201 10V high | NSGA-II | 1858.96 +/- 90.41 | 4986.29 +/- 2224.57 | 9,413,243 | 10.7 |
+| 100c RC201 10V high | PACO-imp2 | 748.45 +/- 72.99 | 10057.54 +/- 3303.21 | 22,766,246 | 390.1 |
+| 100c RC201 10V high | PACO+ALNS W8 | 768.80 +/- 74.72 | 6998.58 +/- 2423.48 | 24,116,963 | 583.9 |
 
-### 5.3 统计排名
+### 4.3 Statistical Ranking
 
-| 算法 | Cost 最优次数 | Tardiness 最优次数 | HV 最优次数 | Cost 平均排名 | Tard 平均排名 | HV 平均排名 | Cost 相对最优平均增幅 | Tard 相对最优平均增幅 |
-|------|--------------|-------------------|-------------|---------------|---------------|-------------|----------------------|----------------------|
+| Algorithm | Cost best count | Tardiness best count | HV best count | Mean cost rank | Mean tardiness rank | Mean HV rank | Mean relative cost increase | Mean relative tardiness increase |
+|-----------|-----------------|----------------------|---------------|----------------|--------------------|--------------|-----------------------------|---------------------------------|
 | NSGA-II | 0 | 16 | 0 | 3.00 | 1.00 | 3.00 | +110.93% | 0.00% |
 | PACO-imp2 | 12 | 0 | 0 | 1.25 | 3.00 | 2.00 | +0.65% | +183.23% |
 | PACO+ALNS W8 | 4 | 0 | 16 | 1.75 | 2.00 | 1.00 | +3.07% | +78.94% |
 
-解读：
+Interpretation:
 
-- **成本**：PACO-imp2 平均排名最优（1.25），W8 次之（1.75），两者差距很小；NSGA-II 成本明显偏高。
-- **延迟**：NSGA-II 平均排名最优（1.00），但其代价是成本高出 110.93%。
-- **超体积**：W8 在全部 16 组配置中 HV 最高，说明其帕累托前沿覆盖面积最大，成本-延迟权衡更全面。
+- **Cost**: PACO-imp2 has the best mean rank (1.25), followed by W8 (1.75), with a small gap between them; NSGA-II is clearly more expensive.
+- **Tardiness**: NSGA-II has the best mean rank (1.00), but at the cost of being 110.93% more expensive.
+- **Hypervolume**: W8 has the highest HV in all 16 configurations, indicating the widest Pareto-front coverage and a more complete cost-tardiness trade-off.
 
-### 5.4 W7→W8 变化
+### 4.4 W7 to W8 Changes
 
-| 规模 | ΔCost | ΔTardiness | ΔHV | ΔTime (s) |
-|------|-------|------------|------|-----------|
+| Scale | Delta Cost | Delta Tardiness | Delta HV | Delta Time (s) |
+|-------|------------|-----------------|----------|----------------|
 | 25c | +0.00 | +0.00 | +47,955 | -22.15 |
 | 50c | -2.04 | -24.63 | +264,560 | -125.68 |
 | 100c | -8.07 | -302.12 | -1,325,861 | -284.38 |
 
-分规模平均运行时间：
+Mean runtime by scale:
 
-| 规模 | W7 (s) | W8 (s) | 加速比 |
-|------|--------|--------|--------|
-| 25c | 54.70 | 32.55 | 约 1.7× |
-| 50c | 246.15 | 120.46 | 约 2.0× |
-| 100c | 791.13 | 506.75 | 约 1.6× |
+| Scale | W7 (s) | W8 (s) | Speedup |
+|-------|--------|--------|---------|
+| 25c | 54.70 | 32.55 | about 1.7x |
+| 50c | 246.15 | 120.46 | about 2.0x |
+| 100c | 791.13 | 506.75 | about 1.6x |
 
-说明：W8 在 25c 的均值成本与延迟与 W7 基本一致，RC2 的 HV 有小幅提升；50c 的成本、延迟、HV 均改善；100c 的成本与延迟改善但 HV 平均下降约 1.33e6，主要由 `100c_RC101_10V_high`（-2,321,385）与 `100c_RC201_10V_high`（-2,753,291）贡献，而 `100c_RC101_10V_medium` 的 HV 仍上升（+320,244）。因此 W8 的价值主要体现在稳健性、泛化性与运行时间，而非在所有大实例上同时提升前沿质量。
+Note: on 25c, W8 mean cost and tardiness are essentially unchanged from W7, with a small HV improvement on RC2; on 50c, cost, tardiness, and HV all improve; on 100c, cost and tardiness improve, but mean HV falls by about 1.33e6, driven mainly by `100c_RC101_10V_high` (-2,321,385) and `100c_RC201_10V_high` (-2,753,291), while `100c_RC101_10V_medium` still improves (+320,244). W8's value therefore lies mainly in robustness, generalization, and runtime, rather than in simultaneously improving front quality on all large instances.
 
-### 5.5 代表性帕累托前沿
+### 4.5 Representative Pareto Fronts
 
-| 配置 | 图 |
-|------|-----|
+| Config | Figure |
+|--------|--------|
 | 25c RC201 medium | ![25c RC201 medium](../../src/experiments/PACO+ALNS/results/20260807_w8/pareto_compare_25c_RC201_2V_medium.png) |
 | 50c RC101 4V medium | ![50c RC101 4V medium](../../src/experiments/PACO+ALNS/results/20260807_w8/pareto_compare_50c_RC101_4V_medium.png) |
 | 100c RC101 10V medium | ![100c RC101 10V medium](../../src/experiments/PACO+ALNS/results/20260807_w8/pareto_compare_100c_RC101_10V_medium.png) |
 
 ---
 
-## 6. E-CVRP 对比结果（W8）
+## 5. E-CVRP Comparison Results (W8)
 
-### 6.1 总体统计
+### 5.1 Overall Statistics
 
-| 算法 | 可行实例数 | 缺失客户实例 | 超载实例 | 4 个已知最优实例平均 gap | 平均时间 (s) |
-|------|------------|--------------|----------|--------------------------|--------------|
-| NSGA-II | 21/24 | 0 | 6（共 33 个超载解） | +67.44% | 7.8 |
-| PACO-imp2 | 22/24 | 2（X-n830、X-n920） | 0 | +9.63% | 30.4 |
+| Algorithm | Feasible instances | Instances with missing customers | Overload instances | Mean gap on the 4 instances with known optima | Mean time (s) |
+|-----------|--------------------|----------------------------------|--------------------|-----------------------------------------------|---------------|
+| NSGA-II | 21/24 | 0 | 6 (33 overloaded solutions in total) | +67.44% | 7.8 |
+| PACO-imp2 | 22/24 | 2 (X-n830, X-n920) | 0 | +9.63% | 30.4 |
 | PACO+ALNS W8 | 24/24 | 0 | 0 | -1.01% | 1105.3 |
 
-说明：
+Notes:
 
-- NSGA-II 在 X-n759、X-n830、X-n920 上未能在给定预算内给出可行解，其余实例即使出现过超载解，也仍能选出可行解；
-- PACO-imp2 在 X-n830、X-n920 上出现缺失客户，无可行解；
-- W8 在全部 24 个实例上均有可行解，且在三种算法均有可行解的实例中，最佳成本全部不劣于另外两种算法；
-- W8 平均时间被 X 系列大实例拉高（X-n1006 单实例约 7388s），小中型实例上时间并不高。
+- NSGA-II cannot produce a feasible solution within the given budget on X-n759, X-n830, and X-n920; on the remaining instances, a feasible solution can still be selected even when overloaded solutions appear during search;
+- PACO-imp2 has missing customers on X-n830 and X-n920 and therefore no feasible solution;
+- W8 finds feasible solutions on all 24 instances, and on every instance where all three algorithms have feasible solutions, its best cost is never worse than the other two;
+- W8's mean time is inflated by the large X instances (X-n1006 alone takes about 7388s); on small and medium instances the time is not high.
 
-### 6.2 有公开最优值的 4 个实例
+### 5.2 The 4 Instances with Published Optimal Values
 
-| 实例 | 最优值 | NSGA-II Best | PACO-imp2 Best | W8 Best | W8 Gap |
-|------|--------|--------------|----------------|---------|--------|
+| Instance | Optimal value | NSGA-II Best | PACO-imp2 Best | W8 Best | W8 Gap |
+|----------|---------------|--------------|----------------|---------|--------|
 | E-n29-k4-s7 | 383 | 464.67 | 418.09 | 375.28 | -2.02% |
 | E-n30-k3-s7 | 577 | 776.42 | 603.23 | 568.56 | -1.46% |
 | E-n35-k3-s5 | 527 | 921.27 | 568.20 | 535.80 | +1.67% |
 | F-n49-k4-s4 | 740 | 1769.07 | 865.73 | 723.54 | -2.22% |
 
-注意：W8 的负 gap 是在去掉能量/充电约束的 CVRP 松弛下得到更短距离，不能解读为超过公开 EVRP 最优。
+Note: W8's negative gap is obtained under the CVRP relaxation with energy/recharging constraints removed and must not be interpreted as beating the published EVRP optimum.
 
-### 6.3 全部 24 个实例明细
+### 5.3 All 24 Instances
 
-| 实例 | Opt/BKS | NSGA-II Best | PACO-imp2 Best | W8 Best | W8 Gap |
-|------|---------|--------------|----------------|---------|--------|
+| Instance | Opt/BKS | NSGA-II Best | PACO-imp2 Best | W8 Best | W8 Gap |
+|----------|---------|--------------|----------------|---------|--------|
 | E-n29-k4-s7 | 383 | 464.67 | 418.09 | 375.28 | -2.02% |
 | E-n30-k3-s7 | 577 | 776.42 | 603.23 | 568.56 | -1.46% |
 | E-n35-k3-s5 | 527 | 921.27 | 568.20 | 535.80 | +1.67% |
@@ -229,7 +214,7 @@ NSGA-II 使用锦标赛选择、拥挤度距离、SBX 交叉与多项式变异�
 | E-n112-k8-s11 | - | 3036.51 | 1203.51 | 860.86 | - |
 | F-n49-k4-s4 | 740 | 1769.07 | 865.73 | 723.54 | -2.22% |
 | F-n80-k4-s8 | - | 925.94 | 331.34 | 241.97 | - |
-| F-n140-k5-s5（按 k7） | - | 5077.33 | 1522.20 | 1188.58 | - |
+| F-n140-k5-s5 (run with k7) | - | 5077.33 | 1522.20 | 1188.58 | - |
 | M-n110-k10-s9 | - | 3190.97 | 1023.96 | 820.55 | - |
 | M-n126-k7-s5 | - | 4947.29 | 1350.23 | 1051.78 | - |
 | M-n163-k12-s12 | - | 4512.80 | 1673.15 | 1152.06 | - |
@@ -245,10 +230,10 @@ NSGA-II 使用锦标赛选择、拥挤度距离、SBX 交叉与多项式变异�
 | X-n920-k207-s4 | - | nan | nan | 433017.09 | - |
 | X-n1006-k43-s5 | - | 538246.83 | 118031.31 | 90816.60 | - |
 
-### 6.4 按系列汇总
+### 5.4 Summary by Family
 
-| 系列 | 实例数 | NSGA-II 可行 | PACO-imp2 可行 | W8 可行 |
-|------|--------|--------------|----------------|---------|
+| Family | Instances | NSGA-II feasible | PACO-imp2 feasible | W8 feasible |
+|--------|-----------|------------------|--------------------|-------------|
 | E | 7 | 7 | 7 | 7 |
 | F | 3 | 3 | 3 | 3 |
 | M | 4 | 4 | 4 | 4 |
@@ -256,52 +241,51 @@ NSGA-II 使用锦标赛选择、拥挤度距离、SBX 交叉与多项式变异�
 
 ---
 
-## 7. 讨论与局限
+## 6. Discussion and Limitations
 
-### 7.1 Solomon 上的方法定位
+### 6.1 Method Positioning on Solomon
 
-三种算法在 Solomon 上呈现明显的“区域分工”：
+The three algorithms show a clear division of labor on Solomon:
 
-- PACO-imp2 偏向低成本解，但延迟较高；
-- NSGA-II 偏向低延迟解，但成本较高；
-- PACO+ALNS W8 处于两者之间，帕累托前沿覆盖最广，因此 HV 最高。
+- PACO-imp2 favors low-cost solutions, but with higher tardiness;
+- NSGA-II favors low-tardiness solutions, but with higher cost;
+- PACO+ALNS W8 sits between the two and covers the Pareto front most broadly, hence the highest HV.
 
-这种差异是双目标优化的正常现象；W8 的价值在于用可接受的时间成本换取了更完整的权衡集合。
+This difference is a normal phenomenon in bi-objective optimization; W8's value is obtaining a more complete set of trade-off solutions at an acceptable time cost.
 
-### 7.2 E-CVRP 上的泛化性
+### 6.2 Generalization on E-CVRP
 
-E-CVRP 验证说明 W8 的稳健构造对容量约束、缺失客户、大规模实例的处理明显优于另外两种算法。NSGA-II 虽有容量修复，但大规模 X 系列仍不稳定；PACO-imp2 在超大规模实例上会出现缺失客户。
+The E-CVRP validation shows that W8's robust construction is clearly better than the other two algorithms on capacity constraints, missing customers, and large instances. NSGA-II has capacity repair, but remains unstable on the large X series; PACO-imp2 produces missing customers on very large instances.
 
-### 7.3 局限
+### 6.3 Limitations
 
-1. E-CVRP 的能量/充电约束未建模，负 gap 不能作为超过公开最优的证据；
-2. 24 个实例中只有 4 个有公开最优值，统计样本有限；
-3. 三种算法的计算预算不完全一致（W8 在 X 大实例上的时间显著更长）；
-4. F-n140 因声明车辆数不可行，按 7 辆车运行；
-5. W8 在 Solomon 100c 的 HV 相比 W7 有升有降，未形成一致优势；
-6. 未进行配对显著性检验（如 Wilcoxon），当前结论以均值与排名为主。
-
----
-
-## 8. 结论
-
-经过第 1-8 周的迭代，PACO+ALNS W8 成为当前项目的核心方法：
-
-1. **Solomon RC**：16/16 组配置 HV 最高，成本接近 PACO-imp2，延迟明显低于 PACO-imp2，运行时间较 W7 下降约 1.6-2.0 倍；
-2. **E-CVRP**：24/24 实例可行，最佳成本全部不劣于 PACO-imp2 与 NSGA-II，在 4 个有最优值的实例上平均 gap 为 -1.01%（松弛口径）；
-3. **方法成熟度**：W8 修复了无人机 ID、时序脏读、SA 评分三个稳健性问题，并加入容量感知修复与存档过滤，为后续引入能量约束、多访问无人机和 RL 算子选择提供了稳定基线。
+1. E-CVRP energy/recharging constraints are not modeled, so a negative gap is not evidence of beating the published optimum;
+2. Only 4 of the 24 instances have published optimal values, so the statistical sample is limited;
+3. The computation budgets of the three algorithms are not fully consistent (W8 takes significantly longer on the large X instances);
+4. F-n140 is run with 7 vehicles because the declared vehicle count is infeasible;
+5. W8's HV on Solomon 100c shows mixed changes relative to W7 and does not form a consistent advantage;
+6. No paired significance tests (e.g., Wilcoxon) were performed; the current conclusions rely mainly on means and rankings.
 
 ---
 
-## 9. 数据与代码位置
+## 7. Conclusion
 
-| 内容 | 路径 |
-|------|------|
-| W8 算法实现 | `src/experiments/PACO+ALNS/PACO+ALNSW8.py` |
-| 三算法对比脚本 | `src/experiments/PACO+ALNS/compare_three_algorithms.py` |
-| E-CVRP 验证脚本 | `src/experiments/PACO+ALNS/evrp_validation.py` |
-| Solomon W8 结果与分析 | `src/experiments/PACO+ALNS/results/20260807_w8/` |
-| Solomon W7 结果与分析 | `src/experiments/PACO+ALNS/results/20260805/` |
-| E-CVRP W8 结果与分析 | `src/experiments/PACO+ALNS/results/20260806_evrp_w8/` |
-| E-CVRP 基准实例 | `src/experiments/e-cvrp_benchmark_instances/` |
+After weeks 1-8 of iteration, PACO+ALNS W8 has become the core method of this project:
 
+1. **Solomon RC**: highest HV in 16/16 configurations, cost close to PACO-imp2, tardiness clearly lower than PACO-imp2, and runtime about 1.6-2.0x lower than W7;
+2. **E-CVRP**: feasible on 24/24 instances, best cost never worse than PACO-imp2 or NSGA-II, and a mean gap of -1.01% (relaxation basis) on the 4 instances with published optimal values;
+3. **Method maturity**: W8 fixed three robustness issues (drone ID, timeline stale reads, SA scoring), and added capacity-aware repair and archive filtering, providing a stable baseline for introducing energy constraints, multi-visit drones, and RL-based operator selection.
+
+---
+
+## 8. Data and Code Locations
+
+| Content | Path |
+|---------|------|
+| W8 algorithm implementation | `src/experiments/PACO+ALNS/PACO+ALNSW8.py` |
+| Three-algorithm comparison script | `src/experiments/PACO+ALNS/compare_three_algorithms.py` |
+| E-CVRP validation script | `src/experiments/PACO+ALNS/evrp_validation.py` |
+| Solomon W8 results and analysis | `src/experiments/PACO+ALNS/results/20260807_w8/` |
+| Solomon W7 results and analysis | `src/experiments/PACO+ALNS/results/20260805/` |
+| E-CVRP W8 results and analysis | `src/experiments/PACO+ALNS/results/20260806_evrp_w8/` |
+| E-CVRP benchmark instances | `src/experiments/e-cvrp_benchmark_instances/` |
