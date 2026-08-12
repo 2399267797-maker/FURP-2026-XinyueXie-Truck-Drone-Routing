@@ -430,7 +430,7 @@ To illustrate the differences among the algorithms, this section presents three 
 
 ![Fig. 6 NSGA-II min-cost route](../src/experiments/PACO+ALNS/results/20260809_w8/figures/routes_nsga2_C101_100c_medium_min_cost.png)
 
-![Fig. 7 NSGA-II compromise route](PACO+ALNS/results/20260809_w8/figures/routes_nsga2_C101_100c_medium_compromise.png)
+![Fig. 7 NSGA-II compromise route](../src/experiments/PACO+ALNS/results/20260809_w8/figures/routes_nsga2_C101_100c_medium_compromise.png)
 
 ![Fig. 8 PACO min-cost route](../src/experiments/PACO+ALNS/results/20260809_w8/figures/routes_imp2_C101_100c_medium_min_cost.png)
 
