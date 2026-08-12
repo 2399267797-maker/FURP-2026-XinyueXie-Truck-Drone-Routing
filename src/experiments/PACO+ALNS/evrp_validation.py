@@ -307,6 +307,8 @@ def main():
                         help='instance names, e.g. E-n29-k4-s7 F-n49-k4-s4')
     parser.add_argument('--include-x', action='store_true',
                         help='include extra X instances (up to 360 nodes)')
+    parser.add_argument('--algo', choices=ALGORITHMS + ['all'], default='all',
+                        help='which algorithm to run (default: all)')
     parser.add_argument('--outdir', type=str, default='20260805_evrp')
     parser.add_argument('--workers', type=int, default=min(16, os.cpu_count() or 4))
     parser.add_argument('--force', action='store_true')
@@ -319,10 +321,11 @@ def main():
     instances = args.instances if args.instances else list(DEFAULT_INSTANCES)
     if args.include_x:
         instances += EXTRA_INSTANCES
+    algos = ALGORITHMS if args.algo == 'all' else [args.algo]
 
     tasks = []
     for idx, inst in enumerate(instances):
-        for algo in ALGORITHMS:
+        for algo in algos:
             out_path = os.path.join(results_dir, f'{inst}_{algo}.json')
             if os.path.exists(out_path) and not args.force:
                 continue

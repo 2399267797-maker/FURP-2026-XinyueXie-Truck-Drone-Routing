@@ -1,50 +1,30 @@
 {
   "n_runs": 3,
-  "mean_cost": 25607.00951769213,
-  "std_cost": 32005.856789522062,
-  "mean_tardiness": 8.052144553507965,
-  "std_tardiness": 8.052144553507965,
-  "mean_solve_time": 13.883976300557455,
-  "mean_n_solutions": 2.0,
-  "mean_drone_missions": 10.333333333333334,
-  "mean_routes": 2.0,
+  "mean_cost": 626.8545128973974,
+  "std_cost": 0.0,
+  "mean_tardiness": 16.10428910701593,
+  "std_tardiness": 0.0,
+  "mean_solve_time": 13.661060730616251,
+  "mean_n_solutions": 1.0,
+  "mean_drone_missions": 3.6666666666666665,
+  "mean_routes": 0.6666666666666666,
   "n_missing_solutions": 0,
-  "n_overload_solutions": 3,
+  "n_overload_solutions": 0,
   "max_missing": 0,
-  "max_overload": 70.0,
+  "max_overload": 0.0,
   "all_costs": [
-    10568.832484890689,
-    70596.33054128494,
-    70596.33054128494,
     626.8545128973974,
     626.8545128973974,
     626.8545128973974
   ],
   "all_tardiness": [
-    0.0,
-    0.0,
-    0.0,
     16.10428910701593,
     16.10428910701593,
     16.10428910701593
   ],
   "all_pareto_fronts": [
-    [
-      [
-        10568.832484890689,
-        0.0
-      ]
-    ],
-    [
-      [
-        70596.33054128494,
-        0.0
-      ],
-      [
-        70596.33054128494,
-        0.0
-      ]
-    ],
+    [],
+    [],
     [
       [
         626.8545128973974,
@@ -61,13 +41,13 @@
     ]
   ],
   "module": "w8",
-  "mean_hv": 47489828.01833928,
-  "std_hv": 29029160.84399661,
-  "combined_hv": 73064882.55418596,
-  "n_front_points": 4,
+  "mean_hv": 23994830.66647394,
+  "std_hv": 33933814.955373295,
+  "combined_hv": 71984491.99942182,
+  "n_front_points": 3,
   "all_hypervolumes": [
-    63774002.232349016,
-    6710989.823247006,
+    0.0,
+    0.0,
     71984491.99942182
   ],
   "config": "50c_RC204_2V_medium",

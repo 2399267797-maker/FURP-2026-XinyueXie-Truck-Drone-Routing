@@ -4,7 +4,7 @@
   "std_cost": 90.54621389326245,
   "mean_tardiness": 11854.477043955585,
   "std_tardiness": 6214.615425817667,
-  "mean_solve_time": 11.599488655726114,
+  "mean_solve_time": 16.41584038734436,
   "mean_n_solutions": 34.0,
   "mean_drone_missions": 9.608333333333333,
   "mean_routes": 10.0,

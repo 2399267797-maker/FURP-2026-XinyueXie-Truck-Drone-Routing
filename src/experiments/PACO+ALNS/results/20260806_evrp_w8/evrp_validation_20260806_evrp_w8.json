@@ -5,7 +5,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 1.8504735628763835,
+          "mean_solve_time": 1.201560656229655,
           "mean_best_cost": 507.98137000994376,
           "std_best_cost": 31.72040374412709,
           "best_cost": 464.67442230161674,
@@ -58,7 +58,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 1.6890265146891277,
+          "mean_solve_time": 1.1539780298868816,
           "mean_best_cost": 808.6807942863974,
           "std_best_cost": 43.88778599438775,
           "best_cost": 776.4210274826822,
@@ -111,7 +111,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 1.4656600157419841,
+          "mean_solve_time": 1.0869887669881184,
           "mean_best_cost": 932.814850262042,
           "std_best_cost": 9.694581827400384,
           "best_cost": 921.270347190399,
@@ -164,7 +164,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 1.7210943698883057,
+          "mean_solve_time": 1.2522765000661213,
           "mean_best_cost": 1201.4862896457446,
           "std_best_cost": 26.838648583040012,
           "best_cost": 1171.9230244850664,
@@ -217,7 +217,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 2.432261069615682,
+          "mean_solve_time": 1.3421866099039714,
           "mean_best_cost": 1274.7085658598128,
           "std_best_cost": 21.32022816715413,
           "best_cost": 1249.468324415455,
@@ -270,7 +270,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 1.788427432378133,
+          "mean_solve_time": 1.5321637789408367,
           "mean_best_cost": 1995.8134960390537,
           "std_best_cost": 33.69157716330773,
           "best_cost": 1965.9810293801354,
@@ -323,7 +323,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 2,
-          "mean_solve_time": 0.8643107414245605,
+          "mean_solve_time": 0.42919158935546875,
           "mean_best_cost": 3055.376480803567,
           "std_best_cost": 18.87022116205526,
           "best_cost": 3036.506259641512,
@@ -376,7 +376,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 1.9488276640574138,
+          "mean_solve_time": 1.332201321919759,
           "mean_best_cost": 1800.696660034493,
           "std_best_cost": 24.144394826880067,
           "best_cost": 1769.0678270101253,
@@ -429,7 +429,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 1.9540554682413738,
+          "mean_solve_time": 1.6759235858917236,
           "mean_best_cost": 974.4223923667097,
           "std_best_cost": 56.9985335926136,
           "best_cost": 925.9446365824763,
@@ -482,7 +482,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 3.6243841648101807,
+          "mean_solve_time": 2.444326718648275,
           "mean_best_cost": 5122.507826636438,
           "std_best_cost": 32.33151227112347,
           "best_cost": 5077.327407118524,
@@ -535,7 +535,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 1.2715511322021484,
+          "mean_solve_time": 1.8352982997894287,
           "mean_best_cost": 3243.830681841311,
           "std_best_cost": 61.255685721683946,
           "best_cost": 3190.965500307426,
@@ -588,7 +588,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 3,
-          "mean_solve_time": 3.3769885698954263,
+          "mean_solve_time": 2.3608944416046143,
           "mean_best_cost": 5130.89326528212,
           "std_best_cost": 259.22487131500617,
           "best_cost": 4947.2851563629165,
@@ -641,7 +641,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 2,
-          "mean_solve_time": 1.2612892389297485,
+          "mean_solve_time": 0.6233601570129395,
           "mean_best_cost": 4543.157095161043,
           "std_best_cost": 30.355594052540255,
           "best_cost": 4512.801501108503,
@@ -694,15 +694,15 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 2,
-          "mean_solve_time": 4.270295739173889,
+          "mean_solve_time": 2.2123308181762695,
           "mean_best_cost": 6246.695957886213,
           "std_best_cost": 13.801770863859474,
           "best_cost": 6232.894187022353,
-          "mean_cost": 6894.992889041791,
-          "mean_std_cost": 1697.7031580207504,
+          "mean_cost": 6379.068748605472,
+          "mean_std_cost": 120.5698844733642,
           "mean_feasible_solutions": 11.5,
           "n_missing_solutions": 0,
-          "n_overload_solutions": 1
+          "n_overload_solutions": 0
         },
         "imp2": {
           "n_runs": 2,
@@ -747,7 +747,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 2,
-          "mean_solve_time": 1.0883893966674805,
+          "mean_solve_time": 0.5314426422119141,
           "mean_best_cost": 73308.36996193399,
           "std_best_cost": 364.5690024265641,
           "best_cost": 72943.80095950743,
@@ -800,7 +800,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 1,
-          "mean_solve_time": 2.707948684692383,
+          "mean_solve_time": 1.9096128940582275,
           "mean_best_cost": 49639.740295258554,
           "std_best_cost": 0.0,
           "best_cost": 49639.740295258554,
@@ -853,15 +853,15 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 1,
-          "mean_solve_time": 25.137272357940674,
+          "mean_solve_time": 16.502558708190918,
           "mean_best_cost": 120812.29173638808,
           "std_best_cost": 0.0,
           "best_cost": 120812.29173638808,
-          "mean_cost": 140619.18488790642,
-          "mean_std_cost": 15994.120475505495,
+          "mean_cost": 120812.29173638808,
+          "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
-          "n_overload_solutions": 3
+          "n_overload_solutions": 0
         },
         "imp2": {
           "n_runs": 1,
@@ -906,7 +906,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 1,
-          "mean_solve_time": 6.630301237106323,
+          "mean_solve_time": 5.633228778839111,
           "mean_best_cost": 157157.3325295557,
           "std_best_cost": 0.0,
           "best_cost": 157157.3325295557,
@@ -959,7 +959,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 1,
-          "mean_solve_time": 13.640926599502563,
+          "mean_solve_time": 8.271612882614136,
           "mean_best_cost": 152308.60178956596,
           "std_best_cost": 0.0,
           "best_cost": 152308.60178956596,
@@ -1012,15 +1012,15 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 1,
-          "mean_solve_time": 67.08136177062988,
+          "mean_solve_time": 35.69530725479126,
           "mean_best_cost": 350093.59102520806,
           "std_best_cost": 0.0,
           "best_cost": 350093.59102520806,
-          "mean_cost": 360129.4809185865,
-          "mean_std_cost": 10035.889893378422,
+          "mean_cost": 350093.59102520806,
+          "mean_std_cost": 0.0,
           "mean_feasible_solutions": 1.0,
           "n_missing_solutions": 0,
-          "n_overload_solutions": 1
+          "n_overload_solutions": 0
         },
         "imp2": {
           "n_runs": 1,
@@ -1065,15 +1065,15 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 1,
-          "mean_solve_time": 294.0365469455719,
+          "mean_solve_time": 144.2635064125061,
           "mean_best_cost": null,
           "std_best_cost": null,
           "best_cost": null,
-          "mean_cost": 559906.45361107,
-          "mean_std_cost": 53858.26445596617,
+          "mean_cost": 0.0,
+          "mean_std_cost": 0.0,
           "mean_feasible_solutions": 0.0,
           "n_missing_solutions": 0,
-          "n_overload_solutions": 14
+          "n_overload_solutions": 0
         },
         "imp2": {
           "n_runs": 1,
@@ -1118,15 +1118,15 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 1,
-          "mean_solve_time": 180.08538794517517,
+          "mean_solve_time": 86.67628622055054,
           "mean_best_cost": null,
           "std_best_cost": null,
           "best_cost": null,
-          "mean_cost": 2089531.3921968967,
-          "mean_std_cost": 145989.45686470854,
+          "mean_cost": 0.0,
+          "mean_std_cost": 0.0,
           "mean_feasible_solutions": 0.0,
           "n_missing_solutions": 0,
-          "n_overload_solutions": 5
+          "n_overload_solutions": 0
         },
         "imp2": {
           "n_runs": 1,
@@ -1171,15 +1171,15 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 1,
-          "mean_solve_time": 480.13014006614685,
+          "mean_solve_time": 233.56008744239807,
           "mean_best_cost": null,
           "std_best_cost": null,
           "best_cost": null,
-          "mean_cost": 821075.3361322092,
-          "mean_std_cost": 40114.35003872208,
+          "mean_cost": 0.0,
+          "mean_std_cost": 0.0,
           "mean_feasible_solutions": 0.0,
           "n_missing_solutions": 0,
-          "n_overload_solutions": 9
+          "n_overload_solutions": 0
         },
         "imp2": {
           "n_runs": 1,
@@ -1224,7 +1224,7 @@
       "algorithms": {
         "nsga2": {
           "n_runs": 1,
-          "mean_solve_time": 18.026065587997437,
+          "mean_solve_time": 10.759028911590576,
           "mean_best_cost": 538246.82568216,
           "std_best_cost": 0.0,
           "best_cost": 538246.82568216,

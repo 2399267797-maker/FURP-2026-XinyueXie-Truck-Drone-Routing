@@ -396,6 +396,18 @@ class NSGA2VRP:
             DRONE_FAIL_PENALTY = 50.0
             tardiness_penalty += drone_fail_count * DRONE_FAIL_PENALTY
             
+            # 公平对比口径：返回前沿只保留可行解（无缺客户、无超载），
+            # 与 PACO / PACO+ALNS / Pure ALNS 的档案语义一致；搜索阶段仍使用惩罚适应度。
+            served = set()
+            for r in routes:
+                served.update(r.customers)
+                for m in r.drone_missions:
+                    served.update(m.customer_ids)
+            missing = self.n_customers - len(served)
+            overload = self._total_overload(routes)
+            if missing > 0 or overload > 1e-6:
+                continue
+            
             all_solutions.append(routes)
             all_objectives.append((cost, tardiness_penalty))
         

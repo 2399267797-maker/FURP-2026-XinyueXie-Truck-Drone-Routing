@@ -361,6 +361,9 @@ def main():
     parser.add_argument('--force', action='store_true')
     parser.add_argument('--route-plots', action='store_true')
     parser.add_argument('--no-pareto-plots', action='store_true')
+    parser.add_argument('--no-copy-existing', action='store_true',
+                        help='keep the existing nsga2/imp2/w8 JSONs in the outdir '
+                             'instead of re-copying them from 20260809_w8')
     args = parser.parse_args()
 
     configs = configs_from_existing()
@@ -378,19 +381,21 @@ def main():
     os.makedirs(results_dir, exist_ok=True)
 
     # Copy the existing three-algorithm results (always refresh them so the
-    # original stored hv_reference is restored).
-    for cfg in configs:
-        key = c3.config_key(cfg)
-        for algo, fname in EXISTING_FILE_NAMES.items():
-            src = os.path.join(EXISTING_DIR, f"{key}_{fname}.json")
-            dst = os.path.join(results_dir, f"{key}_{algo}.json")
-            if not os.path.exists(src):
-                print(f"[warn] missing existing result {src}", flush=True)
-                continue
-            with open(src, encoding='utf-8') as f:
-                data = json.load(f)
-            with open(dst, 'w', encoding='utf-8') as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
+    # original stored hv_reference is restored), unless the outdir already
+    # contains updated results such as the rerun NSGA-II JSONs.
+    if not args.no_copy_existing:
+        for cfg in configs:
+            key = c3.config_key(cfg)
+            for algo, fname in EXISTING_FILE_NAMES.items():
+                src = os.path.join(EXISTING_DIR, f"{key}_{fname}.json")
+                dst = os.path.join(results_dir, f"{key}_{algo}.json")
+                if not os.path.exists(src):
+                    print(f"[warn] missing existing result {src}", flush=True)
+                    continue
+                with open(src, encoding='utf-8') as f:
+                    data = json.load(f)
+                with open(dst, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
 
     tasks = []
     for idx, cfg in enumerate(configs):

@@ -543,6 +543,9 @@ def main():
                         help='run every standard Solomon instance except tested RC101/RC201')
     parser.add_argument('--limit', type=int, default=0,
                         help='only run the first N configs (smoke test)')
+    parser.add_argument('--algo', choices=['nsga2', 'imp2', 'w7', 'all'], default='all',
+                        help='which algorithm to run; subset runs skip the final '
+                             'three-way analysis regeneration')
     args = parser.parse_args()
 
     w_slot = 'w8' if args.w7_module == 'w8' else 'w7'
@@ -552,6 +555,12 @@ def main():
     ALGO_STYLES[w_slot] = style
     ALGO_STYLES[w_slot]['label'] = ('PACO+ALNS W8' if w_slot == 'w8'
                                     else 'PACO+ALNS W7')
+    if args.algo == 'all':
+        run_algos = list(ALGORITHMS)
+    elif args.algo == 'w7':
+        run_algos = [w_slot]
+    else:
+        run_algos = [args.algo]
 
     results_dir = os.path.join(BASE, 'results', args.outdir)
     os.makedirs(results_dir, exist_ok=True)
@@ -573,7 +582,7 @@ def main():
     tasks = []
     for idx, cfg in enumerate(configs):
         key = config_key(cfg)
-        for algo in ALGORITHMS:
+        for algo in run_algos:
             out_path = os.path.join(results_dir, f"{key}_{algo}.json")
             if os.path.exists(out_path) and not args.force:
                 print(f"[skip] {key} {algo} (already exists)", flush=True)
@@ -590,6 +599,12 @@ def main():
     if tasks:
         with Pool(args.workers) as pool:
             pool.map(run_config, tasks)
+
+    if args.algo != 'all':
+        print("[info] subset run finished; skipping three-way analysis "
+              "regeneration (use compare_pure_alns.py for the four-way output)",
+              flush=True)
+        return
 
     results_by_key = {}
     for cfg in configs:

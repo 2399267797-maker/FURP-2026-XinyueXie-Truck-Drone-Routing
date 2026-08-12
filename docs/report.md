@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This paper investigates the truck-drone routing problem with time windows (TDRPTW) under a unified bi-objective model that minimizes total travel cost and weighted time-window tardiness. Four multi-objective algorithms, NSGA-II, PACO, PACO+ALNS, and a pure ALNS baseline, are compared on all 54 Solomon instances of the C, R, and RC families, with customer sizes of 25, 50, and 100 and two drone endurance levels, resulting in 324 configurations, each repeated three times with 100 iterations. PACO+ALNS achieves the best overall cost and hypervolume performance, with average cost and hypervolume ranks of 1.31 and 1.10 and the best cost and hypervolume in 222/324 and 291/324 configurations, respectively. NSGA-II attains the lowest tardiness in 209/324 configurations but shows substantially higher cost and produces capacity-overloaded solutions in 82 configurations. PACO lies in between with much lower runtime. Pure ALNS, an ablation that removes the ant-colony construction and pheromone update while keeping the same ALNS parameters and outer-iteration budget as PACO+ALNS, ranks third in cost and hypervolume (2.98 and 3.22) with an average runtime of 29.7 seconds per configuration, but fails to find a feasible solution on 6 wide-time-window 100-customer C2 configurations. On the WCCI-2020 E-CVRP benchmark (24 instances), PACO+ALNS reports a mean gap of -1.01% on the four instances with published best-known values, outperforming PACO (+9.63%), Pure ALNS (+3.32%), and NSGA-II (+67.44%); PACO+ALNS and Pure ALNS both find feasible solutions on all 24 instances. The paper provides the mathematical formulation, algorithmic pseudocode, grouped statistical tables, and reproducible experimental settings.
+This paper investigates the truck-drone routing problem with time windows (TDRPTW) under a unified bi-objective model that minimizes total travel cost and weighted time-window tardiness. Four multi-objective algorithms, NSGA-II, PACO, PACO+ALNS, and a pure ALNS baseline, are compared on all 54 Solomon instances of the C, R, and RC families, with customer sizes of 25, 50, and 100 and two drone endurance levels, resulting in 324 configurations, each repeated three times with 100 iterations. PACO+ALNS achieves the best overall cost and hypervolume performance, with average cost and hypervolume ranks of 1.31 and 1.10 and the best cost and hypervolume in 222/324 and 291/324 configurations, respectively. NSGA-II attains the lowest tardiness in 206/324 configurations but shows substantially higher cost, and finds no feasible solution in 13 wide-time-window 100-customer C2/RC2 configurations. PACO lies in between with much lower runtime. Pure ALNS, an ablation that removes the ant-colony construction and pheromone update while keeping the same ALNS parameters and outer-iteration budget as PACO+ALNS, ranks third in cost and hypervolume (2.98 and 3.22) with an average runtime of 29.7 seconds per configuration, but fails to find a feasible solution on 6 wide-time-window 100-customer C2 configurations. On the WCCI-2020 E-CVRP benchmark (24 instances), PACO+ALNS reports a mean gap of -1.01% on the four instances with published best-known values, outperforming PACO (+9.63%), Pure ALNS (+3.32%), and NSGA-II (+67.44%); PACO+ALNS and Pure ALNS both find feasible solutions on all 24 instances. The paper provides the mathematical formulation, algorithmic pseudocode, grouped statistical tables, and reproducible experimental settings.
 
 **Keywords**: truck-drone routing; time windows; multi-objective optimization; NSGA-II; ant colony optimization; adaptive large neighborhood search; pure ALNS; Solomon benchmark
 
@@ -90,7 +90,7 @@ An individual is a two-layer encoding of length $2n$: the first $n$ positions ar
 
 #### Decoding
 
-A subtractive decoding strategy of "truck first, drone peeling" is adopted: all customers are first evenly distributed into truck routes in visit order to form the truck backbone; the algorithm then scans each route and converts customers whose mode gene is drone and whose triples satisfy the range, payload, and temporal synchronization constraints into drone missions, peeling them off the truck route. Drone assignments that cannot satisfy the constraints are counted as failed penalties.
+A subtractive decoding strategy of "truck first, drone peeling" is adopted: all customers are first evenly distributed into truck routes in visit order to form the truck backbone; the algorithm then scans each route and converts customers whose mode gene is drone and whose triples satisfy the range, payload, and temporal synchronization constraints into drone missions, peeling them off the truck route. Drone assignments that cannot satisfy the constraints are counted as failed penalties. To keep the returned front comparable with the other algorithms, the final non-dominated front keeps only feasible solutions (no missing customers, no overload); infeasible solutions remain penalized during the search.
 
 #### Genetic Operators
 
@@ -293,7 +293,7 @@ Python 3.13, NumPy, Matplotlib, and DEAP; 18-core parallelism (multiprocessing, 
 - Hypervolume (HV): computed with the shared reference point stored by the three-algorithm comparison (the maximum of each objective over the original three-algorithm solution sets, multiplied by 1.1); Pure ALNS is evaluated with the same reference point so that the HV values of the four algorithms are directly comparable;
 - Runtime: mean seconds per run;
 - Feasibility: number of solutions with missing customers and number with capacity overload;
-- Statistical indicators: per-configuration "best counts" and average ranks (1 is best; ties are all counted as best). Means/medians in grouped statistics are based on the per-configuration `mean_cost`, `mean_tardiness`, and `mean_hv`. Configurations where Pure ALNS has no feasible solution are excluded from its statistics and rankings.
+- Statistical indicators: per-configuration "best counts" and average ranks (1 is best; ties are all counted as best). Means/medians in grouped statistics are based on the per-configuration `mean_cost`, `mean_tardiness`, and `mean_hv`. All four algorithms return feasible-only Pareto fronts; configurations where an algorithm has no feasible solution are excluded from its statistics and rankings.
 
 ## 6 Experimental Results and Analysis
 
@@ -301,26 +301,26 @@ Python 3.13, NumPy, Matplotlib, and DEAP; 18-core parallelism (multiprocessing, 
 
 | Algorithm | Mean Cost | Median Cost | Mean Tardiness | Median Tardiness | Cost Best Count | Tardiness Best Count | HV Best Count | Cost Rank | Tardiness Rank | HV Rank | Time (s) |
 |-----------|-----------|-------------|----------------|------------------|-----------------|----------------------|---------------|-----------|----------------|---------|----------|
-| NSGA-II | 10725.0 | 793.7 | 4647.6 | 793.0 | 0 | 209 | 5 | 3.98 | 1.63 | 3.66 | 13.1 |
-| PACO | 409.2 | 370.9 | 4342.4 | 2196.2 | 102 | 34 | 28 | 1.71 | 3.35 | 2.01 | 275.6 |
-| PACO+ALNS | 402.8 | 345.2 | 2411.7 | 1287.8 | 222 | 63 | 291 | 1.31 | 2.19 | 1.10 | 467.2 |
-| Pure ALNS | 667.4 | 461.1 | 4912.6 | 1528.5 | 0 | 27 | 0 | 2.98 | 2.82 | 3.22 | 29.7 |
+| NSGA-II | 804.2 | 626.9 | 4347.3 | 782.4 | 0 | 206 | 2 | 3.98 | 1.62 | 3.74 | 15.9 |
+| PACO | 409.2 | 370.9 | 4342.4 | 2196.2 | 102 | 34 | 28 | 1.71 | 3.31 | 2.00 | 275.6 |
+| PACO+ALNS | 402.8 | 345.2 | 2411.7 | 1287.8 | 222 | 66 | 294 | 1.31 | 2.18 | 1.09 | 467.2 |
+| Pure ALNS | 667.4 | 461.1 | 4912.6 | 1528.5 | 0 | 27 | 0 | 2.98 | 2.78 | 3.15 | 29.7 |
 
-Note: the mean cost of NSGA-II is substantially inflated by the penalties of capacity-overloaded solutions in 82 configurations, and the median cost (793.7) better reflects its typical level. PACO and PACO+ALNS have no overloaded or missing-customer solutions in any configuration. All solutions returned by Pure ALNS are free of overload and missing customers, but no feasible solution was found in 6 100c C2 wide-time-window configurations, which are excluded from its cost/tardiness statistics and rankings. Pure ALNS ranks below the other three algorithms in cost and HV, while its runtime is about 1/16 of PACO+ALNS.
+Note: all four algorithms return feasible-only Pareto fronts, so the reported costs do not include overload penalties. NSGA-II now reports feasible solutions only; it finds no feasible solution in 13 100c C2/RC2 wide-time-window (medium) configurations, which are excluded from its statistics and rankings. PACO and PACO+ALNS have feasible solutions in all 324 configurations; Pure ALNS finds none in 6 100c C2 wide-time-window configurations. Pure ALNS ranks below the other three algorithms in cost and HV, while its runtime is about 1/16 of PACO+ALNS.
 
 ### 6.2 By Instance Family
 
 | Family | Indicator | NSGA-II | PACO | PACO+ALNS | Pure ALNS |
 |--------|-----------|---------|------|-----------|-----------|
-| C | Median cost | 730.3 | 318.0 | **311.8** | 398.2 |
-| C | Median tardiness | 3634.4 | 5669.0 | **2880.9** | 5588.1 |
-| C | Mean time (s) | 13.0 | 291.5 | 465.2 | 24.4 |
-| R | Median cost | 800.7 | 379.9 | **359.8** | 657.2 |
-| R | Median tardiness | **412.8** | 1441.7 | 818.2 | 1084.7 |
-| R | Mean time (s) | 13.1 | 268.3 | 468.1 | 32.0 |
-| RC | Median cost | 1322.3 | 369.8 | **369.2** | 549.1 |
-| RC | Median tardiness | **308.2** | 955.9 | 523.7 | 668.2 |
-| RC | Mean time (s) | 14.9 | 208.5 | 385.6 | 24.9 |
+| C | Median cost | 474.0 | 318.0 | **311.8** | 398.2 |
+| C | Median tardiness | 3315.2 | 5669.0 | **2880.9** | 5588.1 |
+| C | Mean time (s) | 15.4 | 291.5 | 465.2 | 24.4 |
+| R | Median cost | 640.8 | 379.9 | **359.8** | 657.2 |
+| R | Median tardiness | **390.4** | 1441.7 | 818.2 | 1084.7 |
+| R | Mean time (s) | 16.2 | 268.3 | 468.1 | 32.0 |
+| RC | Median cost | 640.2 | 369.8 | **369.2** | 549.1 |
+| RC | Median tardiness | **265.7** | 955.9 | 523.7 | 668.2 |
+| RC | Mean time (s) | 13.0 | 208.5 | 385.6 | 24.9 |
 
 PACO+ALNS achieves the lowest median cost in all three families (C, R, and RC); NSGA-II achieves the lowest tardiness in the R and RC families, and PACO+ALNS in the C family. Pure ALNS is in the middle-to-lower range in cost for all families, while its runtime is significantly lower than the PACO-type algorithms. Overall, the cost advantage of the PACO-type algorithms is consistent across all distribution types.
 
@@ -330,10 +330,10 @@ PACO+ALNS achieves the lowest median cost in all three families (C, R, and RC); 
 |------|-----------|---------|------|-----------|-----------|
 | 25c | Median cost | 361.6 | 200.7 | **188.5** | 340.9 |
 | 25c | Median tardiness | **217.4** | 1219.2 | 524.2 | 583.6 |
-| 50c | Median cost | 793.7 | 370.9 | **345.2** | 600.5 |
-| 50c | Median tardiness | **884.7** | 1901.2 | 1109.1 | 1838.5 |
-| 100c | Median cost | 1776.2 | **662.1** | 676.3 | 1322.8 |
-| 100c | Median tardiness | **2695.3** | 3374.5 | 2802.5 | 4036.2 |
+| 50c | Median cost | 690.6 | 370.9 | **345.2** | 600.5 |
+| 50c | Median tardiness | **941.9** | 1901.2 | 1109.1 | 1838.5 |
+| 100c | Median cost | 1619.4 | **662.1** | 676.3 | 1322.8 |
+| 100c | Median tardiness | **2557.0** | 3374.5 | 2802.5 | 4036.2 |
 
 The costs of all four algorithms increase with the customer size. PACO+ALNS has a clear cost advantage at 25c and 50c; at 100c, PACO has a slightly lower median cost (662.1 vs 676.3), but PACO+ALNS still dominates in HV. The cost of Pure ALNS is close to NSGA-II at 25c, and its gap from the PACO-type algorithms widens as the size increases.
 
@@ -342,14 +342,14 @@ The costs of all four algorithms increase with the customer size. PACO+ALNS has 
 | Family-Size | Indicator | NSGA-II | PACO | PACO+ALNS | Pure ALNS |
 |-------------|-----------|---------|------|-----------|-----------|
 | C-25 | Median cost/tardiness | 359.6/1085.5 | 177.3/5865.0 | **166.6**/1755.1 | 340.5/1109.9 |
-| C-50 | Median cost/tardiness | 730.3/4188.7 | 318.0/4891.7 | **311.8**/2176.6 | 593.6/8609.8 |
-| C-100 | Median cost/tardiness | 1786.1/11786.9 | 692.9/6916.4 | **684.9**/5316.0 | 1322.8/17110.4 |
+| C-50 | Median cost/tardiness | 678.2/4188.7 | 318.0/4891.7 | **311.8**/2176.6 | 593.6/8609.8 |
+| C-100 | Median cost/tardiness | 1746.3/10510.4 | 692.9/6916.4 | **684.9**/5316.0 | 1322.8/17110.4 |
 | R-25 | Median cost/tardiness | 391.1/82.8 | 208.7/807.6 | **194.1**/380.8 | 370.2/434.7 |
-| R-50 | Median cost/tardiness | 800.7/412.8 | 379.9/1414.2 | **359.8**/867.3 | 657.2/1095.3 |
-| R-100 | Median cost/tardiness | 1663.9/1755.2 | **653.1**/3070.0 | 674.3/1861.6 | 1299.6/2666.2 |
+| R-50 | Median cost/tardiness | 753.0/412.8 | 379.9/1414.2 | **359.8**/867.3 | 657.2/1095.3 |
+| R-100 | Median cost/tardiness | 1603.7/1788.3 | **653.1**/3070.0 | 674.3/1861.6 | 1299.6/2666.2 |
 | RC-25 | Median cost/tardiness | 354.5/79.5 | 242.6/551.8 | 252.9/**362.7** | 334.4/189.9 |
-| RC-50 | Median cost/tardiness | 4081.7/408.4 | 369.8/1037.8 | **369.2**/575.0 | 549.1/825.8 |
-| RC-100 | Median cost/tardiness | 6725.7/1585.1 | **688.1**/2327.2 | 716.3/1604.0 | 1168.5/2236.1 |
+| RC-50 | Median cost/tardiness | 735.8/408.4 | 369.8/1037.8 | **369.2**/575.0 | 549.1/825.8 |
+| RC-100 | Median cost/tardiness | 1787.8/1779.6 | **688.1**/2327.2 | 716.3/1604.0 | 1168.5/2236.1 |
 
 The grouped results are consistent with the overall conclusions: PACO+ALNS has the lowest cost in most groups, PACO is slightly better at R-100 and RC-100, and the tardiness advantage of NSGA-II mainly comes from the small-scale instances of the R and RC families. The cost of Pure ALNS is comparable to NSGA-II at 25c, but its gap from the PACO-type algorithms clearly widens at 50c/100c.
 
@@ -357,10 +357,10 @@ The grouped results are consistent with the overall conclusions: PACO+ALNS has t
 
 | Endurance | Indicator | NSGA-II | PACO | PACO+ALNS | Pure ALNS |
 |-----------|-----------|---------|------|-----------|-----------|
-| medium | Cost/tardiness/HV rank | 3.98/1.62/3.62 | 1.77/3.27/2.00 | **1.28/2.19/1.10** | 2.96/2.90/3.26 |
-| medium | Cost/tardiness/HV best counts | 0/106/3 | 45/21/14 | 117/29/145 | 0/12/0 |
-| high | Cost/tardiness/HV rank | 3.97/1.63/3.69 | 1.66/3.43/2.02 | **1.35/2.19/1.10** | 3.00/2.74/3.18 |
-| high | Cost/tardiness/HV best counts | 0/103/2 | 57/13/14 | 105/34/146 | 0/15/0 |
+| medium | Cost/tardiness/HV rank | 4.00/1.52/3.73 | 1.77/3.25/1.99 | **1.28/2.18/1.10** | 2.96/2.85/3.16 |
+| medium | Cost/tardiness/HV best counts | 0/105/2 | 45/21/14 | 117/30/146 | 0/12/0 |
+| high | Cost/tardiness/HV rank | 3.97/1.70/3.75 | 1.66/3.38/2.01 | **1.35/2.17/1.09** | 3.00/2.72/3.14 |
+| high | Cost/tardiness/HV best counts | 0/101/0 | 57/13/14 | 105/36/148 | 0/15/0 |
 
 The relative rankings of the four algorithms are basically the same under both endurance settings, indicating that the algorithm performance is insensitive to drone endurance and the results are robust.
 
@@ -369,24 +369,24 @@ The relative rankings of the four algorithms are basically the same under both e
 | Size | NSGA-II | PACO | PACO+ALNS | Pure ALNS | HV Best Count (W8) |
 |------|---------|------|-----------|-----------|--------------------|
 | 25c | 0.38M | 1.00M | 1.33M | 0.47M | 101/108 |
-| 50c | 367.6M | 377.6M | 402.8M | 295.6M | 99/108 |
-| 100c | 3125.2M | 5054.6M | 4960.9M | 1122.9M | 91/108 |
+| 50c | 335.4M | 377.6M | 402.8M | 295.6M | 99/108 |
+| 100c | 834.2M | 5054.6M | 4960.9M | 1122.9M | 91/108 |
 
-HV increases sharply with the instance size, so cross-size comparisons are meaningless. Within a fixed size, PACO+ALNS has the highest mean HV at 25c and 50c; at 100c its mean HV is slightly lower than PACO, but it achieves more best counts (91 vs 17), indicating a more stable front distribution. The HV of Pure ALNS is slightly higher than NSGA-II at 25c and clearly lower than the other three algorithms at 50c/100c, indicating that its front coverage is limited by the single scalarized objective.
+HV increases sharply with the instance size, so cross-size comparisons are meaningless. Within a fixed size, PACO+ALNS has the highest mean HV at 25c and 50c; at 100c its mean HV is slightly lower than PACO, but it achieves more best counts (91 vs 17), indicating a more stable front distribution. The HV of NSGA-II is lowest at 50c and 100c; Pure ALNS is slightly above NSGA-II at 25c and 100c but clearly below the PACO-type algorithms, indicating that its front coverage is limited by the single scalarized objective.
 
 ### 6.7 Runtime and Scalability
 
 | Size | NSGA-II | PACO | PACO+ALNS | Pure ALNS |
 |------|---------|------|-----------|-----------|
-| 25c | 4.9 | 21.9 | 49.1 | 7.1 |
-| 50c | 9.9 | 111.3 | 214.1 | 19.6 |
-| 100c | 24.4 | 693.5 | 1138.3 | 64.3 |
+| 25c | 6.4 | 21.9 | 49.1 | 7.1 |
+| 50c | 13.8 | 111.3 | 214.1 | 19.6 |
+| 100c | 29.3 | 693.5 | 1138.3 | 64.3 |
 
 NSGA-II has the smallest computational cost but its solution quality is limited by the decoding structure. PACO+ALNS has the highest per-run time but significantly improves solution quality under the same iteration budget. The runtime of Pure ALNS is only about 1/7-1/18 of PACO+ALNS, at the cost of lower cost and HV, indicating that the time savings mainly come from removing the multi-ant construction and pheromone update. The engineering optimization of the capacity-repair operator reduced the runtime by 30%-62% (about 46% on average) on the earlier 16 RC configurations, with speedups on all 16.
 
 ### 6.8 Feasibility Analysis
 
-Across the 324 configurations, PACO and PACO+ALNS have no capacity-overloaded or missing-customer solutions; NSGA-II produces capacity-overloaded solutions in 82 configurations, concentrated in large-scale and tight-capacity instances. All solutions returned by Pure ALNS are free of overload and missing customers, but no feasible solution was found in 6 100c C2 wide-time-window configurations (the 4V combinations of C201/C202/C203/C205) within the given budget. This indicates that the "even customer distribution across routes" decoding of NSGA-II needs capacity-aware repair or penalty mechanisms to serve as a fair baseline on hard-constrained problems, and that the fixed scalarized objective and greedy construction of Pure ALNS also need improvement for wide-window, high-capacity scenarios.
+Across the 324 configurations, PACO and PACO+ALNS have feasible solutions in all configurations, and Pure ALNS in all but 6. After filtering to feasible-only fronts, NSGA-II returns no overloaded or missing-customer solutions, but finds no feasible solution in 13 100c C2/RC2 wide-time-window (medium, 4V) configurations (C201-C208 and RC203-RC205/RC207-RC208). This indicates that the "even customer distribution across routes" decoding of NSGA-II still cannot guarantee feasibility on tight-capacity instances, and that the fixed scalarized objective and greedy construction of Pure ALNS also need improvement for wide-window, high-capacity scenarios.
 
 ### 6.9 E-CVRP Generalization
 
@@ -404,7 +404,7 @@ On the large X instances, PACO+ALNS finds feasible solutions on all of them; PAC
 ### 6.10 Comprehensive Discussion
 
 1. **Objective trade-off**: the solutions of NSGA-II concentrate in the low-tardiness region at the cost of higher cost; PACO and PACO+ALNS achieve lower cost, and PACO+ALNS improves both objectives through ALNS, giving the best overall HV. Pure ALNS has clearly narrower front coverage because it uses a fixed scalarized objective.
-2. **Feasibility**: capacity is a hard constraint in real operations. NSGA-II should be used with penalty or repair mechanisms, and feasibility statistics should be reported in direct comparisons; Pure ALNS has no feasible solution on 6 wide-time-window large-scale configurations, which should also be stated when reporting feasibility.
+2. **Feasibility**: capacity is a hard constraint in real operations. With the feasible-only front convention, NSGA-II no longer reports penalized overloaded solutions, but it has no feasible solution on 13 wide-time-window large-scale configurations; Pure ALNS has none on 6. These infeasible configurations are excluded from the corresponding statistics and rankings and should be reported together with the feasibility counts.
 3. **Efficiency and quality**: the per-run time of PACO+ALNS is about 1.5-2 times that of PACO, but quality and HV are significantly higher under the same iteration budget. Pure ALNS under the same parameter configuration takes only about 1/7-1/18 of the time of PACO+ALNS but is clearly inferior in cost and HV, showing that the directed search ability provided by the PACO construction and pheromone is the key to quality improvement.
 4. **Generalization**: the E-CVRP validation shows that PACO+ALNS remains feasible and competitive on larger instances with different distributions.
 
@@ -424,7 +424,7 @@ To illustrate the differences among the algorithms, this section presents three 
 
 ![Fig. 4 Convergence curves: best cost](../src/experiments/PACO+ALNS/results/20260809_w8/figures/convergence_cost_25c_C101_medium.png)
 
-![Fig. 5 Convergence curves: hypervolume](../src/experiments//PACO+ALNS/results/20260809_w8/figures/convergence_hv_25c_C101_medium.png)
+![Fig. 5 Convergence curves: hypervolume](../src/experiments/PACO+ALNS/results/20260809_w8/figures/convergence_hv_25c_C101_medium.png)
 
 **Route visualization**: Figs. 6-11 show the min-cost and compromise routes of C101 (100 customers, medium) for the first three algorithms. Solid lines are truck main routes, dashed/dotted lines are drone launch and return legs, and gray crosses are unserved customers (none in this experiment).
 
@@ -448,7 +448,7 @@ This paper still has the following limitations:
 
 1. The model does not include energy consumption and recharging-station constraints, so the E-CVRP validation can only serve as a CVRP-relaxation test;
 2. Each configuration is repeated only 3 times, so the statistical power is limited; future work can increase the number of repeats and provide confidence intervals and significance tests;
-3. The decoder of NSGA-II does not embed capacity constraints, which gives it a feasibility disadvantage as a baseline; capacity-aware repair can be introduced later;
+3. The decoder of NSGA-II does not guarantee feasibility: even with the capacity-repair heuristic and feasible-only front filtering, it finds no feasible solution in 13 wide-time-window C2/RC2 configurations; a demand-aware decoder can be introduced later;
 4. Pure ALNS uses a fixed scalarized objective and fails to find feasible solutions on 6 100c C2 wide-time-window configurations, indicating that single-weight ALNS has insufficient search coverage for wide-window, high-capacity scenarios;
 5. No parameter-sensitivity analysis or cross-operator ablation experiments were conducted;
 6. The algorithms have not been compared end to end with commercial solvers or other state-of-the-art methods (e.g., parallel variants of large neighborhood search).
@@ -457,7 +457,7 @@ Future work includes extending equal-time-budget comparisons (especially equal-t
 
 ## 8 Conclusion
 
-This paper systematically compares four algorithms, NSGA-II, PACO, PACO+ALNS, and Pure ALNS, on the untested Solomon benchmark instances. PACO+ALNS is the best overall in cost and hypervolume; NSGA-II is the best in the tardiness objective but at a high cost and feasibility penalty; PACO provides a balanced but slightly weaker trade-off; Pure ALNS, as an ablation baseline, verifies the contribution of the PACO construction and pheromone to solution quality, but its feasibility on some wide-time-window large-scale configurations needs improvement. The complete grouped statistics, algorithmic pseudocode, and reproducible configurations provide a benchmark for multi-objective algorithm research on truck-drone cooperative delivery.
+This paper systematically compares four algorithms, NSGA-II, PACO, PACO+ALNS, and Pure ALNS, on the untested Solomon benchmark instances, with all algorithms evaluated on feasible-only Pareto fronts. PACO+ALNS is the best overall in cost and hypervolume; NSGA-II is the best in the tardiness objective but at a higher cost, and it has no feasible solution on 13 wide-time-window configurations; PACO provides a balanced but slightly weaker trade-off; Pure ALNS, as an ablation baseline, verifies the contribution of the PACO construction and pheromone to solution quality, but its feasibility on some wide-time-window large-scale configurations needs improvement. The complete grouped statistics, algorithmic pseudocode, and reproducible configurations provide a benchmark for multi-objective algorithm research on truck-drone cooperative delivery.
 
 ## References
 
